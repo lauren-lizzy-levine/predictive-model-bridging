@@ -1,0 +1,1031 @@
+# newdoc id = GUM_reddit_racial
+# global.Entity = GRP-etype-infstat-centering-minspan-link-identity
+# meta::author = NA
+# meta::dateCollected = 2019-09-11
+# meta::dateCreated = 2019-09-09
+# meta::dateModified = 2019-09-12
+# meta::genre = reddit
+# meta::salientEntities = 1, 4, 5, 7, 24, 74, 75, 80
+# meta::sourceURL = https://www.reddit.com/r/AskEurope/comments/d1urjk/how_do_you_guys_interpret_the_importance_of/?sort=top
+# meta::speakerCount = 4
+# meta::summary = An American asks some Europeans how they view US preoccupation with race issues and its history, with answers suggesting that Europeans know the history more or less, and that, while understandable, many US race concepts do not apply in Europe.
+# meta::title = How do you guys interpret the importance of racial issues seen in America?
+# sent_id = GUM_reddit_racial-1
+# s_prominence = 2
+# s_type = wh
+# transition = establishment
+# text = How do you guys interpret the importance of racial issues seen in America?
+# newpar
+# newpar_block = head (1 s)
+1	How	how	ADV	WRB	PronType=Int	5	advmod	5:advmod	Discourse=organization-heading:1->19:4:grf-ly-+sem-lxchn-10,285+sem-synym-13,241
+2	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
+3	you	you	PRON	PRP	Case=Nom|Number=Plur|Person=2|PronType=Prs	4	dep	4:dep	Entity=(1-person-acc:com-cf1-2-coref
+4	guys	guy	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=1)|MSeg=guy-s
+5	interpret	interpret	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Wh
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(2-abstract-new-cf2-2-sgl
+7	importance	importance	NOUN	NN	Number=Sing	5	obj	5:obj	MSeg=import-ance
+8	of	of	ADP	IN	_	10	case	10:case	_
+9	racial	racial	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(3-abstract-new-cf4-2-coref|MSeg=rac-ial
+10	issues	issue	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	Entity=3)2)|MSeg=issue-s
+11	seen	see	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	acl	10:acl	Discourse=elaboration-attribute:2->1:0:syn-mdf-10+syn-nmn-11|MSeg=see-n
+12	in	in	ADP	IN	_	13	case	13:case	_
+13	America	America	PROPN	NNP	Number=Sing	11	obl	11:obl:in	Entity=(4-place-new-cf3-1-coref-United_States)|SpaceAfter=No
+14	?	?	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_racial-2
+# s_prominence = 4
+# s_type = intj
+# speaker = gilgoose
+# transition = establishment
+# text = Hey, guys!
+# newpar
+# newpar_block = sp who:::"#gilgoose" (9 s) | p (1 s)
+1	Hey	hey	INTJ	UH	_	3	discourse	3:discourse	Discourse=organization-phatic:3->9:3:_;explanation-justify:3->3:2:3:orp-so-112|SpaceAfter=No
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	guys	guy	NOUN	NNS	Number=Plur	0	root	0:root	Entity=(1-person-giv:act-cf1*-1-coref)|MSeg=guy-s|SpaceAfter=No
+4	!	!	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_racial-3
+# s_prominence = 4
+# s_type = decl
+# speaker = gilgoose
+# transition = retain
+# text = As an American, we obviously learn about US history to a much greater extent than I imagine any of you guys would in school.
+# newpar
+# newpar_block = p (3 s)
+1	As	as	ADP	IN	_	3	case	3:case	Discourse=context-background:4->9:2:ref-prs-23,83
+2	an	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Entity=(5-person-acc:com-cf1-2-coref
+3	American	American	NOUN	NN	Number=Sing	7	obl	7:obl:as	Entity=5)|MSeg=America-n|SpaceAfter=No
+4	,	,	PUNCT	,	_	3	punct	3:punct	_
+5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	7:nsubj	Bridge=5<6|Entity=(6-person-acc:inf-cf4-1-coref)
+6	obviously	obviously	ADV	RB	Degree=Pos	7	advmod	7:advmod	MSeg=obvious-ly
+7	learn	learn	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+8	about	about	ADP	IN	_	10	case	10:case	_
+9	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	10	compound	10:compound	Entity=(7-abstract-new-cf5-2-coref-History_of_the_United_States(4-place-giv:inact-cf3-1-coref-United_States)
+10	history	history	NOUN	NN	Number=Sing	7	obl	7:obl:about	Entity=7)
+11	to	to	ADP	IN	_	15	case	15:case	_
+12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	Entity=(8-abstract-new-cf6-4-sgl
+13	much	much	ADV	RB	Degree=Pos	14	advmod	14:advmod	_
+14	greater	great	ADJ	JJR	Degree=Cmp	15	amod	15:amod	MSeg=great-er
+15	extent	extent	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
+16	than	than	SCONJ	IN	_	18	mark	18:mark	Discourse=adversative-antithesis:5->4:0:dm-than-34;elaboration-attribute:5->4:0:0:syn-mdf-33+syn-nmn-34,36
+17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	18:nsubj	Entity=(5-person-giv:act-cf1-1-ana)
+18	imagine	imagine	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	acl	15:acl:than	_
+19	any	any	DET	DT	PronType=Ind	23	nsubj	23:nsubj	Entity=(1-person-giv:act-cf2*-1-ana
+20	of	of	ADP	IN	_	22	case	22:case	_
+21	you	you	PRON	PRP	Case=Acc|Number=Plur|Person=2|PronType=Prs	22	dep	22:dep	_
+22	guys	guy	NOUN	NNS	Number=Plur	19	nmod	19:nmod:of	Entity=1)|MSeg=guy-s
+23	would	would	AUX	MD	VerbForm=Fin	18	ccomp	18:ccomp	_
+24	in	in	ADP	IN	_	25	case	25:case	_
+25	school	school	NOUN	NN	Number=Sing	23	obl	23:obl:in	Entity=(9-place-new-cf7-1-sgl)8)|SpaceAfter=No
+26	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+# sent_id = GUM_reddit_racial-4
+# s_prominence = 5
+# s_type = decl
+# speaker = gilgoose
+# transition = smooth-shift
+# text = Along with knowing our history, we also have grown up in the culture that’s resulted from nearly 250 years of our country’s existence and from far more many years before our revolution.
+1	Along	along	SCONJ	IN	_	3	mark	3:mark	Discourse=explanation-justify:6->4:1:_;context-circumstance:6->7:0:1:orp-along with-45-46+syn-pres-47
+2	with	with	SCONJ	IN	_	3	mark	3:mark	_
+3	knowing	know	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl:along_with	MSeg=know-ing
+4	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	Entity=(7-abstract-giv:act-cf2-2-coref-History_of_the_United_States(6-person-giv:act-cf1*-1-ana)
+5	history	history	NOUN	NN	Number=Sing	3	obj	3:obj	Entity=7)|SpaceAfter=No
+6	,	,	PUNCT	,	_	3	punct	3:punct	_
+7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	Discourse=joint-list_m:7->6:0:dm-also-52|Entity=(6-person-giv:act-cf1*-1-ana)
+8	also	also	ADV	RB	_	10	advmod	10:advmod	_
+9	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
+10	grown	grow	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	MSeg=grow-n
+11	up	up	ADP	RP	_	10	compound:prt	10:compound:prt	_
+12	in	in	ADP	IN	_	14	case	14:case	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(10-abstract-new-cf4-2-sgl
+14	culture	culture	NOUN	NN	Number=Sing	10	obl	10:obl:in|17:nsubj:pass	_
+15-16	that’s	_	_	_	_	_	_	_	_
+15	that	that	PRON	WDT	PronType=Rel	17	nsubj:pass	14:ref	Discourse=elaboration-attribute:8->7:0:syn-mdf-58+syn-relcl-59,61
+16	’s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
+17	resulted	result	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	acl:relcl	14:acl:relcl	MSeg=result-ed
+18	from	from	ADP	IN	_	21	case	21:case	_
+19	nearly	nearly	ADV	RB	Degree=Pos	20	advmod	20:advmod	Entity=(11-time-new-cf5-3-sgl|MSeg=near-ly
+20	250	250	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
+21	years	year	NOUN	NNS	Number=Plur	17	obl	17:obl:from	MSeg=year-s
+22	of	of	ADP	IN	_	26	case	26:case	_
+23	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	24	nmod:poss	24:nmod:poss	Entity=(12-abstract-new-cf6-4-sgl(4-place-giv:act-cf3-2-coref-United_States(6-person-giv:act-cf1*-1-ana)
+24-25	country’s	_	_	_	_	_	_	_	_
+24	country	country	NOUN	NN	Number=Sing	26	nmod:poss	26:nmod:poss	_
+25	’s	's	PART	POS	_	24	case	24:case	Entity=4)
+26	existence	existence	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=12)11)|MSeg=exist-ence
+27	and	and	CCONJ	CC	_	32	cc	32:cc	_
+28	from	from	ADP	IN	_	32	case	32:case	_
+29	far	far	ADV	RB	Degree=Pos	30	advmod	30:advmod	Entity=(13-time-new-cf7-4-sgl
+30	more	more	ADV	RBR	Degree=Cmp	31	advmod	31:advmod	_
+31	many	many	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+32	years	year	NOUN	NNS	Number=Plur	21	conj	17:obl:from|21:conj:and	MSeg=year-s
+33	before	before	ADP	IN	_	35	case	35:case	_
+34	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	35	nmod:poss	35:nmod:poss	Entity=(14-event-new-cf8-2-sgl(6-person-giv:act-cf1*-1-ana)|XML=<date notBefore:::"1775" notAfter:::"1783">
+35	revolution	revolution	NOUN	NN	Number=Sing	32	nmod	32:nmod:before	Entity=14)13)10)|SpaceAfter=No|XML=</date>
+36	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+# sent_id = GUM_reddit_racial-5
+# s_prominence = 3
+# s_type = decl
+# speaker = gilgoose
+# transition = continue
+# text = Naturally, we see the racial issues and tensions occurring today as a very logical conclusion, personal to each individual, and as intense in the realm of politics.
+1	Naturally	naturally	ADV	RB	Degree=Pos	4	advmod	4:advmod	Discourse=context-background:9->13:3:ref-prs-83,127|MSeg=Natur-al-ly|SpaceAfter=No
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	Entity=(6-person-giv:act-cf1*-1-ana)
+4	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(15-abstract-new-cf4-3,5-sgl(3-abstract-giv:inact-cf2-3-coref
+6	racial	racial	ADJ	JJ	Degree=Pos	7	amod	7:amod	MSeg=rac-ial
+7	issues	issue	NOUN	NNS	Number=Plur	4	obj	4:obj	Entity=3)|MSeg=issue-s
+8	and	and	CCONJ	CC	_	9	cc	9:cc	_
+9	tensions	tension	NOUN	NNS	Number=Plur	7	conj	4:obj|7:conj:and	Entity=(16-abstract-new-cf7-1-sgl)15)|MSeg=tens-ion-s
+10	occurring	occur	VERB	VBG	VerbForm=Ger	7	acl	7:acl	Discourse=elaboration-attribute:10->9:0:syn-mdf-87+syn-nmn-90|MSeg=occurr-ing
+11	today	today	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	Entity=(17-time-acc:com-cf3-1-coref)|MSeg=to-day
+12	as	as	ADP	IN	_	16	case	16:case	Discourse=same-unit_m:11->9:1:_
+13	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	Entity=(18-abstract-new-cf8-4-sgl
+14	very	very	ADV	RB	_	15	advmod	15:advmod	_
+15	logical	logical	ADJ	JJ	Degree=Pos	16	amod	16:amod	MSeg=logic-al
+16	conclusion	conclusion	NOUN	NN	Number=Sing	10	obl	10:obl:as	Entity=18)|MSeg=conclus-ion|SpaceAfter=No
+17	,	,	PUNCT	,	_	18	punct	18:punct	_
+18	personal	personal	ADJ	JJ	Degree=Pos	16	conj	10:obl:as|16:conj:and	MSeg=person-al
+19	to	to	ADP	IN	_	21	case	21:case	_
+20	each	each	DET	DT	PronType=Ind	21	det	21:det	Entity=(19-person-new-cf6-2-sgl
+21	individual	individual	NOUN	NN	Number=Sing	18	obl	18:obl:to	Entity=19)|SpaceAfter=No
+22	,	,	PUNCT	,	_	25	punct	25:punct	_
+23	and	and	CCONJ	CC	_	25	cc	25:cc	_
+24	as	as	ADP	IN	_	25	case	25:case	_
+25	intense	intense	ADJ	JJ	Degree=Pos	16	conj	10:obl:as|16:conj:and	_
+26	in	in	ADP	IN	_	28	case	28:case	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(20-abstract-new-cf5-2-sgl
+28	realm	realm	NOUN	NN	Number=Sing	25	obl	25:obl:in	_
+29	of	of	ADP	IN	_	30	case	30:case	_
+30	politics	politics	NOUN	NN	Number=Sing	28	nmod	28:nmod:of	Entity=(21-abstract-new-cf9-1-sgl)20)|MSeg=politic-s|SpaceAfter=No
+31	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-6
+# s_prominence = 3
+# s_type = decl
+# speaker = gilgoose
+# transition = zero
+# text = So, my questions are:
+# newpar
+# newpar_block = p (1 s)
+1	So	so	ADV	RB	_	4	advmod	4:advmod	Discourse=organization-preparation:12->13:2:grf-col-117|SpaceAfter=No
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(22-abstract-new-cf2-2-sgl(5-person-giv:inact-cf1-1-ana)
+4	questions	question	NOUN	NNS	Number=Plur	0	root	0:root	Entity=22)|MSeg=question-s
+5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	SpaceAfter=No
+6	:	:	PUNCT	:	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-7
+# s_prominence = 2
+# s_type = wh
+# speaker = gilgoose
+# transition = null
+# text = (1) How do different European countries feel/interpret our seemingly, from an outsider’s point of view, obsession with race?
+# newpar
+# newpar_block = list type:::"ordered" (4 s) | item n:::"1" (2 s)
+1	(1)	(1)	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	Discourse=topic-question:13->19:3:lex-indwd-119+syn-sbinv-120+grf-qst-141
+2	How	how	ADV	WRB	PronType=Int	7	advmod	7:advmod	_
+3	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux|9:aux	_
+4	different	different	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(23-place-new-cf2-3-sgl|MSeg=differ-ent
+5	European	European	ADJ	JJ	Degree=Pos	6	amod	6:amod	MSeg=Europe-an
+6	countries	country	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj|9:nsubj	Entity=23)|MSeg=countrie-s
+7	feel	feel	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Wh|SpaceAfter=No|XML=<w>
+8	/	/	SYM	SYM	_	9	cc	9:cc	SpaceAfter=No
+9	interpret	interpret	VERB	VB	VerbForm=Inf	7	conj	7:conj:slash	XML=</w>
+10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	Entity=(24-abstract-new-cf3-12-coref(6-person-giv:inact-cf1-1-ana)
+11	seemingly	seemingly	ADV	RB	Degree=Pos	21	amod	21:amod	MSeg=seem-ing-ly|SpaceAfter=No
+12	,	,	PUNCT	,	_	17	punct	17:punct	_
+13	from	from	ADP	IN	_	17	case	17:case	_
+14	an	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	Entity=(25-abstract-new-cf5-4-sgl(26-person-new-cf4-2-sgl
+15-16	outsider’s	_	_	_	_	_	_	_	_
+15	outsider	outsider	NOUN	NN	Number=Sing	17	nmod:poss	17:nmod:poss	MSeg=outsid-er
+16	’s	's	PART	POS	_	15	case	15:case	Entity=26)
+17	point	point	NOUN	NN	Number=Sing	11	advcl	11:advcl	_
+18	of	of	ADP	IN	_	19	case	19:case	_
+19	view	view	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	Entity=25)|SpaceAfter=No
+20	,	,	PUNCT	,	_	11	punct	11:punct	_
+21	obsession	obsession	NOUN	NN	Number=Sing	9	obj	9:obj	MSeg=obsess-ion
+22	with	with	ADP	IN	_	23	case	23:case	_
+23	race	race	NOUN	NN	Number=Sing	21	nmod	21:nmod:with	Entity=(27-abstract-new-cf6-1-coref)24)|SpaceAfter=No
+24	?	?	PUNCT	.	_	7	punct	7:punct	_
+
+# sent_id = GUM_reddit_racial-8
+# s_prominence = 2
+# s_type = q
+# speaker = gilgoose
+# transition = null
+# text = Do many people not understand why?
+1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	Discourse=joint-list_m:14->13:0:grf-seq-+sem-lxchn-124,146
+2	many	many	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(28-person-new-cf1-2-coref
+3	people	person	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=28)
+4	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+5	understand	understand	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar|MSeg=under-stand
+6	why	why	ADV	WRB	PronType=Int	5	advmod	5:advmod	SpaceAfter=No
+7	?	?	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_racial-9
+# s_prominence = 2
+# s_type = q
+# speaker = gilgoose
+# transition = establishment
+# text = (2) Do many people from your country not know anything about our very important domestic historical events/movements (e.g. our kind of slavery, the Civil War, the Reconstruction Era, the Golden Age of Racism in the 1920s + the KKK, Jim Crow + redlining, the Civil Rights Movement in the 1960s, and Black Lives Matter + criminal justice reform today, etc.)?
+# newpar
+# newpar_block = item n:::"2" (1 s)
+1	(2)	(2)	NUM	CD	NumForm=Digit|NumType=Card	9	dep	9:dep	Discourse=joint-list_m:15->13:1:grf-seq-+sem-lxchn-140,173
+2	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
+3	many	many	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(28-person-giv:act-cf2*-2-coref
+4	people	person	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	_
+5	from	from	ADP	IN	_	7	case	7:case	_
+6	your	your	PRON	PRP$	Case=Gen|Number=Sing|Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	Entity=(29-place-new-cf18-2-sgl(30-person-acc:com-cf4-1-sgl)
+7	country	country	NOUN	NN	Number=Sing	4	nmod	4:nmod:from	Entity=29)28)
+8	not	not	PART	RB	Polarity=Neg	9	advmod	9:advmod	_
+9	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar
+10	anything	anything	PRON	NN	Number=Sing|PronType=Ind	9	obj	9:obj	Entity=(31-abstract-new-cf16-1-sgl)
+11	about	about	ADP	IN	_	17	case	17:case	_
+12	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	Entity=(32-abstract-new-cf19-6,8-coref(6-person-giv:inact-cf1-1-ana)
+13	very	very	ADV	RB	_	14	advmod	14:advmod	_
+14	important	important	ADJ	JJ	Degree=Pos	17	amod	17:amod	MSeg=import-ant
+15	domestic	domestic	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
+16	historical	historical	ADJ	JJ	Degree=Pos	17	amod	17:amod	MSeg=histor-ic-al
+17	events	event	NOUN	NNS	Number=Plur	10	nmod	10:nmod:about	MSeg=event-s|SpaceAfter=No|XML=<w>
+18	/	/	SYM	SYM	_	19	cc	19:cc	SpaceAfter=No
+19	movements	movement	NOUN	NNS	Number=Plur	17	conj	10:nmod:about|17:conj:slash	Entity=32)|MSeg=move-ment-s|XML=</w>
+20	(	(	PUNCT	-LRB-	_	23	punct	23:punct	Discourse=elaboration-additional:16->15:0:sem-mrnym-160-167,170-173+ref-prs-160,170+grf-prn-168,219+lex-indwd-169|SpaceAfter=No
+21	e.g.	e.g.	ADV	FW	Abbr=Yes	23	advmod	23:advmod	_
+22	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	Bridge=32<33|Entity=(33-abstract-acc:inf-cf13-2-coref(6-person-giv:act-cf1-1-ana)
+23	kind	kind	NOUN	NN	Number=Sing	17	appos	17:appos	_
+24	of	of	ADP	IN	_	25	case	25:case	_
+25	slavery	slavery	NOUN	NN	Number=Sing	23	nmod	23:nmod:of	Entity=33)|MSeg=slave-ry|SpaceAfter=No
+26	,	,	PUNCT	,	_	29	punct	29:punct	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Bridge=32<34|Entity=(34-event-acc:inf-cf5-2,3-sgl-American_Civil_War|XML=<date notBefore:::"1861" notAfter:::"1865">
+28	Civil	Civil	ADJ	NNP	Degree=Pos|Number=Sing	29	amod	29:amod	_
+29	War	War	PROPN	NNP	Number=Sing	23	conj	17:appos|23:conj:plus	Entity=34)|SpaceAfter=No|XML=</date>
+30	,	,	PUNCT	,	_	33	punct	33:punct	_
+31	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Bridge=32<35|Entity=(35-time-acc:inf-cf6-2,3-sgl-Reconstruction_era|XML=<date notBefore:::"1863" notAfter:::"1877">
+32	Reconstruction	Reconstruction	PROPN	NNP	Number=Sing	33	compound	33:compound	MSeg=Re-construct-ion
+33	Era	Era	PROPN	NNP	Number=Sing	23	conj	17:appos|23:conj:plus	Entity=35)|SpaceAfter=No|XML=</date>
+34	,	,	PUNCT	,	_	37	punct	37:punct	_
+35	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	Bridge=32<36|Entity=(36-time-acc:inf-cf7-3-sgl
+36	Golden	Golden	ADJ	JJ	Degree=Pos	37	amod	37:amod	MSeg=Gold-en
+37	Age	Age	NOUN	NN	Number=Sing	23	conj	17:appos|23:conj:plus	_
+38	of	of	ADP	IN	_	39	case	39:case	_
+39	Racism	Racism	NOUN	NN	Number=Sing	37	nmod	37:nmod:of	Entity=(37-abstract-new-cf20-1-sgl)|MSeg=Rac-ism
+40	in	in	ADP	IN	_	42	case	42:case	_
+41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	Entity=(38-time-acc:com-cf8-2-sgl|XML=<date from:::"1920-01-01" to:::"1929-12-31">
+42	1920s	1920s	NOUN	NNS	Number=Plur	37	nmod	37:nmod:in	Entity=38)36)|XML=</date>
+43	+	+	SYM	SYM	_	45	cc	45:cc	_
+44	the	the	DET	DT	Definite=Def|PronType=Art	45	det	45:det	Bridge=32<39|Entity=(39-organization-acc:inf-cf9-2-coref-Ku_Klux_Klan
+45	KKK	KKK	PROPN	NNP	Abbr=Yes|Number=Sing	37	conj	23:conj|37:conj:plus	Entity=39)|SpaceAfter=No
+46	,	,	PUNCT	,	_	47	punct	47:punct	_
+47	Jim	Jim	PROPN	NNP	Number=Sing	23	conj	17:appos|23:conj:plus	Bridge=32<40|Entity=(40-person-acc:inf-cf11-1,2-coref-Jim_Crow_%28character%29
+48	Crow	Crow	PROPN	NNP	Number=Sing	47	flat	47:flat	Entity=40)
+49	+	+	SYM	SYM	_	50	cc	50:cc	_
+50	redlining	redlin	VERB	VBG	VerbForm=Ger	47	conj	23:conj|47:conj:plus	Bridge=32<41|Entity=(41-event-acc:inf-cf15-1-sgl)|MSeg=redlin-ing|SpaceAfter=No
+51	,	,	PUNCT	,	_	55	punct	55:punct	_
+52	the	the	DET	DT	Definite=Def|PronType=Art	55	det	55:det	Bridge=32<42|Entity=(42-organization-acc:inf-cf10-2,3,4-coref-Civil_rights_movement
+53	Civil	Civil	ADJ	NNP	Degree=Pos|Number=Sing	54	compound	54:compound	Entity=(43-abstract-new-cf21-1,2-coref
+54	Rights	Rights	PROPN	NNP	Number=Sing	55	compound	55:compound	Entity=43)
+55	Movement	Movement	PROPN	NNP	Number=Sing	23	conj	17:appos|23:conj:and	MSeg=Move-ment
+56	in	in	ADP	IN	_	58	case	58:case	_
+57	the	the	DET	DT	Definite=Def|PronType=Art	58	det	58:det	Entity=(44-time-new-cf17-2-coref|XML=<date from:::"1960-01-01" to:::"1969-12-31">
+58	1960s	1960s	NOUN	NNS	Number=Plur	55	nmod	55:nmod:in	Entity=44)42)|SpaceAfter=No|XML=</date>
+59	,	,	PUNCT	,	_	63	punct	63:punct	_
+60	and	and	CCONJ	CC	_	63	cc	63:cc	_
+61	Black	Black	ADJ	NNP	Degree=Pos|Number=Sing	62	amod	62:amod	Bridge=32<45|Entity=(45-organization-acc:inf-cf12-1,2,3-sgl-Black_Lives_Matter
+62	Lives	Life	PROPN	NNP	Number=Sing	63	nsubj	63:nsubj	_
+63	Matter	Matter	PROPN	NNP	Number=Sing	23	conj	17:appos|23:conj:and	Entity=45)
+64	+	+	SYM	SYM	_	67	cc	67:cc	_
+65	criminal	criminal	ADJ	JJ	Degree=Pos	66	amod	66:amod	Bridge=32<46|Entity=(46-event-acc:inf-cf14-3-sgl|MSeg=crimin-al
+66	justice	justice	NOUN	NN	Number=Sing	67	compound	67:compound	_
+67	reform	reform	NOUN	NN	Number=Sing	63	conj	23:conj|63:conj:plus	Entity=46)
+68	today	today	NOUN	NN	Number=Sing	67	nmod:tmod	67:nmod:tmod	Entity=(17-time-giv:inact-cf3-1-coref)|MSeg=to-day|SpaceAfter=No
+69	,	,	PUNCT	,	_	70	punct	70:punct	_
+70	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Plur	23	conj	17:appos|23:conj	SpaceAfter=No
+71	)	)	PUNCT	-RRB-	_	23	punct	23:punct	SpaceAfter=No
+72	?	?	PUNCT	.	_	9	punct	9:punct	_
+
+# sent_id = GUM_reddit_racial-10
+# s_prominence = 2
+# s_type = wh
+# speaker = gilgoose
+# transition = rough-shift
+# text = (3) What are your guys’ general thoughts when you hear about our outrage over a racial issue today?
+# newpar
+# newpar_block = item n:::"3" (1 s)
+1	(3)	(3)	NUM	CD	NumForm=Digit|NumType=Card	8	dep	8:dep	Discourse=joint-list_m:17->13:1:grf-seq-
+2	What	what	PRON	WP	PronType=Int	8	nsubj	8:nsubj	_
+3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+4	your	your	PRON	PRP$	Case=Gen|Number=Sing|Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	Entity=(47-abstract-new-cf5-5-sgl(1-person-giv:inact-cf1-2-coref
+5-6	guys’	_	_	_	_	_	_	_	_
+5	guys	guy	NOUN	NNS	Number=Plur	8	nmod:poss	8:nmod:poss	MSeg=guy-s
+6	’	's	PART	POS	_	5	case	5:case	Entity=1)
+7	general	general	ADJ	JJ	Degree=Pos	8	amod	8:amod	MSeg=general
+8	thoughts	thought	NOUN	NNS	Number=Plur	0	root	0:root	Cxn=Interrogative-Wh|Entity=47)|MSeg=thought-s
+9	when	when	ADV	WRB	PronType=Int	11	advmod	11:advmod	Discourse=context-circumstance:18->17:0:dm-when-229;elaboration-attribute:18->17:0:0:syn-mdf-228+syn-nmn-231
+10	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	11	nsubj	11:nsubj	Entity=(1-person-giv:act-cf1-1-ana)
+11	hear	hear	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	8	acl	8:acl:when	_
+12	about	about	ADP	IN	_	14	case	14:case	_
+13	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	Entity=(48-abstract-new-cf6-2-coref(6-person-giv:act-cf2*-1-ana)
+14	outrage	outrage	NOUN	NN	Number=Sing	11	obl	11:obl:about	MSeg=out-rage
+15	over	over	ADP	IN	_	18	case	18:case	_
+16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Bridge=3<49|Entity=(49-abstract-acc:inf-cf4-3-sgl
+17	racial	racial	ADJ	JJ	Degree=Pos	18	amod	18:amod	MSeg=rac-ial
+18	issue	issue	NOUN	NN	Number=Sing	14	nmod	14:nmod:over	Entity=49)48)
+19	today	today	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	Entity=(17-time-giv:act-cf3-1-coref)|MSeg=to-day|SpaceAfter=No
+20	?	?	PUNCT	.	_	8	punct	8:punct	_
+
+# sent_id = GUM_reddit_racial-11
+# addressee = gilgoose
+# s_prominence = 1
+# s_type = decl
+# speaker = CreepyOctopus
+# transition = zero
+# text = US society does seem quite obsessed with race, and while the very concept of dividing people into races is repulsive to me, I understand why this is a big deal in the US - and I understand why European views on the issue are usually too simplistic.
+# newpar
+# newpar_block = sp who:::"#CreepyOctopus" whom:::"#gilgoose" (5 s) | p (3 s)
+1	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=ROOT:19:0|Entity=(50-abstract-new-cf6-2-coref-Society_of_the_United_States(4-place-giv:inact-cf3-1-coref-United_States)
+2	society	society	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=50)|MSeg=soci-ety
+3	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	MSeg=doe-s
+4	seem	seem	VERB	VB	VerbForm=Inf	0	root	0:root	_
+5	quite	quite	ADV	RB	_	6	advmod	6:advmod	_
+6	obsessed	obsessed	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	MSeg=obsess-ed
+7	with	with	ADP	IN	_	8	case	8:case	_
+8	race	race	NOUN	NN	Number=Sing	6	obl	6:obl:with	Entity=(27-abstract-giv:inact-cf2-1-coref)|SpaceAfter=No
+9	,	,	PUNCT	,	_	10	punct	10:punct	_
+10	and	and	CCONJ	CC	_	26	cc	26:cc	Discourse=evaluation-comment:20->19:0:lex-indwd-253+lex-indwd-271;joint-other:20->19:1:0:orp-and-250
+11	while	while	SCONJ	IN	_	21	mark	21:mark	Discourse=adversative-concession:21->24:0:dm-while-251
+12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(51-abstract-new-cf5-3-sgl
+13	very	very	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
+14	concept	concept	NOUN	NN	Number=Sing	21	nsubj	21:nsubj	_
+15	of	of	SCONJ	IN	_	16	mark	16:mark	Discourse=elaboration-attribute:22->21:0:syn-mdf-254+syn-nmn-255-256
+16	dividing	divide	VERB	VBG	VerbForm=Ger	14	acl	14:acl:of	MSeg=divid-ing
+17	people	person	NOUN	NNS	Number=Plur	16	obj	16:obj	Entity=(52-person-new-cf8-1-sgl)51)
+18	into	into	ADP	IN	_	19	case	19:case	MSeg=in-to
+19	races	race	NOUN	NNS	Number=Plur	16	obl	16:obl:into	Bridge=27<53|Entity=(53-abstract-acc:inf-cf4-1-sgl)|MSeg=race-s
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	21:cop	Discourse=same-unit_m:23->21:1:_
+21	repulsive	repulsive	ADJ	JJ	Degree=Pos	26	advcl	26:advcl:while	MSeg=repuls-ive
+22	to	to	ADP	IN	_	23	case	23:case	_
+23	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	21	obl	21:obl:to	Entity=(54-person-acc:com-cf1-1-ana)|SpaceAfter=No
+24	,	,	PUNCT	,	_	21	punct	21:punct	_
+25	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	26	nsubj	26:nsubj	Discourse=same-unit_m:24->20:0:_|Entity=(54-person-giv:act-cf1-1-ana)
+26	understand	understand	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	MSeg=under-stand
+27	why	why	ADV	WRB	PronType=Rel	26	obj	26:obj	_
+28	this	this	PRON	DT	Number=Sing|PronType=Dem	32	nsubj	32:nsubj	Entity=(27-abstract-giv:act-cf2-1-ana)
+29	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	32:cop	_
+30	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	Entity=(27-abstract-giv:act-cf2-3-coref
+31	big	big	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+32	deal	deal	NOUN	NN	Number=Sing	27	advcl:relcl	27:advcl:relcl	Entity=27)
+33	in	in	ADP	IN	_	35	case	35:case	_
+34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	Entity=(4-place-giv:act-cf3-2-coref-United_States
+35	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	32	obl	32:obl:in	Entity=4)
+36	-	-	PUNCT	:	_	39	punct	39:punct	Discourse=adversative-contrast_m:25->19:1:_;joint-list:25->24:0:0:orp-and-277
+37	and	and	CCONJ	CC	_	39	cc	39:cc	_
+38	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	39	nsubj	39:nsubj	Entity=(54-person-giv:act-cf1-1-ana)
+39	understand	understand	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	MSeg=under-stand
+40	why	why	ADV	WRB	PronType=Rel	39	obj	39:obj	_
+41	European	European	ADJ	JJ	Degree=Pos	42	amod	42:amod	Entity=(55-abstract-new-cf7-2-sgl|MSeg=Europe-an
+42	views	view	NOUN	NNS	Number=Plur	49	nsubj	49:nsubj	MSeg=view-s
+43	on	on	ADP	IN	_	45	case	45:case	_
+44	the	the	DET	DT	Definite=Def|PronType=Art	45	det	45:det	Entity=(27-abstract-giv:act-cf2-2-coref
+45	issue	issue	NOUN	NN	Number=Sing	42	nmod	42:nmod:on	Entity=27)55)
+46	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	49	cop	49:cop	_
+47	usually	usually	ADV	RB	Degree=Pos	49	advmod	49:advmod	MSeg=usual-ly
+48	too	too	ADV	RB	Degree=Pos	49	advmod	49:advmod	_
+49	simplistic	simplistic	ADJ	JJ	Degree=Pos	40	advcl:relcl	40:advcl:relcl	MSeg=simpl-istic|SpaceAfter=No
+50	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-12
+# addressee = gilgoose
+# s_prominence = 2
+# s_type = decl
+# speaker = CreepyOctopus
+# transition = establishment
+# text = I'm pretty sure that most people here only have a very vague idea of US history in this regard.
+1-2	I'm	_	_	_	_	_	_	_	_
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	Discourse=attribution-positive:26->27:0:sem-atsrc-291+lex-indwd-294+syn-rpr-295|Entity=(54-person-giv:act-cf1*-1-ana)
+2	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	pretty	pretty	ADV	RB	_	4	advmod	4:advmod	_
+4	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
+5	that	that	SCONJ	IN	_	10	mark	10:mark	Discourse=causal-cause:27->25:0:_
+6	most	most	ADJ	JJS	Degree=Sup	7	amod	7:amod	Entity=(56-person-new-cf7-3-sgl
+7	people	person	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
+8	here	here	ADV	RB	PronType=Dem	10	advmod	10:advmod	Entity=(57-place-acc:com-cf5-1-sgl)56)
+9	only	only	ADV	RB	_	10	advmod	10:advmod	_
+10	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	ccomp	4:ccomp	_
+11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(58-abstract-new-cf6-4-sgl
+12	very	very	ADV	RB	_	13	advmod	13:advmod	_
+13	vague	vague	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
+14	idea	idea	NOUN	NN	Number=Sing	10	obj	10:obj	_
+15	of	of	ADP	IN	_	17	case	17:case	_
+16	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	17	compound	17:compound	Entity=(7-abstract-giv:inact-cf3-2-coref-History_of_the_United_States(4-place-giv:act-cf2-1-coref-United_States)
+17	history	history	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=7)58)
+18	in	in	ADP	IN	_	20	case	20:case	_
+19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	Bridge=27<59|Entity=(59-abstract-acc:inf-cf4-2-sgl
+20	regard	regard	NOUN	NN	Number=Sing	10	obl	10:obl:in	Entity=59)|SpaceAfter=No
+21	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-13
+# addressee = gilgoose
+# s_prominence = 3
+# s_type = decl
+# speaker = CreepyOctopus
+# transition = continue
+# text = Slavery is widely known, so is the KKK (albeit superficially), but I'm quite sure most people have no idea what Jim Crow laws are, or that official segregation continued into the 1960s, and most other race-related history.
+1	Slavery	slavery	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass	Discourse=adversative-concession:28->31:1:dm-but-326|Entity=(33-abstract-giv:inact-cf2-1-coref)|MSeg=Slave-ry
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+3	widely	widely	ADV	RB	Degree=Pos	4	advmod	4:advmod	MSeg=wide-ly
+4	known	know	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	MSeg=know-n|SpaceAfter=No
+5	,	,	PUNCT	,	_	9	punct	9:punct	_
+6	so	so	ADV	RB	_	9	advmod	9:advmod	Discourse=joint-list_m:29->28:0:lex-altlex-317-318
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(39-organization-giv:inact-cf3-2-coref-Ku_Klux_Klan
+9	KKK	KKK	PROPN	NNP	Abbr=Yes|Number=Sing	4	parataxis	4:parataxis	Entity=39)
+10	(	(	PUNCT	-LRB-	_	12	punct	12:punct	Discourse=adversative-concession:30->29:0:dm-albeit-322|SpaceAfter=No
+11	albeit	albeit	SCONJ	IN	_	12	mark	12:mark	_
+12	superficially	superficially	ADV	RB	Degree=Pos	9	advcl	9:advcl:albeit	MSeg=superficial-ly|SpaceAfter=No
+13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	SpaceAfter=No
+14	,	,	PUNCT	,	_	19	punct	19:punct	_
+15	but	but	CCONJ	CC	_	19	cc	19:cc	Discourse=elaboration-additional:31->27:1:ref-prs-291,327+grf-prn-321,324
+16-17	I'm	_	_	_	_	_	_	_	_
+16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	19:nsubj	Discourse=attribution-positive:32->34:2:sem-atsrc-327+lex-indwd-330+syn-rpr-343|Entity=(54-person-giv:act-cf1*-1-ana)
+17	'm	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
+18	quite	quite	ADV	RB	_	19	advmod	19:advmod	_
+19	sure	sure	ADJ	JJ	Degree=Pos	4	conj	4:conj:but	_
+20	most	most	ADJ	JJS	Degree=Sup	21	amod	21:amod	Discourse=attribution-negative:33->34:1:sem-atsrc-296-297|Entity=(60-person-new-cf6-2-sgl
+21	people	person	NOUN	NNS	Number=Plur	22	nsubj	22:nsubj	Entity=60)
+22	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	ccomp	19:ccomp	_
+23	no	no	DET	DT	Polarity=Neg|PronType=Neg	24	det	24:det	Entity=(61-abstract-new-cf9-2-sgl
+24	idea	idea	NOUN	NN	Number=Sing	22	obj	22:obj	Entity=61)
+25	what	what	PRON	WP	PronType=Int	24	acl	24:acl	Discourse=same-unit_m:34->31:0:_
+26	Jim	Jim	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(62-abstract-new-cf7-2,3-sgl(40-person-giv:inact-cf5-1,2-coref-Jim_Crow_%28character%29
+27	Crow	Crow	PROPN	NNP	Number=Sing	26	flat	26:flat	Entity=40)
+28	laws	law	NOUN	NNS	Number=Plur	25	nsubj	25:nsubj	Entity=62)|MSeg=law-s
+29	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	25	cop	25:cop	SpaceAfter=No
+30	,	,	PUNCT	,	_	35	punct	35:punct	_
+31	or	or	CCONJ	CC	_	35	cc	35:cc	Discourse=joint-list_m:35->34:0:sem-lxchn-337-338,345+dm-or-342
+32	that	that	SCONJ	IN	_	35	mark	35:mark	_
+33	official	official	ADJ	JJ	Degree=Pos	34	amod	34:amod	Entity=(63-abstract-new-cf8-2-coref|MSeg=offic-ial
+34	segregation	segregation	NOUN	NN	Number=Sing	35	nsubj	35:nsubj	Entity=63)|MSeg=segregat-ion
+35	continued	continue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	conj	24:acl|25:conj:or	MSeg=continu-ed
+36	into	into	ADP	IN	_	38	case	38:case	MSeg=in-to
+37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	Entity=(44-time-giv:inact-cf4-2-coref|XML=<date from:::"1960-01-01" to:::"1969-12-31">
+38	1960s	1960s	NOUN	NNS	Number=Plur	35	obl	35:obl:into	Entity=44)|SpaceAfter=No|XML=</date>
+39	,	,	PUNCT	,	_	40	punct	40:punct	_
+40	and	and	CCONJ	CC	_	46	cc	46:cc	_
+41	most	most	ADV	RBS	Degree=Sup	46	advmod	46:advmod	Entity=(64-abstract-new-cf10-6-sgl
+42	other	other	ADJ	JJ	Degree=Pos	46	amod	46:amod	_
+43	race	race	NOUN	NN	Number=Sing	45	compound	45:compound	SpaceAfter=No|XML=<w>
+44	-	-	PUNCT	HYPH	_	43	punct	43:punct	SpaceAfter=No
+45	related	related	ADJ	JJ	Degree=Pos	46	amod	46:amod	MSeg=relat-ed|XML=</w>
+46	history	history	NOUN	NN	Number=Sing	25	conj	24:acl|25:conj:and	Entity=64)|SpaceAfter=No
+47	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-14
+# addressee = gilgoose
+# s_prominence = 1
+# s_type = decl
+# speaker = CreepyOctopus
+# transition = continue
+# text = It definitely looks to me like American society as a whole isn't doing a good job of moving past these issues, and that the racial division is even encouraged at some level, but I am not as presumption as to preach solutions, having never lived in the US, let alone as a racial minority.
+# newpar
+# newpar_block = p (2 s)
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	Discourse=attribution-positive:36->37:2:sem-atsrc-263+syn-rpr-383|Entity=(65-abstract-acc:com-cf5-1-sgl)
+2	definitely	definitely	ADV	RB	Degree=Pos	3	advmod	3:advmod	MSeg=definite-ly
+3	looks	look	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MSeg=look-s
+4	to	to	ADP	IN	_	5	case	5:case	_
+5	me	I	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	3	obl	3:obl:to	Entity=(54-person-giv:act-cf1*-1-ana)
+6	like	like	SCONJ	IN	_	14	mark	14:mark	Discourse=joint-other_m:37->19:2:lex-indwd-288
+7	American	American	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(66-abstract-new-cf11-8-disc(50-abstract-giv:inact-cf2-2-coref-Society_of_the_United_States|MSeg=America-n
+8	society	society	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	MSeg=soci-ety
+9	as	as	ADP	IN	_	11	case	11:case	_
+10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	_
+11	whole	whole	NOUN	NN	Number=Sing	8	nmod	8:nmod:as	Entity=50)
+12-13	isn't	_	_	_	_	_	_	_	_
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
+13	n't	not	PART	RB	Polarity=Neg	14	advmod	14:advmod	_
+14	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	3	advcl	3:advcl:like	MSeg=do-ing
+15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(67-abstract-new-cf7-3-sgl
+16	good	good	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
+17	job	job	NOUN	NN	Number=Sing	14	obj	14:obj	_
+18	of	of	SCONJ	IN	_	19	mark	19:mark	Discourse=elaboration-attribute:38->37:0:syn-mdf-375+syn-nmn-376-377
+19	moving	move	VERB	VBG	VerbForm=Ger	17	acl	17:acl:of	MSeg=mov-ing
+20	past	past	ADP	IN	_	22	case	22:case	_
+21	these	this	DET	DT	Number=Plur|PronType=Dem	22	det	22:det	Entity=(3-abstract-giv:inact-cf3-2-coref
+22	issues	issue	NOUN	NNS	Number=Plur	19	obl	19:obl:past	Entity=3)67)66)|MSeg=issue-s|SpaceAfter=No
+23	,	,	PUNCT	,	_	31	punct	31:punct	_
+24	and	and	CCONJ	CC	_	31	cc	31:cc	Discourse=joint-list_m:39->37:1:dm-and-382
+25	that	that	SCONJ	IN	_	31	mark	31:mark	_
+26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(68-abstract-new-cf6-3-sgl
+27	racial	racial	ADJ	JJ	Degree=Pos	28	amod	28:amod	MSeg=rac-ial
+28	division	division	NOUN	NN	Number=Sing	31	nsubj:pass	31:nsubj:pass	Entity=68)
+29	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	31	aux:pass	31:aux:pass	_
+30	even	even	ADV	RB	_	31	advmod	31:advmod	_
+31	encouraged	encourage	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	conj	3:advcl:like|14:conj:and	MSeg=en-courag-ed
+32	at	at	ADP	IN	_	34	case	34:case	_
+33	some	some	DET	DT	PronType=Ind	34	det	34:det	Entity=(69-abstract-new-cf10-2-sgl
+34	level	level	NOUN	NN	Number=Sing	31	obl	31:obl:at	Entity=69)|SpaceAfter=No
+35	,	,	PUNCT	,	_	41	punct	41:punct	_
+36	but	but	CCONJ	CC	_	41	cc	41:cc	Discourse=adversative-concession:40->37:3:dm-but-394
+37	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	41	nsubj	41:nsubj	Entity=(54-person-giv:act-cf1*-1-ana)
+38	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	41	cop	41:cop	_
+39	not	not	PART	RB	Polarity=Neg	41	advmod	41:advmod	_
+40	as	as	ADV	RB	_	41	advmod	41:advmod	_
+41	presumption	presumption	NOUN	NN	Number=Sing|Typo=Yes	3	conj	3:conj:but	CorrectForm=presumptuous|MSeg=presumpt-ion|XML=<sic ana:::"presumptuous"></sic>
+42	as	as	SCONJ	IN	_	44	mark	44:mark	Discourse=mode-manner:41->40:0:dm-as-400
+43	to	to	PART	TO	_	44	mark	44:mark	_
+44	preach	preach	VERB	VB	VerbForm=Inf	41	advcl	41:advcl:as_to	_
+45	solutions	solution	NOUN	NNS	Number=Plur	44	obj	44:obj	Entity=(70-abstract-new-cf8-1-sgl)|MSeg=solution-s|SpaceAfter=No
+46	,	,	PUNCT	,	_	49	punct	49:punct	_
+47	having	have	AUX	VBG	VerbForm=Ger	49	aux	49:aux	Discourse=causal-cause:42->40:1:_|MSeg=hav-ing
+48	never	never	ADV	RB	Polarity=Neg	49	advmod	49:advmod	_
+49	lived	live	VERB	VBN	Tense=Past|VerbForm=Part	41	advcl	41:advcl	MSeg=liv-ed
+50	in	in	ADP	IN	_	52	case	52:case	_
+51	the	the	DET	DT	Definite=Def|PronType=Art	52	det	52:det	Entity=(4-place-giv:inact-cf4-2-coref-United_States
+52	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	49	obl	49:obl:in	Entity=4)|SpaceAfter=No
+53	,	,	PUNCT	,	_	59	punct	59:punct	_
+54	let	let	VERB	VB	VerbForm=Inf	59	cc	59:cc	Discourse=elaboration-additional:43->42:0:lex-altlex-412-413
+55	alone	alone	ADJ	JJ	Degree=Pos	54	fixed	54:fixed	MSeg=a-lone
+56	as	as	ADP	IN	_	59	case	59:case	_
+57	a	a	DET	DT	Definite=Ind|PronType=Art	59	det	59:det	Entity=(71-person-new-cf9-3-sgl
+58	racial	racial	ADJ	JJ	Degree=Pos	59	amod	59:amod	MSeg=rac-ial
+59	minority	minority	NOUN	NN	Number=Sing	49	conj	41:advcl|49:conj:let_alone	Entity=71)|MSeg=minor-ity|SpaceAfter=No
+60	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_racial-15
+# addressee = gilgoose
+# s_prominence = 3
+# s_type = decl
+# speaker = CreepyOctopus
+# transition = continue
+# text = I find it annoying when Americans try to apply US racial concepts to Europe, and thus make absurd statements, so it's only fair for me to admit my limited understanding of the subject, even if I consider myself to know US history better than 90% of Europeans.
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj:outer	2:nsubj:outer|4:nsubj:xsubj	Discourse=causal-cause:44->47:1:dm-so-440|Entity=(54-person-giv:act-cf1*-1-ana)
+2	find	find	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	expl	2:expl	Entity=(72-event-new-cf6-1-cata)
+4	annoying	annoying	ADJ	JJ	Degree=Pos	2	xcomp	2:xcomp	MSeg=annoy-ing
+5	when	when	ADV	WRB	PronType=Int	7	advmod	7:advmod	Discourse=contingency-condition:45->44:0:dm-when-423
+6	Americans	American	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj|9:nsubj:xsubj|18:nsubj	Entity=(72-event-acc:com-cf6-2-coref(73-person-new-cf7-1-sgl)|MSeg=America-n-s
+7	try	try	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	2	advcl	2:advcl:when	_
+8	to	to	PART	TO	_	9	mark	9:mark	_
+9	apply	apply	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	MSeg=appl-y
+10	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	12	compound	12:compound	Entity=(74-abstract-new-cf3-3-coref(4-place-giv:act-cf4-1-coref-United_States)
+11	racial	racial	ADJ	JJ	Degree=Pos	12	amod	12:amod	MSeg=rac-ial
+12	concepts	concept	NOUN	NNS	Number=Plur	9	obj	9:obj	Entity=74)|MSeg=concept-s
+13	to	to	ADP	IN	_	14	case	14:case	_
+14	Europe	Europe	PROPN	NNP	Number=Sing	9	obl	9:obl:to	Entity=(75-place-new-cf11-1-sgl-Europe)72)|SpaceAfter=No
+15	,	,	PUNCT	,	_	18	punct	18:punct	_
+16	and	and	CCONJ	CC	_	18	cc	18:cc	Discourse=causal-result:46->45:0:dm-and-434+dm-thus-435
+17	thus	thus	ADV	RB	_	18	advmod	18:advmod	_
+18	make	make	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	2:advcl:when|7:conj:and	_
+19	absurd	absurd	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(76-abstract-new-cf8-2-sgl
+20	statements	statement	NOUN	NNS	Number=Plur	18	obj	18:obj	Entity=76)|MSeg=state-ment-s|SpaceAfter=No
+21	,	,	PUNCT	,	_	26	punct	26:punct	_
+22	so	so	ADV	RB	_	26	advmod	26:advmod	Discourse=explanation-justify:47->40:2:_
+23-24	it's	_	_	_	_	_	_	_	_
+23	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	26	expl	26:expl	Entity=(77-event-acc:com-cf2-1-ana)
+24	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
+25	only	only	ADV	RB	_	26	advmod	26:advmod	_
+26	fair	fair	ADJ	JJ	Degree=Pos	2	parataxis	2:parataxis	_
+27	for	for	SCONJ	IN	_	30	mark	30:mark	_
+28	me	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	30:nsubj	Entity=(54-person-giv:act-cf1*-1-ana)
+29	to	to	PART	TO	_	30	mark	30:mark	Entity=(77-event-giv:act-cf2-2-coref
+30	admit	admit	VERB	VB	VerbForm=Inf	26	csubj	26:csubj	_
+31	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	33	nmod:poss	33:nmod:poss	Entity=(78-abstract-new-cf9-3-sgl(54-person-giv:act-cf1*-1-ana)
+32	limited	limited	ADJ	JJ	Degree=Pos	33	amod	33:amod	MSeg=limit-ed
+33	understanding	understanding	NOUN	NN	Number=Sing	30	obj	30:obj	MSeg=under-stand-ing
+34	of	of	ADP	IN	_	36	case	36:case	_
+35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	Entity=(74-abstract-giv:act-cf3-2-coref
+36	subject	subject	NOUN	NN	Number=Sing	33	nmod	33:nmod:of	Entity=74)78)77)|SpaceAfter=No
+37	,	,	PUNCT	,	_	41	punct	41:punct	_
+38	even	even	ADV	RB	_	41	advmod	41:advmod	Discourse=adversative-concession:48->47:0:dm-even if-456-457
+39	if	if	SCONJ	IN	_	41	mark	41:mark	_
+40	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	41	nsubj	41:nsubj	Entity=(54-person-giv:act-cf1*-1-ana)
+41	consider	consider	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	26	advcl	26:advcl:if	Cxn=Condition-Realistic
+42	myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs|Reflex=Yes	41	obj	41:obj|44:nsubj:xsubj	Entity=(54-person-giv:act-cf1*-1-ana)|MSeg=my-self
+43	to	to	PART	TO	_	44	mark	44:mark	_
+44	know	know	VERB	VB	VerbForm=Inf	41	xcomp	41:xcomp	_
+45	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	46	compound	46:compound	Entity=(7-abstract-giv:inact-cf5-2-coref-History_of_the_United_States(4-place-giv:act-cf4-1-coref-United_States)
+46	history	history	NOUN	NN	Number=Sing	44	obj	44:obj	Entity=7)
+47	better	well	ADV	RBR	Degree=Cmp	44	advmod	44:advmod	MSeg=bett-er
+48	than	than	ADP	IN	_	50	case	50:case	_
+49	90	90	NUM	CD	NumForm=Digit|NumType=Card	50	nummod	50:nummod	Entity=(79-person-new-cf12-2-sgl|SpaceAfter=No|XML=<w>
+50	%	%	SYM	NN	Number=Sing	47	obl	47:obl:than	XML=</w>
+51	of	of	ADP	IN	_	52	case	52:case	_
+52	Europeans	European	PROPN	NNPS	Number=Plur	50	nmod	50:nmod:of	Entity=(80-person-new-cf10-1-sgl)79)|MSeg=Europe-an-s|SpaceAfter=No
+53	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_racial-16
+# addressee = CreepyOctopus
+# s_prominence = 3
+# s_type = other
+# speaker = jilletlecroix
+# transition = zero
+# text = "sn't doing a good job of moving past these issues"
+# newpar
+# newpar_block = sp who:::"#jilletlecroix" whom:::"#CreepyOctopus" (6 s) | p (1 s) | quote (1 s)
+1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=organization-preparation:49->51:0:ref-prop-472-484,486;adversative-antithesis:49->51:1:0:orp-though-490|Entity=(66-abstract-giv:inact-cf1-4-disc|SpaceAfter=No
+2-3	sn't	_	_	_	_	_	_	_	_
+2	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	4	aux	4:aux	CorrectForm=is|XML=<sic ana:::"is"></sic>
+3	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
+4	doing	do	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	MSeg=do-ing
+5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	_
+6	good	good	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+7	job	job	NOUN	NN	Number=Sing	4	obj	4:obj	_
+8	of	of	SCONJ	IN	_	9	mark	9:mark	Discourse=elaboration-attribute:50->49:0:syn-mdf-478+syn-nmn-479-480
+9	moving	move	VERB	VBG	VerbForm=Ger	7	acl	7:acl:of	MSeg=mov-ing
+10	past	past	ADP	IN	_	12	case	12:case	_
+11	these	this	DET	DT	Number=Plur|PronType=Dem	12	det	12:det	_
+12	issues	issue	NOUN	NNS	Number=Plur	9	obl	9:obl:past	MSeg=issue-s|SpaceAfter=No
+13	"	''	PUNCT	''	_	4	punct	4:punct	Entity=66)
+
+# sent_id = GUM_reddit_racial-17
+# addressee = CreepyOctopus
+# s_prominence = 2
+# s_type = q
+# speaker = jilletlecroix
+# transition = establishment
+# text = Is that entirely true, though?
+# newpar
+# newpar_block = p (1 s)
+1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	Discourse=topic-question:51->55:3:grf-qst-491
+2	that	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	4:nsubj	Entity=(66-abstract-giv:act-cf1*-1-coref)
+3	entirely	entirely	ADV	RB	Degree=Pos	4	advmod	4:advmod	MSeg=entire-ly
+4	true	true	ADJ	JJ	Degree=Pos	0	root	0:root	Cxn=Interrogative-Polar|SpaceAfter=No
+5	,	,	PUNCT	,	_	6	punct	6:punct	_
+6	though	though	ADV	RB	Degree=Pos	4	advmod	4:advmod	SpaceAfter=No
+7	?	?	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-18
+# addressee = CreepyOctopus
+# s_prominence = 2
+# s_type = decl
+# speaker = jilletlecroix
+# transition = zero
+# text = The Civil Rights movement ended 50 years ago, and there's been a black president since then.
+# newpar
+# newpar_block = p (3 s)
+1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=context-background:52->53:0:sem-synym-497-499,509|Entity=(42-organization-giv:inact-cf2-2,3,4-coref-Civil_rights_movement
+2	Civil	Civil	ADJ	NNP	Degree=Pos|Number=Sing	3	amod	3:amod	Entity=(43-abstract-giv:inact-cf3-1,2-coref
+3	Rights	Rights	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=43)
+4	movement	Movement	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=42)|MSeg=move-ment
+5	ended	end	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	MSeg=end-ed
+6	50	50	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(81-time-new-cf1-3-coref|XML=<date notBefore:::"1969" notAfter:::"1969">
+7	years	year	NOUN	NNS	Number=Plur	8	obl:tmod	8:obl:tmod	MSeg=year-s
+8	ago	ago	ADV	RB	Degree=Pos	5	advmod	5:advmod	Entity=81)|MSeg=a-go|SpaceAfter=No|XML=</date>
+9	,	,	PUNCT	,	_	13	punct	13:punct	_
+10	and	and	CCONJ	CC	_	13	cc	13:cc	Discourse=explanation-evidence:53->55:2:_;joint-sequence:53->52:0:0:mrf-tns-496,503+orp-and-501
+11-12	there's	_	_	_	_	_	_	_	_
+11	there	there	PRON	EX	PronType=Dem	13	expl	13:expl	_
+12	's	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
+13	been	be	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj:and	Cxn=Existential-There
+14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	Entity=(82-person-new-cf4-3-sgl
+15	black	black	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
+16	president	president	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	Entity=82)|MSeg=presid-ent
+17	since	since	ADP	IN	_	18	case	18:case	_
+18	then	then	ADV	RB	PronType=Dem	16	nmod	16:nmod:since	Entity=(81-time-giv:act-cf1-1-coref)|SpaceAfter=No
+19	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_racial-19
+# addressee = CreepyOctopus
+# s_prominence = 1
+# s_type = decl
+# speaker = jilletlecroix
+# transition = null
+# text = There's still tons of problems, but it's massively improved.
+1-2	There's	_	_	_	_	_	_	_	_
+1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	Discourse=adversative-concession:54->55:0:dm-but-518
+2	's	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-There
+3	still	still	ADV	RB	Degree=Pos	2	advmod	2:advmod	_
+4	tons	ton	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	Entity=(83-abstract-new-cf2-1-sgl|MSeg=ton-s
+5	of	of	ADP	IN	_	6	case	6:case	_
+6	problems	problem	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Entity=83)|MSeg=problem-s|SpaceAfter=No
+7	,	,	PUNCT	,	_	12	punct	12:punct	_
+8	but	but	CCONJ	CC	_	12	cc	12:cc	Discourse=joint-other_m:55->19:2:_
+9-10	it's	_	_	_	_	_	_	_	_
+9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	nsubj:pass	12:nsubj:pass	Entity=(84-abstract-acc:com-cf1-1-sgl)
+10	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	aux:pass	12:aux:pass	_
+11	massively	massively	ADV	RB	Degree=Pos	12	advmod	12:advmod	MSeg=massive-ly
+12	improved	improve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:but	MSeg=improv-ed|SpaceAfter=No
+13	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_racial-20
+# addressee = CreepyOctopus
+# s_prominence = 2
+# s_type = decl
+# speaker = jilletlecroix
+# transition = null
+# text = To be a minority in the USA today is a night and day difference to what it was during my grandparents' time.
+1	To	to	PART	TO	_	4	mark	4:mark	Discourse=explanation-justify:56->55:1:_|Entity=(85-abstract-new-cf1-4-disc
+2	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(86-person-new-cf5-2-sgl
+4	minority	minority	NOUN	NN	Number=Sing	14	csubj	14:csubj	Entity=86)|MSeg=minor-ity
+5	in	in	ADP	IN	_	7	case	7:case	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(4-place-giv:inact-cf3-2-coref-United_States
+7	USA	USA	PROPN	NNP	Abbr=Yes|Number=Sing	4	nmod	4:nmod:in	Entity=4)85)
+8	today	today	NOUN	NN	Number=Sing	4	obl:tmod	4:obl:tmod	Entity=(17-time-giv:inact-cf4-1-coref)|MSeg=to-day
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+10	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(87-abstract-new-cf7-5-sgl
+11	night	night	NOUN	NN	Number=Sing	14	compound	14:compound	_
+12	and	and	CCONJ	CC	_	13	cc	13:cc	_
+13	day	day	NOUN	NN	Number=Sing	11	conj	11:conj:and|14:compound	_
+14	difference	difference	NOUN	NN	Number=Sing	0	root	0:root	Entity=87)|MSeg=differ-ence
+15	to	to	ADP	IN	_	16	case	16:case	_
+16	what	what	PRON	WP	PronType=Int	14	acl	14:acl	_
+17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj	Entity=(85-abstract-giv:act-cf1-1-coref)
+18	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	_
+19	during	during	ADP	IN	_	23	case	23:case	MSeg=dur-ing
+20	my	my	PRON	PRP$	Case=Gen|Number=Sing|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	Entity=(88-time-new-cf8-4-sgl(89-person-new-cf6-2-sgl(5-person-giv:inact-cf2-1-ana)
+21-22	grandparents'	_	_	_	_	_	_	_	_
+21	grandparents	grandparent	NOUN	NNS	Number=Plur	23	nmod:poss	23:nmod:poss	MSeg=grand-parent-s
+22	'	's	PART	POS	_	21	case	21:case	Entity=89)
+23	time	time	NOUN	NN	Number=Sing	16	nmod	16:nmod:during	Entity=88)|SpaceAfter=No
+24	.	.	PUNCT	.	_	14	punct	14:punct	_
+
+# sent_id = GUM_reddit_racial-21
+# addressee = CreepyOctopus
+# s_prominence = 3
+# s_type = decl
+# speaker = jilletlecroix
+# transition = establishment
+# text = It's not even close to what segregation was.
+# newpar
+# newpar_block = p (1 s)
+1-2	It's	_	_	_	_	_	_	_	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	Discourse=elaboration-additional:57->56:0:ref-prop-524-530,548|Entity=(85-abstract-giv:act-cf1*-1-ana)
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+4	even	even	ADV	RB	_	5	advmod	5:advmod	_
+5	close	close	ADV	RB	Degree=Pos	0	root	0:root	_
+6	to	to	SCONJ	IN	_	7	mark	7:mark	_
+7	what	what	PRON	WP	PronType=Int	5	advcl	5:advcl:to	_
+8	segregation	segregation	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=(63-abstract-giv:inact-cf2-1-coref)|MSeg=segregat-ion
+9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	SpaceAfter=No
+10	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_racial-22
+# addressee = gilgoose
+# s_prominence = 1
+# s_type = decl
+# speaker = bledin2
+# transition = zero
+# text = (1) Its unreal.
+# newpar
+# newpar_block = sp who:::"#bledin2" whom:::"#gilgoose" (5 s) | list type:::"ordered" (5 s) | item n:::"1" (3 s)
+1	(1)	(1)	X	LS	_	4	dep	4:dep	Discourse=joint-other_m:58->19:2:_
+2-3	Its	_	_	_	_	_	_	_	_
+2	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	Entity=(24-abstract-giv:inact-cf1-1-ana)|XML=<w>
+3	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	4	cop	4:cop	CorrectForm='s|XML=<sic ana:::"'s"></sic></w>
+4	unreal	unreal	ADJ	JJ	Degree=Pos|Polarity=Neg	0	root	0:root	MSeg=un-real|SpaceAfter=No
+5	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-23
+# addressee = gilgoose
+# s_prominence = 2
+# s_type = sub
+# speaker = bledin2
+# transition = null
+# text = I can’t really imagine being asked which race I am to fill out a college application form or something like that.
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:pass:xsubj	Discourse=explanation-evidence:59->58:0:_|Entity=(90-person-acc:com-cf1-1-ana)
+2-3	can’t	_	_	_	_	_	_	_	_
+2	ca	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
+3	n’t	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+4	really	really	ADV	RB	Degree=Pos	5	advmod	5:advmod	MSeg=real-ly
+5	imagine	imagine	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	being	be	AUX	VBG	VerbForm=Ger	7	aux:pass	7:aux:pass	MSeg=be-ing
+7	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	xcomp	5:xcomp	MSeg=ask-ed
+8	which	which	DET	WDT	PronType=Int	9	det	9:det	Entity=(91-abstract-new-cf3-2-sgl
+9	race	race	NOUN	NN	Number=Sing	7	ccomp	7:ccomp	_
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	9:nsubj	Entity=(90-person-giv:act-cf1-1-ana)
+11	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	9	cop	9:cop	Entity=91)
+12	to	to	PART	TO	_	13	mark	13:mark	Discourse=purpose-goal:60->59:0:syn-inf-574
+13	fill	fill	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
+14	out	out	ADP	RP	_	13	compound:prt	13:compound:prt	_
+15	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(92-object-new-cf2-4-coref
+16	college	college	NOUN	NN	Number=Sing	18	compound	18:compound	Entity=(93-organization-new-cf5-1-sgl)
+17	application	application	NOUN	NN	Number=Sing	18	compound	18:compound	Entity=(94-abstract-new-cf6-1-sgl)|MSeg=applic-ation
+18	form	form	NOUN	NN	Number=Sing	13	obj	13:obj	Entity=92)
+19	or	or	CCONJ	CC	_	20	cc	20:cc	_
+20	something	something	PRON	NN	Number=Sing|PronType=Ind	18	conj	13:obj|18:conj:or	Entity=(95-object-new-cf4-1-sgl
+21	like	like	ADP	IN	_	22	case	22:case	_
+22	that	that	PRON	DT	Number=Sing|PronType=Dem	20	nmod	20:nmod:like	Entity=(92-object-giv:act-cf2-1-ana)95)|SpaceAfter=No
+23	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_racial-24
+# addressee = gilgoose
+# s_prominence = 2
+# s_type = decl
+# speaker = bledin2
+# transition = null
+# text = Affirmative action here is very rare, and very often illegal.
+1	Affirmative	affirmative	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint-list_m:61->59:1:sem-lxchn-571,586-587|Entity=(96-abstract-new-cf2-2-sgl|MSeg=Affirmat-ive
+2	action	action	NOUN	NN	Number=Sing	6	nsubj	6:nsubj|11:nsubj	Entity=96)|MSeg=act-ion
+3	here	here	ADV	RB	PronType=Dem	6	advmod	6:advmod	Entity=(97-place-acc:com-cf1-1-sgl)
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+5	very	very	ADV	RB	_	6	advmod	6:advmod	_
+6	rare	rare	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+7	,	,	PUNCT	,	_	11	punct	11:punct	_
+8	and	and	CCONJ	CC	_	11	cc	11:cc	_
+9	very	very	ADV	RB	_	10	advmod	10:advmod	_
+10	often	often	ADV	RB	Degree=Pos	11	advmod	11:advmod	_
+11	illegal	illegal	ADJ	JJ	Degree=Pos	6	conj	6:conj:and	MSeg=il-legal|SpaceAfter=No
+12	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# sent_id = GUM_reddit_racial-25
+# addressee = gilgoose
+# s_prominence = 1
+# s_type = decl
+# speaker = bledin2
+# transition = null
+# text = (2) More or less we know what happened.
+# newpar
+# newpar_block = item n:::"2" (1 s)
+1	(2)	(2)	X	LS	_	6	dep	6:dep	Discourse=joint-list_m:62->58:1:grf-seq-598
+2	More	more	ADV	RBR	Degree=Cmp	6	advmod	6:advmod	_
+3	or	or	CCONJ	CC	_	4	cc	4:cc	_
+4	less	less	ADV	RBR	Degree=Cmp	2	conj	2:conj:or|6:advmod	_
+5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	Bridge=90<98|Entity=(98-person-acc:inf-cf1-1-sgl)
+6	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	what	what	PRON	WP	PronType=Rel	6	obj	6:obj	_
+8	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	acl:relcl	7:acl:relcl	MSeg=happen-ed|SpaceAfter=No
+9	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# sent_id = GUM_reddit_racial-26
+# addressee = gilgoose
+# s_prominence = 1
+# s_type = decl
+# speaker = bledin2
+# transition = null
+# text = (3) Its understandable, since no one ever admitted that a lot of American freedom and prosperity comes from crimes against humanity
+# newpar
+# newpar_block = item n:::"3" (1 s)
+1	(3)	(3)	X	LS	_	4	dep	4:dep	Discourse=joint-list_m:63->58:1:grf-seq-558,607
+2-3	Its	_	_	_	_	_	_	_	_
+2	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	Entity=(48-abstract-giv:inact-cf1-1-ana)|XML=<w>
+3	s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|Typo=Yes|VerbForm=Fin	4	cop	4:cop	CorrectForm='s|XML=<sic ana:::"'s"></sic></w>
+4	understandable	understandable	ADJ	JJ	Degree=Pos|Polarity=Neg	0	root	0:root	MSeg=under-stand-able|SpaceAfter=No
+5	,	,	PUNCT	,	_	10	punct	10:punct	_
+6	since	since	SCONJ	IN	_	10	mark	10:mark	Discourse=attribution-negative:64->65:0:sem-atsrc-613-614+lex-indwd-616+syn-rpr-617
+7	no	no	DET	DT	Polarity=Neg|PronType=Neg	8	det	8:det	Entity=(99-person-new-cf2-2-sgl
+8	one	one	PRON	NN	Number=Sing|PronType=Neg	10	nsubj	10:nsubj	Entity=99)
+9	ever	ever	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
+10	admitted	admit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:since	MSeg=admitt-ed
+11	that	that	SCONJ	IN	_	19	mark	19:mark	Discourse=explanation-justify:65->63:0:dm-since-612
+12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(100-abstract-new-cf3-2-sgl
+13	lot	lot	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
+14	of	of	ADP	IN	_	16	case	16:case	_
+15	American	American	ADJ	JJ	Degree=Pos	16	amod	16:amod	MSeg=America-n
+16	freedom	freedom	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	MSeg=free-dom
+17	and	and	CCONJ	CC	_	18	cc	18:cc	_
+18	prosperity	prosperity	NOUN	NN	Number=Sing	16	conj	13:nmod:of|16:conj:and	Entity=100)|MSeg=prosper-ity
+19	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	ccomp	10:ccomp	MSeg=come-s
+20	from	from	ADP	IN	_	21	case	21:case	_
+21	crimes	crime	NOUN	NNS	Number=Plur	19	obl	19:obl:from	Entity=(101-event-new-cf4-1-sgl|MSeg=crime-s
+22	against	against	ADP	IN	_	23	case	23:case	MSeg=a-gainst
+23	humanity	humanity	NOUN	NN	Number=Sing	21	nmod	21:nmod:against	Entity=(102-abstract-new-cf5-1-sgl)101)|MSeg=human-ity
+
+# sent_id = GUM_reddit_racial-27
+# addressee = bledin2
+# s_prominence = 2
+# s_type = decl
+# speaker = jilletlecroix
+# transition = null
+# text = Your last point is a little complicated.
+# newpar
+# newpar_block = sp who:::"#jilletlecroix" whom:::"#bledin2" (5 s) | p (1 s)
+1	Your	your	PRON	PRP$	Case=Gen|Number=Sing|Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	Discourse=evaluation-comment:66->63:1:lex-indwd-636|Entity=(103-abstract-new-cf2-3-sgl(90-person-giv:inact-cf1-1-ana)
+2	last	last	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	point	point	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=103)
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	_
+6	little	little	ADJ	JJ	Degree=Pos	7	obl:npmod	7:obl:npmod	_
+7	complicated	complicated	ADJ	JJ	Degree=Pos	0	root	0:root	MSeg=complicat-ed|SpaceAfter=No
+8	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+# sent_id = GUM_reddit_racial-28
+# addressee = bledin2
+# s_prominence = 3
+# s_type = decl
+# speaker = jilletlecroix
+# transition = null
+# text = The US's wealth and power also comes from no actions of it's own, but it's geographical location in the world.
+# newpar
+# newpar_block = p (3 s)
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=explanation-justify:67->66:0:_;joint-list:67->65:0:0:orp-also-644|Entity=(104-abstract-new-cf3-4,6-sgl(4-place-giv:inact-cf1-2-coref-United_States
+2-3	US's	_	_	_	_	_	_	_	_
+2	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	4	nmod:poss	4:nmod:poss	_
+3	's	's	PART	POS	_	2	case	2:case	Entity=4)
+4	wealth	wealth	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	MSeg=weal-th
+5	and	and	CCONJ	CC	_	6	cc	6:cc	_
+6	power	power	NOUN	NN	Number=Sing	4	conj	4:conj:and|8:nsubj	Entity=104)
+7	also	also	ADV	RB	_	8	advmod	8:advmod	_
+8	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MSeg=come-s
+9	from	from	ADP	IN	_	11	case	11:case	_
+10	no	no	DET	DT	Polarity=Neg|PronType=Neg	11	det	11:det	Entity=(105-abstract-new-cf4-2-sgl
+11	actions	action	NOUN	NNS	Number=Plur	8	obl	8:obl:from	MSeg=act-ion-s
+12	of	of	ADP	IN	_	14	case	14:case	_
+13	it's	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	14	nmod:poss	14:nmod:poss	CorrectForm=its|Entity=(4-place-giv:act-cf1-1-ana-United_States)|MSeg=it-'s|XML=<sic ana:::"its"></sic>
+14	own	own	ADJ	JJ	Degree=Pos	11	nmod	11:nmod:of	Entity=105)|SpaceAfter=No
+15	,	,	PUNCT	,	_	19	punct	19:punct	_
+16	but	but	CCONJ	CC	_	19	cc	19:cc	_
+17	it's	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	19	nmod:poss	19:nmod:poss	CorrectForm=its|Entity=(106-place-new-cf5-3-sgl(4-place-giv:act-cf1-1-ana-United_States)|MSeg=it-'s|XML=<sic ana:::"its"></sic>
+18	geographical	geographical	ADJ	JJ	Degree=Pos	19	amod	19:amod	MSeg=geograph-ic-al
+19	location	location	NOUN	NN	Number=Sing	11	conj	8:obl:from|11:conj:but	MSeg=locat-ion
+20	in	in	ADP	IN	_	22	case	22:case	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(107-place-acc:com-cf2-2-sgl
+22	world	world	NOUN	NN	Number=Sing	19	nmod	19:nmod:in	Entity=107)106)|SpaceAfter=No
+23	.	.	PUNCT	.	_	8	punct	8:punct	_
+
+# sent_id = GUM_reddit_racial-29
+# addressee = bledin2
+# s_prominence = 5
+# s_type = decl
+# speaker = jilletlecroix
+# transition = establishment
+# text = We are a considerably lucky country, with only two neighbors that are completely non hostile, and two massive oceans on either side of us.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	Discourse=causal-cause:68->71:1:_|Entity=(6-person-giv:inact-cf1-1-ana)
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(4-place-giv:act-cf2*-4-pred-United_States
+4	considerably	considerably	ADV	RB	Degree=Pos	5	advmod	5:advmod	MSeg=considerab-ly
+5	lucky	lucky	ADJ	JJ	Degree=Pos	6	amod	6:amod	MSeg=luck-y
+6	country	country	NOUN	NN	Number=Sing	0	root	0:root	Entity=4)|SpaceAfter=No
+7	,	,	PUNCT	,	_	11	punct	11:punct	_
+8	with	with	ADP	IN	_	11	case	11:case	_
+9	only	only	ADV	RB	_	10	advmod	10:advmod	_
+10	two	two	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	Entity=(108-place-new-cf3-2-sgl
+11	neighbors	neighbor	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with|16:nsubj	MSeg=neighbor-s
+12	that	that	PRON	WDT	PronType=Rel	16	nsubj	11:ref	Discourse=elaboration-attribute:69->68:0:syn-mdf-671+syn-relcl-672,676
+13	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+14	completely	completely	ADV	RB	Degree=Pos	16	advmod	16:advmod	MSeg=complete-ly
+15	non	non	ADV	RB	Degree=Pos	16	advmod	16:advmod	_
+16	hostile	hostile	ADJ	JJ	Degree=Pos	11	acl:relcl	11:acl:relcl	Entity=108)|SpaceAfter=No
+17	,	,	PUNCT	,	_	21	punct	21:punct	_
+18	and	and	CCONJ	CC	_	21	cc	21:cc	Discourse=same-unit_m:70->68:1:_
+19	two	two	NUM	CD	NumForm=Word|NumType=Card	21	nummod	21:nummod	Entity=(109-place-new-cf4-3-sgl
+20	massive	massive	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
+21	oceans	ocean	NOUN	NNS	Number=Plur	11	conj	6:nmod:with|11:conj:and	MSeg=ocean-s
+22	on	on	ADP	IN	_	24	case	24:case	_
+23	either	either	DET	DT	_	24	det	24:det	Entity=(110-place-new-cf5-2-sgl
+24	side	side	NOUN	NN	Number=Sing	21	nmod	21:nmod:on	_
+25	of	of	ADP	IN	_	26	case	26:case	_
+26	us	we	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	24	nmod	24:nmod:of	Entity=(6-person-giv:act-cf1-1-ana)110)109)|SpaceAfter=No
+27	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# sent_id = GUM_reddit_racial-30
+# addressee = bledin2
+# s_prominence = 4
+# s_type = decl
+# speaker = jilletlecroix
+# transition = smooth-shift
+# text = We were always going to have advantages as a newly independent country the moment colonialist rule lost it's control here.
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	Discourse=explanation-justify:71->67:0:_|Entity=(6-person-giv:act-cf1*-1-ana)
+2	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
+3	always	always	ADV	RB	_	4	advmod	4:advmod	_
+4	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	MSeg=go-ing
+5	to	to	PART	TO	_	6	mark	6:mark	_
+6	have	have	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
+7	advantages	advantage	NOUN	NNS	Number=Plur	6	obj	6:obj	Entity=(111-abstract-new-cf4-1-sgl)|MSeg=ad-vantage-s
+8	as	as	ADP	IN	_	12	case	12:case	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	Entity=(4-place-giv:act-cf3-4-pred-United_States
+10	newly	newly	ADV	RB	Degree=Pos	11	advmod	11:advmod	MSeg=new-ly
+11	independent	independent	ADJ	JJ	Degree=Pos	12	amod	12:amod	MSeg=in-de-pend-ent
+12	country	country	NOUN	NN	Number=Sing	6	obl	6:obl:as	Entity=4)
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Discourse=context-circumstance:72->71:0:_|Entity=(112-time-new-cf6-5-sgl
+14	moment	moment	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	_
+15	colonialist	colonialist	ADJ	JJ	Degree=Pos	16	amod	16:amod	Entity=(113-abstract-new-cf2-2-coref|MSeg=coloni-al-ist
+16	rule	rule	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	Entity=113)
+17	lost	lose	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl	MSeg=los-t
+18	it's	its	PRON	PRP$	Case=Gen|Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs|Typo=Yes	19	nmod:poss	19:nmod:poss	CorrectForm=its|Entity=(114-abstract-new-cf5-2-sgl(113-abstract-giv:act-cf2-1-ana)|MSeg=it-'s|XML=<sic ana:::"its"></sic>
+19	control	control	NOUN	NN	Number=Sing	17	obj	17:obj	Entity=114)
+20	here	here	ADV	RB	PronType=Dem	17	advmod	17:advmod	Entity=(4-place-giv:act-cf3-1-coref-United_States)112)|SpaceAfter=No
+21	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_racial-31
+# addressee = bledin2
+# s_prominence = 5
+# s_type = decl
+# speaker = jilletlecroix
+# transition = smooth-shift
+# text = It's not as simple as "All of USA's achievements come from exploitation"
+# newpar
+# newpar_block = p (1 s)
+1-2	It's	_	_	_	_	_	_	_	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	Discourse=adversative-antithesis:73->71:2:_|Entity=(115-abstract-acc:com-cf2-1-sgl)
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+4	as	as	ADV	RB	_	5	advmod	5:advmod	_
+5	simple	simple	ADJ	JJ	Degree=Pos	0	root	0:root	_
+6	as	as	SCONJ	IN	_	13	mark	13:mark	Discourse=mode-manner:74->73:0:dm-as-714
+7	"	''	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No|XML=<q>
+8	All	all	DET	DT	PronType=Tot	13	nsubj	13:nsubj	Entity=(116-abstract-new-cf3-1-sgl
+9	of	of	ADP	IN	_	12	case	12:case	_
+10-11	USA's	_	_	_	_	_	_	_	_
+10	USA	USA	PROPN	NNP	Abbr=Yes|Number=Sing	12	nmod:poss	12:nmod:poss	Entity=(4-place-giv:act-cf1*-1-coref-United_States
+11	's	's	PART	POS	_	10	case	10:case	Entity=4)
+12	achievements	achievement	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	Entity=116)|MSeg=achieve-ment-s
+13	come	come	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:as	_
+14	from	from	ADP	IN	_	15	case	15:case	_
+15	exploitation	exploitation	NOUN	NN	Number=Sing	13	obl	13:obl:from	Entity=(117-event-new-cf4-1-sgl)|MSeg=exploit-ation|SpaceAfter=No
+16	"	''	PUNCT	''	_	13	punct	13:punct	XML=</q>
+

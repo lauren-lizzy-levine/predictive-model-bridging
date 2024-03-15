@@ -1,0 +1,1092 @@
+# newdoc id = GUM_reddit_pandas
+# global.Entity = GRP-etype-infstat-centering-minspan-link-identity
+# meta::author = reddit community (see URL)
+# meta::dateCollected = 2018-09-09
+# meta::dateCreated = 2018-09-08
+# meta::dateModified = 2018-09-09
+# meta::genre = reddit
+# meta::salientEntities = 1, 2, 3, 6, 7, 10, 12, 31, 32, 33, 34, 37, 40, 43, 59, 60, 61, 75, 87
+# meta::sourceURL = https://www.reddit.com/r/Showerthoughts/comments/9e3s9h/humans_are_the_only_species_on_earth_to_try_and/
+# meta::speakerCount = 25
+# meta::summary = Some Reddit forum users discuss whether humans are the only species which practices birth control to prevent reproduction, leading to a discussion of whether or not pandas are poor at reproducing, and some other animals which may become less reproductive when food is scarce, such as rats and rabbits.
+# meta::title = Humans are the only species on earth to try and stop themselves from reproducing
+# sent_id = GUM_reddit_pandas-1
+# s_prominence = 1
+# s_type = decl
+# speaker = howssit
+# transition = establishment
+# text = Humans are the only species on earth to try and stop themselves from reproducing
+# newpar
+# newpar_block = sp who:::"#howssit" (1 s) | head (1 s)
+1	Humans	human	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Discourse=ROOT:1:0|Entity=(1-abstract-new-cf4-5-disc(2-person-new-cf1-1-coref)|MSeg=Human-s
+2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(3-animal-new-cf3-3-sgl
+4	only	only	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+5	species	species	NOUN	NN	Number=Sing	0	root	0:root	_
+6	on	on	ADP	IN	_	7	case	7:case	_
+7	earth	earth	NOUN	NN	Number=Sing	5	nmod	5:nmod:on	Entity=(4-place-acc:com-cf2-1-sgl)
+8	to	to	PART	TO	_	9	mark	9:mark	Discourse=purpose-attribute:2->1:0:syn-mdf-5+syn-inf-8+lex-indwd-11|Entity=(5-event-new-cf5-2,4-disc
+9	try	try	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
+10	and	and	CCONJ	CC	_	11	cc	11:cc	_
+11	stop	stop	VERB	VB	VerbForm=Inf	9	conj	5:acl:to|9:conj:and	_
+12	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	11	obj	11:obj	Entity=(2-person-giv:act-cf1-1-ana)|MSeg=them-selve-s
+13	from	from	SCONJ	IN	_	14	mark	14:mark	_
+14	reproducing	reproduce	VERB	VBG	VerbForm=Ger	11	advcl	11:advcl:from	Entity=(6-event-new-cf6-1-disc)5)3)1)|MSeg=re-produc-ing
+
+# sent_id = GUM_reddit_pandas-2
+# addressee = howssit
+# s_prominence = 1
+# s_type = decl
+# speaker = Kitten-McSnugglet
+# transition = null
+# text = Pandas do a fine job of avoiding reproduction, too.
+# newpar
+# newpar_block = sp who:::"#Kitten-McSnugglet" whom:::"#howssit" (2 s) | p (2 s)
+1	Pandas	panda	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	Discourse=adversative-contrast_m:3->1:1:_|Entity=(7-animal-new-cf1-1-coref-Giant_panda)|MSeg=Panda-s
+2	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(8-abstract-new-cf2-3-sgl
+4	fine	fine	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+5	job	job	NOUN	NN	Number=Sing	2	obj	2:obj	_
+6	of	of	SCONJ	IN	_	7	mark	7:mark	Discourse=elaboration-additional:4->3:0:lex-indwd-24
+7	avoiding	avoid	VERB	VBG	VerbForm=Ger	5	acl	5:acl:of	MSeg=avoid-ing
+8	reproduction	reproduction	NOUN	NN	Number=Sing	7	obj	7:obj	Entity=(9-event-new-cf3-1-sgl)8)|MSeg=reproduc-tion|SpaceAfter=No
+9	,	,	PUNCT	,	_	10	punct	10:punct	_
+10	too	too	ADV	RB	Degree=Pos	2	advmod	2:advmod	SpaceAfter=No
+11	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-3
+# addressee = howssit
+# s_prominence = 2
+# s_type = frag
+# speaker = Kitten-McSnugglet
+# transition = establishment
+# text = The lazy bastards.
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=evaluation-comment:5->3:1:_|Entity=(7-animal-giv:act-cf1*-3-coref-Giant_panda
+2	lazy	lazy	ADJ	JJ	Degree=Pos	3	amod	3:amod	MSeg=laz-y
+3	bastards	bastard	NOUN	NNS	Number=Plur	0	root	0:root	Entity=7)|MSeg=bast-ard-s|SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_pandas-4
+# addressee = Kitten-McSnugglet
+# s_prominence = 1
+# s_type = decl
+# speaker = Toby_Forrester
+# transition = continue
+# text = I read a good source (another reddit comment) which stated that pandas being notoriously poor at reproducing is a myth.
+# newpar
+# newpar_block = sp who:::"#Toby_Forrester" whom:::"#Kitten-McSnugglet" (3 s) | p (3 s)
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	Discourse=attribution-positive:6->8:0:sem-atsrc-30,32-51+lex-indwd-31+lex-indwd-38|Entity=(10-person-acc:com-cf3-1-sgl)
+2	read	read	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(11-abstract-new-cf2-3-coref
+4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+5	source	source	NOUN	NN	Number=Sing	2	obj	2:obj|12:nsubj	_
+6	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=elaboration-additional:7->6:0:grf-prn-35,39|SpaceAfter=No
+7	another	another	DET	DT	PronType=Ind	9	det	9:det	Entity=(11-abstract-giv:act-cf2-3-appos|MSeg=an-other
+8	reddit	Reddit	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(12-place-new-cf6-1-sgl-Reddit)
+9	comment	comment	NOUN	NN	Number=Sing	5	appos	5:appos	Entity=11)|SpaceAfter=No
+10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	_
+11	which	which	PRON	WDT	PronType=Rel	12	nsubj	5:ref	Discourse=attribution-positive:8->9:0:sem-atsrc-32-39+lex-indwd-41+syn-rpr-42
+12	stated	state	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	MSeg=stat-ed
+13	that	that	SCONJ	IN	_	22	mark	22:mark	Discourse=adversative-contrast_m:9->3:2:_
+14	pandas	panda	NOUN	NNS	Number=Plur	17	nsubj	17:nsubj	Entity=(7-animal-giv:act-cf1*-1-coref-Giant_panda)|MSeg=panda-s
+15	being	be	AUX	VBG	VerbForm=Ger	17	cop	17:cop	MSeg=be-ing
+16	notoriously	notoriously	ADV	RB	Degree=Pos	17	advmod	17:advmod	MSeg=notorious-ly
+17	poor	poor	ADJ	JJ	Degree=Pos	22	csubj	22:csubj	_
+18	at	at	SCONJ	IN	_	19	mark	19:mark	_
+19	reproducing	reproduce	VERB	VBG	VerbForm=Ger	17	advcl	17:advcl:at	Entity=(13-event-new-cf5-1-disc)|MSeg=re-produc-ing
+20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
+21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	Entity=(14-abstract-new-cf4-2-sgl
+22	myth	myth	NOUN	NN	Number=Sing	12	ccomp	12:ccomp	Entity=14)11)|SpaceAfter=No
+23	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-5
+# addressee = Kitten-McSnugglet
+# s_prominence = 2
+# s_type = decl
+# speaker = Toby_Forrester
+# transition = zero
+# text = It's just that getting any species in captivity to reproduce is a challenge, so that's why getting pandas in captivity to reproduce is a challenge too.
+1-2	It's	_	_	_	_	_	_	_	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	nsubj:outer	14:nsubj:outer	Discourse=explanation-justify:10->9:1:_|Entity=(15-abstract-new-cf1-1-cata)
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+3	just	just	ADV	RB	_	14	advmod	14:advmod	_
+4	that	that	SCONJ	IN	_	14	mark	14:mark	_
+5	getting	get	VERB	VBG	VerbForm=Ger	14	csubj	14:csubj	Entity=(15-abstract-acc:com-cf1-10-disc|MSeg=gett-ing
+6	any	any	DET	DT	PronType=Ind	7	det	7:det	Entity=(16-animal-new-cf5-2-sgl
+7	species	species	NOUN	NN	Number=Sing	5	obj	5:obj|11:nsubj:xsubj	_
+8	in	in	ADP	IN	_	9	case	9:case	_
+9	captivity	captivity	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	Entity=(17-abstract-new-cf2-1-coref)16)|MSeg=captiv-ity
+10	to	to	PART	TO	_	11	mark	11:mark	_
+11	reproduce	reproduce	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	MSeg=re-produce
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	14:cop	_
+13	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(18-abstract-new-cf6-2-sgl
+14	challenge	challenge	NOUN	NN	Number=Sing	0	root	0:root	Entity=18)15)|SpaceAfter=No
+15	,	,	PUNCT	,	_	28	punct	28:punct	_
+16	so	so	ADV	RB	_	28	advmod	28:advmod	Discourse=causal-result:11->10:0:dm-so-68
+17-18	that's	_	_	_	_	_	_	_	_
+17	that	that	PRON	DT	Number=Sing|PronType=Dem	28	nsubj:outer	28:nsubj:outer	Entity=(15-abstract-giv:act-cf1-1-coref)
+18	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
+19	why	why	ADV	WRB	PronType=Int	28	advmod	28:advmod	_
+20	getting	get	VERB	VBG	VerbForm=Ger	28	csubj	28:csubj	Entity=(19-abstract-new-cf3-1-disc|MSeg=gett-ing
+21	pandas	panda	NOUN	NNS	Number=Plur	20	obj	20:obj|25:nsubj:xsubj	Bridge=7<20|Entity=(20-animal-acc:inf-cf4-1-sgl|MSeg=panda-s
+22	in	in	ADP	IN	_	23	case	23:case	_
+23	captivity	captivity	NOUN	NN	Number=Sing	21	nmod	21:nmod:in	Entity=(17-abstract-giv:act-cf2-1-coref)20)|MSeg=captiv-ity
+24	to	to	PART	TO	_	25	mark	25:mark	_
+25	reproduce	reproduce	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	Entity=19)|MSeg=re-produce
+26	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	cop	28:cop	_
+27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	28:det	Entity=(19-abstract-giv:act-cf3-2-coref
+28	challenge	challenge	NOUN	NN	Number=Sing	14	parataxis	14:parataxis	Entity=19)
+29	too	too	ADV	RB	Degree=Pos	28	advmod	28:advmod	SpaceAfter=No
+30	.	.	PUNCT	.	_	14	punct	14:punct	_
+
+# sent_id = GUM_reddit_pandas-6
+# addressee = Kitten-McSnugglet
+# s_prominence = 2
+# s_type = multiple
+# speaker = Toby_Forrester
+# transition = null
+# text = And in the wild they would reproduce just fine, the largest threat to their reproduction is the narrowing of their ecosystems by humans, not their poor talent in reproducing.
+1	And	and	CCONJ	CC	_	7	cc	7:cc	Discourse=adversative-contrast_m:12->10:1:dm-and-83
+2	in	in	ADP	IN	_	4	case	4:case	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
+4	wild	wild	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
+5	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	Entity=(7-animal-giv:inact-cf1-1-ana-Giant_panda)
+6	would	would	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
+7	reproduce	reproduce	VERB	VB	VerbForm=Inf	0	root	0:root	MSeg=re-produce
+8	just	just	ADV	RB	_	9	advmod	9:advmod	_
+9	fine	fine	ADV	RB	Degree=Pos	7	advmod	7:advmod	SpaceAfter=No
+10	,	,	PUNCT	,	_	19	punct	19:punct	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Discourse=elaboration-additional:13->9:2:ref-prs-43,97+ref-prop-48,97-98|Entity=(21-abstract-new-cf4-9,19-disc(22-abstract-new-cf2-3-coref
+12	largest	large	ADJ	JJS	Degree=Sup	13	amod	13:amod	MSeg=larg-est
+13	threat	threat	NOUN	NN	Number=Sing	19	nsubj	19:nsubj|29:nsubj	_
+14	to	to	ADP	IN	_	16	case	16:case	_
+15	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	Entity=(13-event-giv:inact-cf3-2-coref(7-animal-giv:act-cf1-1-ana-Giant_panda)
+16	reproduction	reproduction	NOUN	NN	Number=Sing	13	nmod	13:nmod:to	Entity=13)22)|MSeg=reproduc-tion
+17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	19:cop	_
+18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(22-abstract-giv:act-cf2-2-coref
+19	narrowing	narrowing	NOUN	NN	Number=Sing	7	parataxis	7:parataxis	MSeg=narrow-ing
+20	of	of	ADP	IN	_	22	case	22:case	_
+21	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	Entity=(23-abstract-new-cf6-2-sgl(7-animal-giv:act-cf1-1-ana-Giant_panda)
+22	ecosystems	ecosystem	NOUN	NNS	Number=Plur	19	nmod	19:nmod:of	Entity=23)|MSeg=eco-system-s
+23	by	by	ADP	IN	_	24	case	24:case	_
+24	humans	human	NOUN	NNS	Number=Plur	19	nmod	19:nmod:by	Entity=(24-person-new-cf5-1-sgl)22)|MSeg=human-s|SpaceAfter=No
+25	,	,	PUNCT	,	_	29	punct	29:punct	_
+26	not	not	PART	RB	Polarity=Neg	29	advmod	29:advmod	_
+27	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	29	nmod:poss	29:nmod:poss	Entity=(25-abstract-new-cf7-3-sgl(7-animal-giv:act-cf1-1-ana-Giant_panda)
+28	poor	poor	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
+29	talent	talent	NOUN	NN	Number=Sing	19	conj	19:conj	_
+30	in	in	SCONJ	IN	_	31	mark	31:mark	_
+31	reproducing	reproduce	VERB	VBG	VerbForm=Ger	29	acl	29:acl:in	Entity=(13-event-giv:act-cf3-1-coref)25)21)|MSeg=re-produc-ing|SpaceAfter=No
+32	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+# sent_id = GUM_reddit_pandas-7
+# addressee = Toby_Forrester
+# s_prominence = 2
+# s_type = decl
+# speaker = ughthisagainwhat
+# transition = establishment
+# text = It's true.
+# newpar
+# newpar_block = sp who:::"#ughthisagainwhat" whom:::"#Toby_Forrester" (3 s) | p (3 s)
+1-2	It's	_	_	_	_	_	_	_	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	Discourse=evaluation-comment:14->9:3:lex-indwd-117|Entity=(21-abstract-giv:act-cf1*-1-coref)
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
+3	true	true	ADJ	JJ	Degree=Pos	0	root	0:root	SpaceAfter=No
+4	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_pandas-8
+# addressee = Toby_Forrester
+# s_prominence = 3
+# s_type = decl
+# speaker = ughthisagainwhat
+# transition = zero
+# text = Zoos in China with larger panda populations also have far fewer problems getting them to breed.
+1	Zoos	zoo	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	Discourse=explanation-evidence:15->14:0:_;elaboration-additional:15->10:0:0:orp-also-126|Entity=(26-place-new-cf2-1-sgl|MSeg=Zoo-s
+2	in	in	ADP	IN	_	3	case	3:case	_
+3	China	China	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	Entity=(27-place-new-cf4-1-sgl-China)
+4	with	with	ADP	IN	_	7	case	7:case	_
+5	larger	large	ADJ	JJR	Degree=Cmp	7	amod	7:amod	Entity=(28-abstract-new-cf5-3-sgl|MSeg=larg-er
+6	panda	panda	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(7-animal-giv:inact-cf1-1-coref-Giant_panda)
+7	populations	population	NOUN	NNS	Number=Plur	1	nmod	1:nmod:with	Entity=28)26)|MSeg=populat-ion-s
+8	also	also	ADV	RB	_	9	advmod	9:advmod	_
+9	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+10	far	far	ADV	RB	Degree=Pos	11	advmod	11:advmod	_
+11	fewer	few	ADJ	JJR	Degree=Cmp	12	amod	12:amod	Entity=(29-abstract-new-cf3-2-sgl
+12	problems	problem	NOUN	NNS	Number=Plur	9	obj	9:obj	Entity=29)|MSeg=problem-s
+13	getting	get	VERB	VBG	VerbForm=Ger	12	acl	12:acl	MSeg=gett-ing
+14	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	13	obj	13:obj|16:nsubj:xsubj	Entity=(7-animal-giv:act-cf1-1-ana-Giant_panda)
+15	to	to	PART	TO	_	16	mark	16:mark	_
+16	breed	breed	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	MSeg=breed|SpaceAfter=No
+17	.	.	PUNCT	.	_	9	punct	9:punct	_
+
+# sent_id = GUM_reddit_pandas-9
+# addressee = Toby_Forrester
+# s_prominence = 4
+# s_type = decl
+# speaker = ughthisagainwhat
+# transition = null
+# text = A little bit of male competition really helps.
+1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=explanation-justify:16->15:0:_|Entity=(30-abstract-new-cf1-3-sgl
+2	little	little	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	bit	bit	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+4	of	of	ADP	IN	_	6	case	6:case	_
+5	male	male	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+6	competition	competition	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	Entity=30)|MSeg=compet-ition
+7	really	really	ADV	RB	Degree=Pos	8	advmod	8:advmod	MSeg=real-ly
+8	helps	help	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MSeg=help-s|SpaceAfter=No
+9	.	.	PUNCT	.	_	8	punct	8:punct	_
+
+# sent_id = GUM_reddit_pandas-10
+# addressee = Toby_Forrester
+# s_prominence = 2
+# s_type = decl
+# speaker = Silly_Swede
+# transition = null
+# text = Yup ... here it is
+# newpar
+# newpar_block = sp who:::"#Silly_Swede" whom:::"#Toby_Forrester" (1 s) | p (1 s)
+1	Yup	yup	INTJ	UH	_	5	discourse	5:discourse	Discourse=restatement-repetition_m:17->14:1:_|XML=<ref target:::"https://www.reddit.com/r/todayilearned/comments/2rmf6h/comment/cnhjokr?st:::JLTK76RB&sh:::8abb8709">
+2	...	…	PUNCT	:	_	1	punct	1:punct	_
+3	here	here	ADV	RB	PronType=Dem	5	advmod	5:advmod	Discourse=explanation-evidence:18->17:0:_
+4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	Entity=(11-abstract-giv:inact-cf1-1-ana)
+5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Existential-Here|XML=</ref>
+
+# sent_id = GUM_reddit_pandas-11
+# addressee = howssit
+# s_prominence = 3
+# s_type = decl
+# speaker = spellred
+# transition = null
+# text = In times of poor food availability, white tail deer stop/slow reproduction.
+# newpar
+# newpar_block = sp who:::"#spellred" whom:::"#howssit" (2 s) | p (2 s)
+1	In	in	ADP	IN	_	2	case	2:case	Discourse=context-background:19->21:1:ref-prop-160-163,168
+2	times	time	NOUN	NNS	Number=Plur	11	obl	11:obl:in	Entity=(31-time-new-cf3-1-sgl|MSeg=time-s
+3	of	of	ADP	IN	_	6	case	6:case	_
+4	poor	poor	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(32-abstract-new-cf4-3-sgl
+5	food	food	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(33-substance-new-cf6-1-sgl)
+6	availability	availability	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	Entity=32)31)|MSeg=availabil-ity|SpaceAfter=No
+7	,	,	PUNCT	,	_	2	punct	2:punct	_
+8	white	white	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(34-animal-new-cf1-3-sgl
+9	tail	tail	NOUN	NN	Number=Sing	10	compound	10:compound	_
+10	deer	deer	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj|13:nsubj	Entity=34)
+11	stop	stop	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Entity=(35-event-new-cf5-1,3-disc|SpaceAfter=No|XML=<w>
+12	/	/	SYM	SYM	_	13	cc	13:cc	SpaceAfter=No
+13	slow	slow	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	conj	11:conj:slash	XML=</w>
+14	reproduction	reproduction	NOUN	NN	Number=Sing	11	obj	11:obj|13:obj	Entity=(36-abstract-new-cf2-1-sgl)35)|MSeg=reproduc-tion|SpaceAfter=No
+15	.	.	PUNCT	.	_	11	punct	11:punct	_
+
+# sent_id = GUM_reddit_pandas-12
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = spellred
+# transition = establishment
+# text = I assume that it also happens elsewhere.
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	Discourse=attribution-positive:20->21:0:sem-atsrc-165+lex-indwd-166+syn-rpr-167|Entity=(37-person-acc:com-cf2-1-ana)
+2	assume	assume	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	that	that	SCONJ	IN	_	6	mark	6:mark	Discourse=explanation-evidence:21->9:4:_;elaboration-additional:21->19:0:0:orp-also-169
+4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	Entity=(35-event-giv:act-cf1*-1-coref)
+5	also	also	ADV	RB	_	6	advmod	6:advmod	_
+6	happens	happen	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	MSeg=happ-en-s
+7	elsewhere	elsewhere	ADV	RB	Degree=Pos	6	advmod	6:advmod	SpaceAfter=No
+8	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-13
+# addressee = spellred
+# s_prominence = 4
+# s_type = decl
+# speaker = KeepGettingBannedSMH
+# transition = zero
+# text = There was an experiment that was done with a rat population which was raised in an environment of artificial high abundance of food, water, etc.
+# newpar
+# newpar_block = sp who:::"#KeepGettingBannedSMH" whom:::"#spellred" (3 s) | p (2 s)
+1	There	there	PRON	EX	PronType=Dem	2	expl	2:expl	Discourse=context-background:22->25:2:sem-rpt-181-201+sem-rpt-182,212-213
+2	was	be	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Cxn=Existential-There
+3	an	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(38-event-new-cf1-2-sgl
+4	experiment	experiment	NOUN	NN	Number=Sing	2	nsubj	2:nsubj|7:nsubj:pass	_
+5	that	that	PRON	WDT	PronType=Rel	7	nsubj:pass	4:ref	Discourse=elaboration-attribute:23->22:0:syn-mdf-176+syn-relcl-177,179
+6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
+7	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	acl:relcl	4:acl:relcl	_
+8	with	with	ADP	IN	_	11	case	11:case	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(39-abstract-new-cf2-3-coref
+10	rat	rat	NOUN	NN	Number=Sing	11	compound	11:compound	Entity=(40-animal-new-cf7-1-coref)
+11	population	population	NOUN	NN	Number=Sing	7	obl	7:obl:with|14:nsubj:pass	MSeg=populat-ion
+12	which	which	PRON	WDT	PronType=Rel	14	nsubj:pass	11:ref	Discourse=elaboration-attribute:24->23:0:syn-mdf-183+syn-relcl-184,186
+13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	14:aux:pass	_
+14	raised	raise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	acl:relcl	11:acl:relcl	MSeg=rais-ed
+15	in	in	ADP	IN	_	17	case	17:case	_
+16	an	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(41-place-new-cf3-2-sgl
+17	environment	environment	NOUN	NN	Number=Sing	14	obl	14:obl:in	MSeg=environ-ment
+18	of	of	ADP	IN	_	21	case	21:case	_
+19	artificial	artificial	ADJ	JJ	Degree=Pos	21	amod	21:amod	Entity=(42-abstract-new-cf4-3-sgl|MSeg=artific-ial
+20	high	high	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
+21	abundance	abundance	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	MSeg=abundan-ce
+22	of	of	ADP	IN	_	23	case	23:case	_
+23	food	food	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=(43-substance-new-cf5-1-sgl)|SpaceAfter=No
+24	,	,	PUNCT	,	_	25	punct	25:punct	_
+25	water	water	NOUN	NN	Number=Sing	23	conj	21:nmod:of|23:conj	Entity=(44-substance-new-cf6-1-sgl)|SpaceAfter=No
+26	,	,	PUNCT	,	_	27	punct	27:punct	_
+27	etc.	etc.	NOUN	FW	Abbr=Yes|Number=Plur	23	conj	21:nmod:of|23:conj	Entity=42)41)39)38)
+
+# sent_id = GUM_reddit_pandas-14
+# addressee = spellred
+# s_prominence = 3
+# s_type = decl
+# speaker = KeepGettingBannedSMH
+# transition = establishment
+# text = The population grew rapidly until space became scarce, then many of the rats exhibited complete disinterest in sex/reproduction which persisted even as population size decreased, causing a collapse of the rat society.
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=explanation-evidence:25->21:2:_|Entity=(39-abstract-giv:act-cf1*-2-coref
+2	population	population	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=39)|MSeg=populat-ion
+3	grew	grow	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+4	rapidly	rapidly	ADV	RB	Degree=Pos	3	advmod	3:advmod	MSeg=rapid-ly
+5	until	until	SCONJ	IN	_	7	mark	7:mark	Discourse=causal-result:26->25:0:_;context-circumstance:26->25:0:0:orp-until-204|MSeg=un-til
+6	space	space	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|8:nsubj:xsubj	Entity=(45-place-new-cf3-1-sgl)
+7	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:until	_
+8	scarce	scarce	ADJ	JJ	Degree=Pos	7	xcomp	7:xcomp	SpaceAfter=No
+9	,	,	PUNCT	,	_	15	punct	15:punct	_
+10	then	then	ADV	RB	PronType=Dem	15	advmod	15:advmod	Discourse=joint-sequence_m:27->25:1:dm-then-209
+11	many	many	ADJ	JJ	Degree=Pos	15	nsubj	15:nsubj	Entity=(46-animal-new-cf5-1-sgl
+12	of	of	ADP	IN	_	14	case	14:case	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(40-animal-giv:act-cf2-2-coref
+14	rats	rat	NOUN	NNS	Number=Plur	11	obl	11:obl:of	Entity=40)46)|MSeg=rat-s
+15	exhibited	exhibit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	parataxis	3:parataxis	MSeg=exhibit-ed
+16	complete	complete	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(47-abstract-new-cf6-2-sgl
+17	disinterest	disinterest	NOUN	NN	Number=Sing|Polarity=Neg	15	obj	15:obj|23:nsubj	MSeg=dis-interest
+18	in	in	ADP	IN	_	19	case	19:case	_
+19	sex	sex	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	Entity=(48-event-new-cf9-1-sgl)|SpaceAfter=No|XML=<w>
+20	/	/	SYM	SYM	_	21	cc	21:cc	SpaceAfter=No
+21	reproduction	reproduction	NOUN	NN	Number=Sing	19	conj	17:nmod:in|19:conj:slash	Entity=(49-event-new-cf10-1-sgl)|MSeg=reproduc-tion|XML=</w>
+22	which	which	PRON	WDT	PronType=Rel	23	nsubj	17:ref	Discourse=elaboration-attribute:28->27:0:syn-mdf-216+syn-relcl-221-222
+23	persisted	persist	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	MSeg=persist-ed
+24	even	even	ADV	RB	_	28	advmod	28:advmod	Discourse=context-circumstance:29->28:0:dm-even as-223-224
+25	as	as	SCONJ	IN	_	28	mark	28:mark	_
+26	population	population	NOUN	NN	Number=Sing	27	compound	27:compound	Entity=(50-abstract-new-cf4-2-sgl(39-abstract-giv:act-cf1*-1-coref)|MSeg=populat-ion
+27	size	size	NOUN	NN	Number=Sing	28	nsubj	28:nsubj	Entity=50)
+28	decreased	decrease	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	advcl	23:advcl:as	Entity=47)|MSeg=decreas-ed|SpaceAfter=No
+29	,	,	PUNCT	,	_	30	punct	30:punct	_
+30	causing	cause	VERB	VBG	VerbForm=Ger	23	advcl	23:advcl	Discourse=causal-result:30->27:1:lex-indwd-229+syn-pres-229|MSeg=caus-ing
+31	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	Entity=(51-event-new-cf7-2-sgl
+32	collapse	collapse	NOUN	NN	Number=Sing	30	obj	30:obj	_
+33	of	of	ADP	IN	_	36	case	36:case	_
+34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	Entity=(52-abstract-new-cf8-3-sgl
+35	rat	rat	NOUN	NN	Number=Sing	36	compound	36:compound	Entity=(40-animal-giv:act-cf2-1-coref)
+36	society	society	NOUN	NN	Number=Sing	32	nmod	32:nmod:of	Entity=52)51)|MSeg=soci-ety|SpaceAfter=No
+37	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_pandas-15
+# addressee = spellred
+# s_prominence = 4
+# s_type = other
+# speaker = KeepGettingBannedSMH
+# transition = zero
+# text = (IIRC)
+# newpar
+# newpar_block = p (1 s)
+1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=adversative-concession:31->25:3:_|SpaceAfter=No
+2	IIRC	IIRC	ADV	RB	Degree=Pos	0	root	0:root	SpaceAfter=No
+3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-16
+# addressee = KeepGettingBannedSMH
+# s_prominence = 4
+# s_type = frag
+# speaker = BooYourBadPuns
+# transition = zero
+# text = Behavioral Sink
+# newpar
+# newpar_block = sp who:::"#BooYourBadPuns" whom:::"#KeepGettingBannedSMH" (1 s) | p (1 s)
+1	Behavioral	behavioral	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=explanation-justify:32->25:4:_|Entity=(53-event-new-cf1-2-sgl|MSeg=Behav-ior-al|XML=<ref target:::"https://en.wikipedia.org/wiki/Behavioral_sink">
+2	Sink	sink	NOUN	NN	Number=Sing	0	root	0:root	Entity=53)|XML=</ref>
+
+# sent_id = GUM_reddit_pandas-17
+# addressee = howssit
+# s_prominence = 1
+# s_type = frag
+# speaker = BaronVonAwesome007
+# transition = null
+# text = And dolphins
+# newpar
+# newpar_block = sp who:::"#BaronVonAwesome007" whom:::"#howssit" (1 s) | p (1 s)
+1	And	and	CCONJ	CC	_	2	cc	2:cc	Discourse=joint-list_m:33->3:3:dm-and-242|Entity=(54-animal-new-cf1-2-sgl
+2	dolphins	dolphin	NOUN	NNS	Number=Plur	0	root	0:root	Entity=54)|MSeg=dolphin-s
+
+# sent_id = GUM_reddit_pandas-18
+# addressee = BaronVonAwesome007
+# s_prominence = 2
+# s_type = other
+# speaker = pugbud
+# transition = null
+# text = Schooled him
+# newpar
+# newpar_block = sp who:::"#pugbud" whom:::"#BaronVonAwesome007" (1 s) | p (1 s)
+1	Schooled	school	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=evaluation-comment:34->33:0:_|MSeg=School-ed
+2	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	1	obj	1:obj	Entity=(37-person-giv:inact-cf1-1-ana)
+
+# sent_id = GUM_reddit_pandas-19
+# addressee = pugbud
+# s_prominence = 3
+# s_type = other
+# speaker = zazzy440
+# transition = establishment
+# text = Ha what a blow hole
+# newpar
+# newpar_block = sp who:::"#zazzy440" whom:::"#pugbud" (1 s) | p (1 s)
+1	Ha	ha	INTJ	UH	_	5	discourse	5:discourse	Discourse=evaluation-comment:35->34:0:_
+2	what	what	DET	WDT	PronType=Int	5	det:predet	5:det:predet	Entity=(37-person-giv:act-cf1*-4-coref
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	_
+4	blow	blow	NOUN	NN	Number=Sing	5	compound	5:compound	_
+5	hole	hole	NOUN	NN	Number=Sing	0	root	0:root	Cxn=Exclamative-What|Entity=37)
+
+# sent_id = GUM_reddit_pandas-20
+# addressee = zazzy440
+# s_prominence = 3
+# s_type = decl
+# speaker = Kitten-McSnugglet
+# transition = continue
+# text = Nah they’re pod people.
+# newpar
+# newpar_block = sp who:::"#Kitten-McSnugglet" whom:::"#zazzy440" (1 s) | p (1 s)
+1	Nah	nah	INTJ	UH	_	5	discourse	5:discourse	Discourse=adversative-contrast_m:36->35:0:_
+2-3	they’re	_	_	_	_	_	_	_	_
+2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	Entity=(37-person-giv:act-cf1*-1-ana)
+3	’re	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+4	pod	pod	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(37-person-giv:act-cf1*-2-pred(55-object-new-cf2-1-sgl)
+5	people	person	NOUN	NNS	Number=Plur	0	root	0:root	Entity=37)|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_pandas-21
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = Costyyy
+# transition = zero
+# text = I love all these comments telling OP he's wrong.
+# newpar
+# newpar_block = sp who:::"#Costyyy" whom:::"#howssit" (1 s) | p (1 s)
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	Discourse=evaluation-comment:37->3:4:lex-indwd-258+lex-indwd-266|Entity=(56-person-acc:com-cf2-1-sgl)
+2	love	love	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	all	all	DET	PDT	PronType=Tot	5	det:predet	5:det:predet	Entity=(57-abstract-acc:com-cf3-3-sgl
+4	these	this	DET	DT	Number=Plur|PronType=Dem	5	det	5:det	_
+5	comments	comment	NOUN	NNS	Number=Plur	2	obj	2:obj	Entity=57)|MSeg=comment-s
+6	telling	tell	VERB	VBG	VerbForm=Ger	5	acl	5:acl	Cxn=Ditransitive|Discourse=attribution-positive:38->39:0:sem-atsrc-259-261+lex-indwd-262|MSeg=tell-ing
+7	OP	OP	NOUN	NN	Number=Sing	6	iobj	6:iobj	Entity=(58-person-acc:com-cf1-1-coref)
+8-9	he's	_	_	_	_	_	_	_	_
+8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj	Discourse=elaboration-additional:39->37:0:_|Entity=(58-person-giv:act-cf1-1-ana)
+9	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+10	wrong	wrong	ADJ	JJ	Degree=Pos	6	ccomp	6:ccomp	SpaceAfter=No
+11	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-22
+# addressee = howssit
+# s_prominence = 1
+# s_type = decl
+# speaker = tinygraycells
+# transition = null
+# text = I think I read that if food was low, rabbits will abort their young and reabsorb them.
+# newpar
+# newpar_block = sp who:::"#tinygraycells" whom:::"#howssit" (1 s) | p (1 s)
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	Discourse=attribution-positive:40->41:0:sem-atsrc-268+lex-indwd-269+syn-rpr-270|Entity=(59-person-acc:com-cf1-1-ana)
+2	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	Discourse=attribution-positive:41->43:2:sem-atsrc-270+lex-indwd-271+syn-rpr-272-273,280|Entity=(59-person-giv:act-cf1-1-ana)
+4	read	read	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	ccomp	2:ccomp	_
+5	that	that	SCONJ	IN	_	13	mark	13:mark	Discourse=contingency-condition:42->43:1:dm-if-273
+6	if	if	SCONJ	IN	_	9	mark	9:mark	_
+7	food	food	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	Entity=(60-substance-new-cf4-1-sgl)
+8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
+9	low	low	ADJ	JJ	Degree=Pos	13	advcl	13:advcl:if	Cxn=Condition-Realistic|SpaceAfter=No
+10	,	,	PUNCT	,	_	9	punct	9:punct	_
+11	rabbits	rabbit	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj|17:nsubj	Discourse=adversative-contrast_m:43->1:1:_|Entity=(61-animal-new-cf3-1-coref)|MSeg=rabbit-s
+12	will	will	AUX	MD	Number=Plur|Person=3|VerbForm=Fin	13	aux	13:aux|17:aux	_
+13	abort	abort	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
+14	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	Entity=(62-animal-new-cf2-2-coref(61-animal-giv:act-cf3-1-ana)
+15	young	young	NOUN	NNS	Number=Plur	13	obj	13:obj	Entity=62)
+16	and	and	CCONJ	CC	_	17	cc	17:cc	Discourse=joint-list_m:44->43:0:dm-and-283
+17	reabsorb	reabsorb	VERB	VB	VerbForm=Inf	13	conj	4:ccomp|13:conj:and	MSeg=re-absorb
+18	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	17	obj	17:obj	Entity=(62-animal-giv:act-cf2-1-ana)|SpaceAfter=No
+19	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-23
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = Nurgus
+# transition = null
+# text = We're the only animal that does it consciously.
+# newpar
+# newpar_block = sp who:::"#Nurgus" whom:::"#howssit" (4 s) | p (4 s)
+1-2	We're	_	_	_	_	_	_	_	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	Discourse=elaboration-additional:45->1:2:ref-prs-1,287+ref-prop-8-14,294|Entity=(2-person-giv:inact-cf1-1-ana)
+2	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(2-person-giv:act-cf1-3-coref
+4	only	only	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+5	animal	animal	NOUN	NN	Number=Sing	0	root	0:root|7:nsubj	_
+6	that	that	PRON	WDT	PronType=Rel	7	nsubj	5:ref	Discourse=elaboration-attribute:46->45:0:syn-mdf-291+syn-relcl-292-293
+7	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl:relcl	5:acl:relcl	MSeg=doe-s
+8	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	obj	7:obj	Entity=(5-event-giv:inact-cf2-1-coref)
+9	consciously	consciously	ADV	RB	Degree=Pos	7	advmod	7:advmod	Entity=2)|MSeg=conscious-ly|SpaceAfter=No
+10	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_pandas-24
+# addressee = howssit
+# s_prominence = 3
+# s_type = other
+# speaker = Nurgus
+# transition = establishment
+# text = That we know of.
+1	That	that	PRON	WDT	PronType=Rel	3	obl	3:obl:of	Discourse=adversative-concession:47->45:1:_
+2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	Entity=(2-person-giv:act-cf1*-1-ana)
+3	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	of	of	ADP	IN	_	1	case	1:case	SpaceAfter=No
+5	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_pandas-25
+# addressee = howssit
+# s_prominence = 4
+# s_type = decl
+# speaker = Nurgus
+# transition = continue
+# text = But to be fair, we're the only animal that does anything consciously which involves deep planning.
+1	But	but	CCONJ	CC	_	10	cc	10:cc	Discourse=organization-preparation:48->49:2:_;adversative-concession:48->45:2:1:lex-indwd-310+orp-but-302
+2	to	to	PART	TO	_	4	mark	4:mark	_
+3	be	be	AUX	VB	VerbForm=Inf	4	cop	4:cop	_
+4	fair	fair	ADJ	JJ	Degree=Pos	10	advcl	10:advcl:to	SpaceAfter=No
+5	,	,	PUNCT	,	_	4	punct	4:punct	_
+6-7	we're	_	_	_	_	_	_	_	_
+6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	10	nsubj	10:nsubj	Discourse=elaboration-additional:49->47:0:ref-prs-298,307|Entity=(2-person-giv:act-cf1*-1-ana)
+7	're	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(2-person-giv:act-cf1*-3-coref
+9	only	only	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
+10	animal	animal	NOUN	NN	Number=Sing	0	root	0:root|12:nsubj	_
+11	that	that	PRON	WDT	PronType=Rel	12	nsubj	10:ref	Discourse=elaboration-attribute:50->49:0:syn-mdf-311+syn-relcl-312-313
+12	does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	MSeg=doe-s
+13	anything	anything	PRON	NN	Number=Sing|PronType=Ind	12	obj	12:obj|16:nsubj	Entity=(63-abstract-new-cf3-2-sgl
+14	consciously	consciously	ADV	RB	Degree=Pos	12	advmod	12:advmod	MSeg=conscious-ly
+15	which	which	PRON	WDT	PronType=Rel	16	nsubj	13:ref	Discourse=elaboration-attribute:51->50:0:syn-mdf-314+syn-relcl-316-317
+16	involves	involve	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl:relcl	13:acl:relcl	MSeg=involve-s
+17	deep	deep	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(64-abstract-new-cf2-2-sgl
+18	planning	planning	NOUN	NN	Number=Sing	16	obj	16:obj	Entity=64)63)2)|MSeg=plann-ing|SpaceAfter=No
+19	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+# sent_id = GUM_reddit_pandas-26
+# addressee = howssit
+# s_prominence = 5
+# s_type = other
+# speaker = Nurgus
+# transition = continue
+# text = That we know of.
+1	That	that	PRON	WDT	PronType=Rel	3	obl	3:obl:of	Discourse=adversative-concession:52->49:1:_
+2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	Entity=(2-person-giv:act-cf1*-1-ana)
+3	know	know	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+4	of	of	ADP	IN	_	1	case	1:case	SpaceAfter=No
+5	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# sent_id = GUM_reddit_pandas-27
+# addressee = Nurgus
+# s_prominence = 4
+# s_type = other
+# speaker = Kill_Da_Humanz
+# transition = continue
+# text = Plot twist: cats are the smartest species on earth and will overthrow humans when we realize that we’re their servants.
+# newpar
+# newpar_block = sp who:::"#Kill_Da_Humanz" whom:::"#Nurgus" (1 s) | p (1 s)
+1	Plot	plot	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=organization-preparation:53->54:1:sem-synym-326-327,329-347+grf-col-328|Entity=(65-abstract-new-cf3-2-coref(66-abstract-new-cf5-1-sgl)
+2	twist	twist	NOUN	NN	Number=Sing	0	root	0:root	Entity=65)|SpaceAfter=No
+3	:	:	PUNCT	:	_	8	punct	8:punct	_
+4	cats	cat	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj|13:nsubj	Discourse=adversative-contrast_m:54->49:3:_|Entity=(65-abstract-giv:act-cf3-5,10-coref(67-animal-new-cf2-1-coref)|MSeg=cat-s
+5	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(67-animal-giv:act-cf2-3-coref
+7	smartest	smart	ADJ	JJS	Degree=Sup	8	amod	8:amod	_
+8	species	species	NOUN	NN	Number=Sing	2	dislocated	2:dislocated	_
+9	on	on	ADP	IN	_	10	case	10:case	_
+10	earth	earth	NOUN	NN	Number=Sing	8	nmod	8:nmod:on	Entity=(68-place-new-cf4-1-sgl)67)
+11	and	and	CCONJ	CC	_	13	cc	13:cc	Discourse=joint-list_m:55->54:0:sem-lxchn-333,339+dm-and-336
+12	will	will	AUX	MD	VerbForm=Fin	13	aux	13:aux	_
+13	overthrow	overthrow	VERB	VB	VerbForm=Inf	8	conj	2:dislocated|8:conj:and	MSeg=over-throw
+14	humans	human	NOUN	NNS	Number=Plur	13	obj	13:obj	Entity=(2-person-giv:act-cf1*-1-coref)|MSeg=human-s
+15	when	when	ADV	WRB	PronType=Int	17	advmod	17:advmod	Discourse=context-circumstance:56->55:0:dm-when-340;attribution-positive:56->57:0:0:lex-indwd-342+sem-atsrc-339,341+syn-rpr-343
+16	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	17	nsubj	17:nsubj	Entity=(2-person-giv:act-cf1*-1-ana)
+17	realize	realize	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	13	advcl	13:advcl:when	MSeg=real-ize
+18	that	that	SCONJ	IN	_	22	mark	22:mark	Discourse=elaboration-additional:57->56:0:ref-prs-341,344
+19-20	we’re	_	_	_	_	_	_	_	_
+19	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	22	nsubj	22:nsubj	Entity=(2-person-giv:act-cf1*-1-ana)
+20	’re	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
+21	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	Entity=(2-person-giv:act-cf1*-2-coref(67-animal-giv:act-cf2-1-ana)
+22	servants	servant	NOUN	NNS	Number=Plur	17	ccomp	17:ccomp	Entity=2)65)|MSeg=serv-ant-s|SpaceAfter=No
+23	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-28
+# addressee = howssit
+# s_prominence = 2
+# s_type = frag
+# speaker = jmoth79
+# transition = zero
+# text = ... and for good reason.
+# newpar
+# newpar_block = sp who:::"#jmoth79" whom:::"#howssit" (1 s) | p (1 s)
+1	...	…	PUNCT	:	_	5	punct	5:punct	Discourse=evaluation-comment:58->1:3:lex-indwd-352
+2	and	and	CCONJ	CC	_	5	cc	5:cc	_
+3	for	for	ADP	IN	_	5	case	5:case	_
+4	good	good	ADJ	JJ	Degree=Pos	5	amod	5:amod	Entity=(69-abstract-new-cf1-2-sgl
+5	reason	reason	NOUN	NN	Number=Sing	0	root	0:root	Entity=69)|SpaceAfter=No
+6	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_pandas-29
+# addressee = howssit
+# s_prominence = 2
+# s_type = wh
+# speaker = ProtoMoleculeFart
+# transition = null
+# text = What about the Ai currently proliferating through our computer networks?
+# newpar
+# newpar_block = sp who:::"#ProtoMoleculeFart" whom:::"#howssit" (3 s) | p (3 s)
+1	What	what	PRON	WP	PronType=Int	0	root	0:root	Cxn=Interrogative-Wh|Discourse=elaboration-additional:59->1:4:ref-prs-1,362
+2	about	about	ADP	IN	_	4	case	4:case	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(70-abstract-new-cf2-2-coref
+4	Ai	AI	NOUN	NN	Number=Sing|Typo=Yes	1	nmod	1:nmod:about	CorrectForm=AI|Entity=70)|XML=<sic ana:::"AI"></sic>
+5	currently	currently	ADV	RB	Degree=Pos	6	advmod	6:advmod	Discourse=elaboration-attribute:60->59:0:syn-mdf-358+syn-nmn-360|MSeg=current-ly
+6	proliferating	proliferate	VERB	VBG	VerbForm=Ger	4	acl	4:acl	MSeg=proliferat-ing
+7	through	through	ADP	IN	_	10	case	10:case	_
+8	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	Entity=(71-place-new-cf3-3-sgl(2-person-giv:inact-cf1-1-ana)
+9	computer	computer	NOUN	NN	Number=Sing	10	compound	10:compound	MSeg=comput-er
+10	networks	network	NOUN	NNS	Number=Plur	6	obl	6:obl:through	Entity=71)|MSeg=net-work-s|SpaceAfter=No
+11	?	?	PUNCT	.	_	1	punct	1:punct	_
+
+# sent_id = GUM_reddit_pandas-30
+# addressee = howssit
+# s_prominence = 3
+# s_type = q
+# speaker = ProtoMoleculeFart
+# transition = establishment
+# text = Don't they count???
+1-2	Don't	_	_	_	_	_	_	_	_
+1	Do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	Discourse=evaluation-comment:61->59:1:_
+2	n't	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
+3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	Entity=(70-abstract-giv:act-cf1*-1-ana)
+4	count	count	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar|SpaceAfter=No
+5	?	?	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
+6	?	?	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
+7	?	?	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-31
+# addressee = howssit
+# s_prominence = 3
+# s_type = wh
+# speaker = ProtoMoleculeFart
+# transition = zero
+# text = WHERE IS YOUR HEART?!?!
+1	WHERE	where	ADV	WRB	PronType=Int	2	advmod	2:advmod	Discourse=joint-list_m:62->61:0:_
+2	IS	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Cxn=Interrogative-Wh
+3	YOUR	your	PRON	PRP$	Case=Gen|Number=Sing|Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(72-abstract-new-cf2-2-sgl(73-person-acc:com-cf1-1-sgl)
+4	HEART	heart	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	Entity=72)|SpaceAfter=No
+5	?	?	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
+6	!	!	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
+7	?	?	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
+8	!	!	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-32
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = thenixnerd
+# transition = null
+# text = We’re too fucking good at it.
+# newpar
+# newpar_block = sp who:::"#thenixnerd" whom:::"#howssit" (1 s) | p (1 s)
+1-2	We’re	_	_	_	_	_	_	_	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	Discourse=joint-other_m:63->59:2:lex-indwd-383|Entity=(2-person-giv:inact-cf1-1-ana)
+2	’re	be	AUX	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	too	too	ADV	RB	Degree=Pos	5	advmod	5:advmod	_
+4	fucking	fucking	INTJ	UH	_	5	discourse	5:discourse	MSeg=fuck-ing
+5	good	good	ADJ	JJ	Degree=Pos	0	root	0:root	_
+6	at	at	ADP	IN	_	7	case	7:case	_
+7	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	obl	5:obl:at	Entity=(6-event-giv:inact-cf2-1-coref)|SpaceAfter=No
+8	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_pandas-33
+# addressee = howssit
+# s_prominence = 2
+# s_type = wh
+# speaker = PurpleNHO3
+# transition = establishment
+# text = How would we know?
+# newpar
+# newpar_block = sp who:::"#PurpleNHO3" whom:::"#howssit" (2 s) | p (2 s)
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	Discourse=explanation-justify:64->65:1:_
+2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
+3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	Entity=(2-person-giv:act-cf1*-1-ana)
+4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Wh|SpaceAfter=No
+5	?	?	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-34
+# addressee = howssit
+# s_prominence = 1
+# s_type = decl
+# speaker = PurpleNHO3
+# transition = zero
+# text = Perhaps other species went extinct because they stopped reproducing.
+1	Perhaps	perhaps	ADV	RB	Degree=Pos	4	advmod	4:advmod	Discourse=adversative-contrast_m:65->1:5:_
+2	other	other	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(74-animal-new-cf1-2-coref
+3	species	species	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|5:nsubj:xsubj	Entity=74)
+4	went	go	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+5	extinct	extinct	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
+6	because	because	SCONJ	IN	_	8	mark	8:mark	Discourse=causal-cause:66->65:0:dm-because-399
+7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj|9:nsubj:xsubj	Entity=(74-animal-giv:act-cf1-1-ana)
+8	stopped	stop	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	advcl	4:advcl:because	MSeg=stopp-ed
+9	reproducing	reproduce	VERB	VBG	VerbForm=Ger	8	xcomp	8:xcomp	MSeg=re-produc-ing|SpaceAfter=No
+10	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-35
+# addressee = PurpleNHO3
+# s_prominence = 2
+# s_type = q
+# speaker = Toby_Forrester
+# transition = establishment
+# text = But did they do so planningly?
+# newpar
+# newpar_block = sp who:::"#Toby_Forrester" whom:::"#PurpleNHO3" (1 s) | p (1 s)
+1	But	but	CCONJ	CC	_	4	cc	4:cc	Discourse=adversative-antithesis:67->65:2:dm-but-404
+2	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
+3	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	Entity=(74-animal-giv:act-cf1*-1-ana)
+4	do	do	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Polar
+5	so	so	ADV	RB	_	4	advmod	4:advmod	_
+6	planningly	planningly	ADV	RB	Degree=Pos	4	advmod	4:advmod	SpaceAfter=No
+7	?	?	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-36
+# addressee = howssit
+# s_prominence = 1
+# s_type = ger
+# speaker = TheRealNokes
+# transition = zero
+# text = And eating
+# newpar
+# newpar_block = sp who:::"#TheRealNokes" whom:::"#howssit" (1 s) | p (1 s)
+1	And	and	CCONJ	CC	_	2	cc	2:cc	Discourse=joint-other_m:68->1:6:dm-and-411
+2	eating	eat	VERB	VBG	VerbForm=Ger	0	root	0:root	MSeg=eat-ing
+
+# sent_id = GUM_reddit_pandas-37
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = Grebnerref
+# transition = zero
+# text = But we still like to practice.
+# newpar
+# newpar_block = sp who:::"#Grebnerref" whom:::"#howssit" (1 s) | p (1 s)
+1	But	but	CCONJ	CC	_	4	cc	4:cc	Discourse=adversative-concession:69->1:7:dm-but-413
+2	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=(2-person-giv:inact-cf1-1-ana)
+3	still	still	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
+4	like	like	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	to	to	PART	TO	_	6	mark	6:mark	_
+6	practice	practice	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-38
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = LethalMindNinja
+# transition = null
+# text = I think it's coyotes that will howl at certain times and listen for responses to decide if an area is over populated.
+# newpar
+# newpar_block = sp who:::"#LethalMindNinja" whom:::"#howssit" (2 s) | p (2 s)
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	2:nsubj	Discourse=elaboration-additional:70->1:8:syn-relcl-425|Entity=(75-person-acc:com-cf1-1-sgl)
+2	think	think	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3-4	it's	_	_	_	_	_	_	_	_
+3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	Entity=(76-animal-new-cf2-1-cata)
+4	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+5	coyotes	coyote	NOUN	NNS	Number=Plur	2	ccomp	2:ccomp|8:nsubj	Entity=(77-event-new-cf4-1-coref(76-animal-acc:com-cf2-1-coref|MSeg=coyote-s
+6	that	that	PRON	WDT	PronType=Rel	8	nsubj	5:ref	_
+7	will	will	AUX	MD	VerbForm=Fin	8	aux	8:aux|13:aux	_
+8	howl	howl	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
+9	at	at	ADP	IN	_	11	case	11:case	_
+10	certain	certain	ADJ	JJ	Degree=Pos	11	amod	11:amod	Entity=(78-time-new-cf5-2-sgl
+11	times	time	NOUN	NNS	Number=Plur	8	obl	8:obl:at	Entity=78)|MSeg=time-s
+12	and	and	CCONJ	CC	_	13	cc	13:cc	Discourse=joint-sequence_m:71->70:0:dm-and-431
+13	listen	listen	VERB	VB	VerbForm=Inf	8	conj	5:acl:relcl|8:conj:and	_
+14	for	for	ADP	IN	_	15	case	15:case	_
+15	responses	response	NOUN	NNS	Number=Plur	13	obl	13:obl:for	Entity=(79-event-new-cf6-1-sgl)76)|MSeg=response-s
+16	to	to	PART	TO	_	17	mark	17:mark	Discourse=purpose-goal:72->70:1:syn-inf-435
+17	decide	decide	VERB	VB	VerbForm=Inf	13	advcl	13:advcl:to	_
+18	if	if	SCONJ	IN	_	23	mark	23:mark	_
+19	an	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	Entity=(80-place-new-cf3-2-sgl
+20	area	area	NOUN	NN	Number=Sing	23	nsubj:pass	23:nsubj:pass	Entity=80)
+21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	aux:pass	23:aux:pass	_
+22	over	over	ADV	RB	Typo=Yes	23	advmod	23:advmod	CorrectForm=overpopulated|XML=<sic ana:::"overpopulated">
+23	populated	populate	VERB	VBN	Tense=Past|Typo=Yes|VerbForm=Part|Voice=Pass	17	advcl	17:advcl:if	CorrectForm=_|Cxn=Condition-Realistic|Entity=77)|MSeg=populat-ed|SpaceAfter=No|XML=</sic>
+24	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-39
+# addressee = howssit
+# s_prominence = 3
+# s_type = decl
+# speaker = LethalMindNinja
+# transition = establishment
+# text = Not sure if that means they go somewhere else to hump or just stay where they are and don't hump.
+1	Not	not	PART	RB	Polarity=Neg	2	advmod	2:advmod	Discourse=attribution-negative:73->74:2:sem-atsrc-30+sem-ngt-444+lex-indwd-445+syn-rpr-446-447,450
+2	sure	sure	ADJ	JJ	Degree=Pos	0	root	0:root	_
+3	if	if	SCONJ	IN	_	5	mark	5:mark	Discourse=adversative-concession:74->70:2:_
+4	that	that	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	Entity=(77-event-giv:act-cf1*-1-ana)
+5	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	MSeg=mean-s
+6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj|14:nsubj	Entity=(76-animal-giv:act-cf2-1-ana)
+7	go	go	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	ccomp	5:ccomp	_
+8	somewhere	somewhere	ADV	RB	_	7	advmod	7:advmod	_
+9	else	else	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
+10	to	to	PART	TO	_	11	mark	11:mark	Discourse=purpose-goal:75->74:0:syn-inf-453
+11	hump	hump	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:to	_
+12	or	or	CCONJ	CC	_	14	cc	14:cc	Discourse=joint-disjunction_m:76->74:1:dm-or-455
+13	just	just	ADV	RB	_	14	advmod	14:advmod	_
+14	stay	stay	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	conj	5:ccomp|7:conj:or	_
+15	where	where	ADV	WRB	PronType=Int	17	advmod	17:advmod	_
+16	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	17	nsubj	17:nsubj	Entity=(76-animal-giv:act-cf2-1-ana)
+17	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	14:advcl:where	_
+18	and	and	CCONJ	CC	_	21	cc	21:cc	Discourse=joint-list_m:77->76:0:dm-and-461
+19-20	don't	_	_	_	_	_	_	_	_
+19	do	do	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	21	aux	21:aux	_
+20	n't	not	PART	RB	Polarity=Neg	21	advmod	21:advmod	_
+21	hump	hump	VERB	VB	VerbForm=Inf	14	conj	7:conj|14:conj:and	SpaceAfter=No
+22	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-40
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = 2DamnBig
+# transition = zero
+# text = In our defense human babies are the worst of all the species.
+# newpar
+# newpar_block = sp who:::"#2DamnBig" whom:::"#howssit" (1 s) | p (1 s)
+1	In	in	ADP	IN	_	3	case	3:case	Discourse=evaluation-comment:78->1:9:lex-indwd-473
+2	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	Entity=(81-abstract-new-cf3-2-sgl(2-person-giv:inact-cf2-1-ana)
+3	defense	defense	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=81)
+4	human	human	ADJ	JJ	Degree=Pos	5	amod	5:amod	Entity=(82-person-new-cf1-2-coref
+5	babies	baby	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	Entity=82)|MSeg=bab-ie-s
+6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
+8	worst	bad	ADJ	JJS	Degree=Sup	0	root	0:root	_
+9	of	of	ADP	IN	_	12	case	12:case	_
+10	all	all	DET	PDT	PronType=Tot	12	det:predet	12:det:predet	Entity=(82-person-giv:act-cf1-3-coref
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	_
+12	species	species	NOUN	NNS	Number=Plur	8	obl	8:obl:of	Entity=82)|SpaceAfter=No
+13	.	.	PUNCT	.	_	8	punct	8:punct	_
+
+# sent_id = GUM_reddit_pandas-41
+# addressee = howssit
+# s_prominence = 2
+# s_type = wh
+# speaker = PurpleNHO3
+# transition = establishment
+# text = How would we know that they didn’t?
+# newpar
+# newpar_block = sp who:::"#PurpleNHO3" whom:::"#howssit" (3 s) | p (3 s)
+1	How	how	ADV	WRB	PronType=Int	4	advmod	4:advmod	Discourse=attribution-positive:79->80:0:sem-atsrc-481+lex-indwd-482+syn-rpr-483|Entity=(83-abstract-new-cf3-4-disc
+2	would	would	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
+3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	4:nsubj	Entity=(2-person-giv:act-cf1*-1-ana)
+4	know	know	VERB	VB	VerbForm=Inf	0	root	0:root	Cxn=Interrogative-Wh
+5	that	that	SCONJ	IN	_	7	mark	7:mark	Discourse=topic-question:80->83:2:lex-indwd-479+syn-sbinv-480+grf-qst-487
+6	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	7	nsubj	7:nsubj	Entity=(84-animal-acc:com-cf2-1-ana)
+7-8	didn’t	_	_	_	_	_	_	_	SpaceAfter=No
+7	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	ccomp	4:ccomp	_
+8	n’t	not	PART	RB	Polarity=Neg	7	advmod	7:advmod	_
+9	?	?	PUNCT	.	_	4	punct	4:punct	Entity=83)
+
+# sent_id = GUM_reddit_pandas-42
+# addressee = howssit
+# s_prominence = 1
+# s_type = multiple
+# speaker = PurpleNHO3
+# transition = smooth-shift
+# text = It’s not to prove that they did, just stating that the option is there.
+1-2	It’s	_	_	_	_	_	_	_	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	nsubj:outer	5:nsubj:outer	Discourse=adversative-concession:81->83:1:_|Entity=(83-abstract-giv:act-cf1*-1-coref)
+2	’s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	not	not	PART	RB	Polarity=Neg	5	advmod	5:advmod	_
+4	to	to	PART	TO	_	5	mark	5:mark	_
+5	prove	prove	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	that	that	SCONJ	IN	_	8	mark	8:mark	_
+7	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	8	nsubj	8:nsubj	Entity=(84-animal-giv:act-cf2-1-ana)
+8	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	5:ccomp	SpaceAfter=No
+9	,	,	PUNCT	,	_	11	punct	11:punct	_
+10	just	just	ADV	RB	_	11	advmod	11:advmod	Discourse=attribution-positive:82->83:0:lex-indwd-498+sem-atsrc-498+syn-rpr-499
+11	stating	state	VERB	VBG	VerbForm=Ger	5	parataxis	5:parataxis	MSeg=stat-ing
+12	that	that	SCONJ	IN	_	15	mark	15:mark	Discourse=adversative-contrast_m:83->1:10:_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(85-abstract-new-cf3-2-sgl
+14	option	option	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	Entity=85)|MSeg=opt-ion
+15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	ccomp	11:ccomp	_
+16	there	there	ADV	RB	PronType=Dem	15	advmod	15:advmod	SpaceAfter=No
+17	.	.	PUNCT	.	_	5	punct	5:punct	_
+
+# sent_id = GUM_reddit_pandas-43
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = PurpleNHO3
+# transition = zero
+# text = It’s not provable or unprovable.
+1-2	It’s	_	_	_	_	_	_	_	_
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj|6:nsubj	Discourse=evaluation-comment:84->83:3:_|Entity=(1-abstract-giv:inact-cf1-1-coref)
+2	’s	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	not	not	PART	RB	Polarity=Neg	4	advmod	4:advmod	_
+4	provable	provable	ADJ	JJ	Degree=Pos	0	root	0:root	MSeg=prov-able
+5	or	or	CCONJ	CC	_	6	cc	6:cc	_
+6	unprovable	unprovable	ADJ	JJ	Degree=Pos|Polarity=Neg	4	conj	4:conj:or	MSeg=un-prov-able|SpaceAfter=No
+7	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-44
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = Al-Horesmi
+# transition = null
+# text = Yeah other animals just eat their babies
+# newpar
+# newpar_block = sp who:::"#Al-Horesmi" whom:::"#howssit" (1 s) | p (1 s)
+1	Yeah	yeah	INTJ	UH	_	5	discourse	5:discourse	Discourse=adversative-antithesis:85->1:11:_
+2	other	other	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(86-event-new-cf3-4-disc(87-animal-new-cf1-2-coref
+3	animals	animal	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=87)|MSeg=animal-s
+4	just	just	ADV	RB	_	5	advmod	5:advmod	_
+5	eat	eat	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+6	their	their	PRON	PRP$	Case=Gen|Number=Plur|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	Entity=(88-animal-new-cf2-2-sgl(87-animal-giv:act-cf1-1-ana)
+7	babies	baby	NOUN	NNS	Number=Plur	5	obj	5:obj	Entity=88)86)|MSeg=bab-ie-s
+
+# sent_id = GUM_reddit_pandas-45
+# addressee = howssit
+# s_prominence = 2
+# s_type = decl
+# speaker = Kur0d4
+# transition = establishment
+# text = This has to do with the fact that raising our offspring is labor and resource intensive.
+# newpar
+# newpar_block = sp who:::"#Kur0d4" whom:::"#howssit" (5 s) | p (4 s)
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	2:nsubj|4:nsubj:xsubj	Discourse=causal-cause:86->1:12:_|Entity=(86-event-giv:act-cf1*-1-coref)
+2	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	MSeg=ha-s
+3	to	to	PART	TO	_	4	mark	4:mark	_
+4	do	do	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
+5	with	with	ADP	IN	_	7	case	7:case	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(89-abstract-new-cf4-2-sgl
+7	fact	fact	NOUN	NN	Number=Sing	4	obl	4:obl:with	_
+8	that	that	SCONJ	IN	_	9	mark	9:mark	Discourse=elaboration-attribute:87->86:0:syn-mdf-525+syn-nmn-534
+9	raising	raise	VERB	VBG	VerbForm=Ger	16	csubj	16:csubj	MSeg=rais-ing
+10	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	Entity=(90-person-new-cf3-2-sgl(2-person-giv:inact-cf2-1-ana)
+11	offspring	offspring	NOUN	NN	Number=Sing	9	obj	9:obj	Entity=90)|MSeg=off-spring
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	16:cop	_
+13	labor	labor	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(91-abstract-new-cf6-1-sgl)
+14	and	and	CCONJ	CC	_	15	cc	15:cc	_
+15	resource	resource	NOUN	NN	Number=Sing	13	conj	13:conj:and|16:compound	Entity=(92-abstract-new-cf5-1-sgl)|MSeg=re-source
+16	intensive	intensive	ADJ	JJ	Degree=Pos	7	acl	7:acl	Entity=89)|MSeg=intens-ive|SpaceAfter=No
+17	.	.	PUNCT	.	_	2	punct	2:punct	_
+
+# sent_id = GUM_reddit_pandas-46
+# addressee = howssit
+# s_prominence = 4
+# s_type = decl
+# speaker = Kur0d4
+# transition = zero
+# text = Many species can walk minutes after birth.
+1	Many	many	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=adversative-antithesis:88->89:1:_|Entity=(93-animal-new-cf2-2-coref
+2	species	species	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=93)
+3	can	can	AUX	MD	Number=Plur|Person=3|VerbForm=Fin	4	aux	4:aux	_
+4	walk	walk	VERB	VB	VerbForm=Inf	0	root	0:root	_
+5	minutes	minute	NOUN	NNS	Number=Plur	7	obl:tmod	7:obl:tmod	Entity=(94-time-new-cf3-1-sgl)|MSeg=minute-s
+6	after	after	ADP	IN	_	7	case	7:case	_
+7	birth	birth	NOUN	NN	Number=Sing	4	obl	4:obl:after	Bridge=93<95|Entity=(95-event-acc:inf-cf1-1-sgl)|MSeg=bir-th|SpaceAfter=No
+8	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# sent_id = GUM_reddit_pandas-47
+# addressee = howssit
+# s_prominence = 3
+# s_type = decl
+# speaker = Kur0d4
+# transition = null
+# text = Due to the size of our heads and the limited size of the birth canal, humans are born relatively premature.
+1	Due	due	ADJ	JJ	Degree=Pos	4	case	4:case	Discourse=elaboration-additional:89->86:1:ref-prs-528,549
+2	to	to	ADP	IN	_	1	fixed	1:fixed	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(96-abstract-new-cf2-2-sgl
+4	size	size	NOUN	NN	Number=Sing	19	obl	19:obl:due_to	_
+5	of	of	ADP	IN	_	7	case	7:case	_
+6	our	our	PRON	PRP$	Case=Gen|Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	Entity=(97-object-new-cf5-2-sgl(2-person-giv:inact-cf1-1-ana)
+7	heads	head	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	Entity=97)96)|MSeg=head-s
+8	and	and	CCONJ	CC	_	11	cc	11:cc	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(98-abstract-new-cf3-3-sgl
+10	limited	limited	ADJ	JJ	Degree=Pos	11	amod	11:amod	MSeg=limit-ed
+11	size	size	NOUN	NN	Number=Sing	4	conj	4:conj:and|19:obl:due_to	_
+12	of	of	ADP	IN	_	15	case	15:case	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(99-place-new-cf4-3-sgl
+14	birth	birth	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(100-event-new-cf6-1-sgl)|MSeg=bir-th
+15	canal	canal	NOUN	NN	Number=Sing	11	nmod	11:nmod:of	Entity=99)98)|SpaceAfter=No
+16	,	,	PUNCT	,	_	4	punct	4:punct	_
+17	humans	human	NOUN	NNS	Number=Plur	19	nsubj:pass	19:nsubj:pass|21:nsubj:xsubj	Entity=(2-person-giv:act-cf1-1-coref)|MSeg=human-s
+18	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	19	aux:pass	19:aux:pass	_
+19	born	bear	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+20	relatively	relatively	ADV	RB	Degree=Pos	21	advmod	21:advmod	MSeg=relat-ive-ly
+21	premature	premature	ADJ	JJ	Degree=Pos	19	xcomp	19:xcomp	MSeg=pre-mature|SpaceAfter=No
+22	.	.	PUNCT	.	_	19	punct	19:punct	_
+
+# sent_id = GUM_reddit_pandas-48
+# addressee = howssit
+# s_prominence = 4
+# s_type = decl
+# speaker = Kur0d4
+# transition = null
+# text = Those children then have to be taken care of for years before they can even begin to fend for themselves.
+1	Those	that	DET	DT	Number=Plur|PronType=Dem	2	det	2:det	Bridge=2<102|Discourse=causal-result:90->89:0:dm-then-568|Entity=(101-abstract-new-cf3-4-disc(102-person-acc:inf-cf1-2-coref
+2	children	child	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj|7:nsubj:pass:xsubj	Entity=102)|MSeg=child-ren
+3	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
+4	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+5	to	to	PART	TO	_	7	mark	7:mark	_
+6	be	be	AUX	VB	VerbForm=Inf	7	aux:pass	7:aux:pass	_
+7	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	xcomp	4:xcomp	MSeg=tak-en
+8	care	care	NOUN	NN	Number=Sing	7	obj	7:obj	_
+9	of	of	ADP	IN	_	8	nmod	8:nmod	_
+10	for	for	ADP	IN	_	11	case	11:case	_
+11	years	year	NOUN	NNS	Number=Plur	7	obl	7:obl:for	Entity=(103-time-new-cf2-1-sgl)|MSeg=year-s
+12	before	before	SCONJ	IN	_	16	mark	16:mark	Discourse=context-circumstance:91->90:0:dm-before-577
+13	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	16	nsubj	16:nsubj|18:nsubj:xsubj	Entity=(102-person-giv:act-cf1-1-ana)
+14	can	can	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
+15	even	even	ADV	RB	_	16	advmod	16:advmod	_
+16	begin	begin	VERB	VB	VerbForm=Inf	7	advcl	7:advcl:before	_
+17	to	to	PART	TO	_	18	mark	18:mark	_
+18	fend	fend	VERB	VB	VerbForm=Inf	16	xcomp	16:xcomp	_
+19	for	for	ADP	IN	_	20	case	20:case	_
+20	themselves	themselves	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs|Reflex=Yes	18	obl	18:obl:for	Entity=(102-person-giv:act-cf1-1-ana)|MSeg=them-selve-s|SpaceAfter=No
+21	.	.	PUNCT	.	_	4	punct	4:punct	Entity=101)
+
+# sent_id = GUM_reddit_pandas-49
+# addressee = howssit
+# s_prominence = 5
+# s_type = decl
+# speaker = Kur0d4
+# transition = establishment
+# text = This is even more pronounced in prosperous societies where only one or two children are even needed and we can legitimately afford not to make children work.
+# newpar
+# newpar_block = p (1 s)
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	5:nsubj	Discourse=elaboration-additional:92->90:1:ref-prop-566-587|Entity=(101-abstract-giv:act-cf2*-1-coref)
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
+3	even	even	ADV	RB	_	5	advmod	5:advmod	_
+4	more	more	ADV	RBR	Degree=Cmp	5	advmod	5:advmod	_
+5	pronounced	pronounced	ADJ	JJ	Degree=Pos	0	root	0:root	MSeg=pronounc-ed
+6	in	in	ADP	IN	_	8	case	8:case	_
+7	prosperous	prosperous	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(104-person-new-cf1-2-coref|MSeg=prosper-ous
+8	societies	society	NOUN	NNS	Number=Plur	5	obl	5:obl:in	Entity=104)
+9	where	where	ADV	WRB	PronType=Int	17	advmod	17:advmod	Discourse=causal-cause:93->94:0:dm-and-604
+10	only	only	ADV	RB	_	11	advmod	11:advmod	_
+11	one	one	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	Entity=(105-person-new-cf3-4-sgl
+12	or	or	CCONJ	CC	_	13	cc	13:cc	_
+13	two	two	NUM	CD	NumForm=Word|NumType=Card	11	conj	11:conj:or|14:nummod	_
+14	children	child	NOUN	NNS	Number=Plur	17	nsubj:pass	17:nsubj:pass	Entity=105)|MSeg=child-ren
+15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
+16	even	even	ADV	RB	_	17	advmod	17:advmod	_
+17	needed	need	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	acl	8:acl:where	MSeg=need-ed
+18	and	and	CCONJ	CC	_	22	cc	22:cc	Discourse=explanation-justify:94->92:0:_
+19	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	22	nsubj	22:nsubj|25:nsubj:xsubj|27:nsubj:xsubj	Entity=(104-person-giv:act-cf1-1-ana)
+20	can	can	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
+21	legitimately	legitimately	ADV	RB	Degree=Pos	22	advmod	22:advmod	MSeg=legitimate-ly
+22	afford	afford	VERB	VB	VerbForm=Inf	17	conj	8:acl:where|17:conj:and	MSeg=a-fford
+23	not	not	PART	RB	Polarity=Neg	25	advmod	25:advmod	_
+24	to	to	PART	TO	_	25	mark	25:mark	_
+25	make	make	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
+26	children	child	NOUN	NNS	Number=Plur	25	obj	25:obj|27:nsubj:xsubj	Entity=(106-person-new-cf4-1-sgl)|MSeg=child-ren
+27	work	work	VERB	VB	VerbForm=Inf	25	xcomp	25:xcomp	SpaceAfter=No
+28	.	.	PUNCT	.	_	5	punct	5:punct	_
+
