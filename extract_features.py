@@ -1,6 +1,7 @@
 import pandas as pd
 import conllu
 import glob
+from doc_splits import gum_test, gum_dev, gum_train
 
 
 def parse_entity_instance(token_list, index, ent_id):
@@ -33,6 +34,7 @@ def parse_entity_instance(token_list, index, ent_id):
     entity_text = entity_text[:-1]
 
     # get head token
+    #multi_inst_count = 0
     head_idx = 0
     token_indexes = []
     token_heads = []
@@ -41,6 +43,10 @@ def parse_entity_instance(token_list, index, ent_id):
         token_heads.append(token["head"])
     for i in range(len(token_list)):
         if token_heads[i] not in token_indexes and token_heads[i] is not None:
+            #if head_idx != 0:
+            #    print("Multiple heads")
+            #    multi_inst_count += 1
+            #    break
             head_idx = i
             break
 
@@ -56,12 +62,13 @@ def parse_entity_instance(token_list, index, ent_id):
                    "bridge_from": bridge_from, "head_form": head_form, "head_lemma": head_lemma,
                    "head_deprel": head_deprel, "head_xpos": head_xpos, "head_number": head_number}
 
-    return entity_info
+    return entity_info #, multi_inst_count
 
 
 def extract_entity_instances(conllu_sentences):
     instances = []
     open_entities = {}
+    #count_tot = 0
     for sentence in conllu_sentences:
         for token in sentence:
             if token["misc"] and "Entity" in token["misc"]:
@@ -77,13 +84,15 @@ def extract_entity_instances(conllu_sentences):
                                     if "-" in entity:
                                         # single token entity
                                         ent_id = entity.split("-")[0]
-                                        entity_info = parse_entity_instance([token], len(instances), ent_id)
+                                        entity_info = parse_entity_instance([token], len(instances), ent_id) #, count
+                                        #count_tot += count
                                     else:
                                         # multi token entity
                                         ent_id = closing_ent
                                         # parse most recent open entity for this id
                                         entity_info = parse_entity_instance(open_entities[ent_id][-1] + [token],
-                                                                            len(instances), ent_id)
+                                                                            len(instances), ent_id) #, count
+                                        #count_tot += count
                                         # remove parsed entity
                                         open_entities[ent_id] = open_entities[ent_id][:-1]
                                         # if there are no more open entities, remove from tracker
@@ -109,13 +118,14 @@ def extract_entity_instances(conllu_sentences):
                 #print(entities)
 
     df = pd.DataFrame(instances)
-    return df
+    return df #, count_tot
 
 
 def make_instance_files():
     gum_file_list = glob.glob("dep/*.conllu")
     inst_df = pd.DataFrame()
     pair_df = pd.DataFrame()
+    #mult_tot = 0
     for file in gum_file_list:
         file_name = file.split("/")[-1].split(".")[0]
         print(file_name)
@@ -123,13 +133,14 @@ def make_instance_files():
         with open(file, "r") as f:
             file_text = f.read()
             sentences = conllu.parse(file_text)
-        entity_instances = extract_entity_instances(sentences)
+        entity_instances = extract_entity_instances(sentences) #, mult
+        #mult_tot += mult
         # add file_name and genre
         entity_instances["doc_id"] = file_name
         entity_instances["genre"] = genre
+    #print(mult_tot)
 
         entity_pairs = make_data_pairs(entity_instances)
-        # print(entity_instances.head()
         inst_df = pd.concat([inst_df, entity_instances], ignore_index=True)
         pair_df = pd.concat([pair_df, entity_pairs], ignore_index=True)
         #break
@@ -140,6 +151,9 @@ def make_instance_files():
 
 def join_rows(first_row, second_row, closest=False):
 
+    doc_id = first_row["doc_id"]
+    genre = first_row["genre"]
+
     bridge = 0
     coref = 0
     if second_row["bridge"] and second_row["bridge_from"] == first_row["entity_id"] and closest:
@@ -147,7 +161,8 @@ def join_rows(first_row, second_row, closest=False):
     if first_row["coref"] and second_row["coref"] and first_row["entity_id"] == second_row["entity_id"]:
         coref = 1
 
-    pair_info = {"fst_entity_text": first_row["entity_text"], "fst_entity_type": first_row["entity_type"],
+    pair_info = {"doc_id": doc_id, "genre": genre, "fst_entity_text": first_row["entity_text"],
+                 "fst_entity_type": first_row["entity_type"],
             "fst_infostat": first_row["infostat"], "fst_coref_type": first_row["coref_type"],
             "fst_head_form": first_row["head_form"], "fst_head_lemma": first_row["head_lemma"],
             "fst_head_deprel": first_row["head_deprel"], "fst_head_xpos": first_row["head_xpos"],
@@ -200,8 +215,30 @@ def make_data_pairs(entity_inst_df):
     return df
 
 
+def make_data_partition(select_file_list, outfile):
+    # read main data file
+    df = pd.read_csv("gum_entity_pairs.csv", sep='\t')
+    # take all instances of bridging from select gum files
+    select_df = df[df["doc_id"].isin(select_file_list)]
+    bridging_pairs = select_df[select_df["bridge"] == 1]
+    class_size = len(bridging_pairs)
+    # take equal number of other coref and non-coref instances
+    coref_pairs = select_df[select_df["coref"] == 1]
+    non_coref_pairs = select_df[(select_df["bridge"] == 0) & (select_df["coref"] == 0)]
+    sample_coref = coref_pairs.sample(n=class_size, random_state=42)
+    sample_non_coref = non_coref_pairs.sample(n=class_size, random_state=42)
+    data = pd.concat([bridging_pairs, sample_coref, sample_non_coref], ignore_index=True)
+    # shuffle
+    shuffled_df = data.sample(frac=1)
+    # write to file
+    shuffled_df.to_csv(outfile, sep='\t')
+    return
+
+
 def main():
-    make_instance_files()
+    #make_instance_files()
+    make_data_partition(gum_train, "train.csv")
+    make_data_partition(gum_dev+gum_test, "dev.csv")
     return
 
 

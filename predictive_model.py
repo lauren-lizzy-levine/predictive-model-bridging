@@ -9,30 +9,29 @@ np.random.seed(42)
 
 
 def read_data():
-    facts = pd.read_csv("gum_data.tab", sep="\t", quoting=3)
+    train = pd.read_csv("train.csv", sep="\t")
+    dev = pd.read_csv("dev.csv", sep="\t")
     # Make a dev set based on complete documents
-    dev_docs = {"GUM_academic_game", "GUM_conversation_family", "GUM_bio_moreau", "GUM_fiction_claus",
-                "GUM_interview_ants", "GUM_news_afghan", "GUM_speech_albania", "GUM_textbook_cognition",
-                "GUM_reddit_callout", "GUM_vlog_covid", "GUM_voyage_fortlee", "GUM_whow_ballet"}  # for example
-    train = facts[~facts['doc_id'].isin(dev_docs)]
-    dev = facts[facts['doc_id'].isin(dev_docs)]
 
     # Get a baseline:
     print("Baseline:")
-    print(sum(train["response"] / len(train["response"])))
+    print(sum(train["bridge"]) / len(train["bridge"]))
+    print(sum(train["bridge"]))
 
-    features = ["x", "y", "z"]  # some features
+    features = []  # some numerical features
 
     # Scale data
-    scaler = StandardScaler()
-    X_train = scaler.fit_transform(train[features])
-    y_train = train["response"]
-    X_dev = scaler.transform(dev[features])
-    y_dev = dev["response"]
+    #scaler = StandardScaler()
+    X_train = train[features]#scaler.fit_transform(train[features])
+    y_train = train["bridge"]
+    X_dev = dev[features]
+    #scaler.transform(dev[features])
+    y_dev = dev["bridge"]
 
     # Ordinally encode categorical variables
     encoder = OrdinalEncoder()
-    cat_labels = []  # some categorical features
+    cat_labels = ["fst_entity_type", "fst_infostat", "fst_head_lemma", "fst_head_deprel", "fst_head_xpos",
+                  "snd_entity_type", "snd_head_lemma", "snd_head_deprel", "snd_head_xpos"]  # some categorical features
     train_copy = train.copy()
     dev_copy = dev.copy()
 
