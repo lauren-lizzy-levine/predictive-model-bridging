@@ -4,7 +4,7 @@ import glob
 from doc_splits import gum_test, gum_dev, gum_train
 
 
-def parse_entity_instance(token_list, index, ent_id):
+def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_pos):
     #print(ent_id)
     #print(token_list[0]["misc"]["Entity"])
     # get entity annotations
@@ -50,8 +50,8 @@ def parse_entity_instance(token_list, index, ent_id):
             head_idx = i
             break
 
-    head_form, head_lemma, head_deprel, head_xpos = token_list[head_idx]["form"], token_list[head_idx]["lemma"],\
-        token_list[head_idx]["deprel"], token_list[head_idx]["xpos"]
+    head_form, head_lemma, head_deprel, head_xpos, head_id = token_list[head_idx]["form"], token_list[head_idx]["lemma"],\
+        token_list[head_idx]["deprel"], token_list[head_idx]["xpos"], token_list[head_idx]["id"]
 
     head_number = None
     if token_list[head_idx]["feats"] and "Number" in token_list[head_idx]["feats"]:
@@ -60,7 +60,8 @@ def parse_entity_instance(token_list, index, ent_id):
     entity_info = {"doc_index": index, "entity_text": entity_text, "entity_id": entity_id, "entity_type": entity_type,
                    "infostat": infostat, "coref_type": coref_type, "coref": coref, "bridge": bridge,
                    "bridge_from": bridge_from, "head_form": head_form, "head_lemma": head_lemma,
-                   "head_deprel": head_deprel, "head_xpos": head_xpos, "head_number": head_number}
+                   "head_deprel": head_deprel, "head_xpos": head_xpos, "head_number": head_number,
+                   "sent_id": sent_id, "head_sent_id": head_id, "head_doc_position": send_id_base_tok_pos + head_id}
 
     return entity_info #, multi_inst_count
 
@@ -69,6 +70,8 @@ def extract_entity_instances(conllu_sentences):
     instances = []
     open_entities = {}
     #count_tot = 0
+    sent_id = 1
+    send_id_base_tok_pos = 0
     for sentence in conllu_sentences:
         for token in sentence:
             if token["misc"] and "Entity" in token["misc"]:
@@ -84,14 +87,15 @@ def extract_entity_instances(conllu_sentences):
                                     if "-" in entity:
                                         # single token entity
                                         ent_id = entity.split("-")[0]
-                                        entity_info = parse_entity_instance([token], len(instances), ent_id) #, count
+                                        entity_info = parse_entity_instance([token], len(instances), ent_id,
+                                                                            sent_id, send_id_base_tok_pos) #, count
                                         #count_tot += count
                                     else:
                                         # multi token entity
                                         ent_id = closing_ent
                                         # parse most recent open entity for this id
                                         entity_info = parse_entity_instance(open_entities[ent_id][-1] + [token],
-                                                                            len(instances), ent_id) #, count
+                                                        len(instances), ent_id, sent_id, send_id_base_tok_pos) #, count
                                         #count_tot += count
                                         # remove parsed entity
                                         open_entities[ent_id] = open_entities[ent_id][:-1]
@@ -116,6 +120,8 @@ def extract_entity_instances(conllu_sentences):
                     #open_entities[ent_id][] = ent_toks.append(token)
                     ent_toks.append(token)
                 #print(entities)
+        sent_id += 1
+        send_id_base_tok_pos += len(sentence)
 
     df = pd.DataFrame(instances)
     return df #, count_tot
@@ -144,8 +150,8 @@ def make_instance_files():
         inst_df = pd.concat([inst_df, entity_instances], ignore_index=True)
         pair_df = pd.concat([pair_df, entity_pairs], ignore_index=True)
         #break
-    inst_df.to_csv('gum_entity_instances.csv', sep='\t')
-    pair_df.to_csv('gum_entity_pairs.csv', sep='\t')
+    inst_df.to_csv('gum_entity_instances.csv', sep='\t', index=False)
+    pair_df.to_csv('gum_entity_pairs.csv', sep='\t', index=False)
     return
 
 
@@ -161,18 +167,20 @@ def join_rows(first_row, second_row, closest=False):
     if first_row["coref"] and second_row["coref"] and first_row["entity_id"] == second_row["entity_id"]:
         coref = 1
 
-    pair_info = {"doc_id": doc_id, "genre": genre, "fst_entity_text": first_row["entity_text"],
-                 "fst_entity_type": first_row["entity_type"],
-            "fst_infostat": first_row["infostat"], "fst_coref_type": first_row["coref_type"],
-            "fst_head_form": first_row["head_form"], "fst_head_lemma": first_row["head_lemma"],
-            "fst_head_deprel": first_row["head_deprel"], "fst_head_xpos": first_row["head_xpos"],
-            "fst_head_number": first_row["head_number"],
-            "snd_entity_text": second_row["entity_text"], "snd_entity_type": second_row["entity_type"],
-            "snd_infostat": second_row["infostat"], "snd_coref_type": second_row["coref_type"],
-            "snd_head_form": second_row["head_form"], "snd_head_lemma": second_row["head_lemma"],
-            "snd_head_deprel": second_row["head_deprel"], "snd_head_xpos": second_row["head_xpos"],
-            "snd_head_number": second_row["head_number"],
-            "coref": coref, "bridge": bridge}
+    pair_info = {"doc_id": doc_id, "genre": genre, "t_entity_text": first_row["entity_text"],
+                 "t_entity_type": first_row["entity_type"],
+            "t_infostat": first_row["infostat"], "t_coref_type": first_row["coref_type"],
+            "t_head_form": first_row["head_form"], "t_head_lemma": first_row["head_lemma"],
+            "t_head_deprel": first_row["head_deprel"], "t_head_xpos": first_row["head_xpos"],
+            "t_head_number": first_row["head_number"], "t_sent_id": first_row["sent_id"],
+            "t_head_sent_id": first_row["head_sent_id"], "t_head_doc_position": first_row["head_doc_position"],
+            "n_entity_text": second_row["entity_text"], "n_entity_type": second_row["entity_type"],
+            "n_infostat": second_row["infostat"], "n_coref_type": second_row["coref_type"],
+            "n_head_form": second_row["head_form"], "n_head_lemma": second_row["head_lemma"],
+            "n_head_deprel": second_row["head_deprel"], "n_head_xpos": second_row["head_xpos"],
+            "n_head_number": second_row["head_number"], "n_sent_id": second_row["sent_id"],
+            "n_head_sent_id": second_row["head_sent_id"], "n_head_doc_position": second_row["head_doc_position"],
+            "t_n_dist": second_row["head_doc_position"] - first_row["head_doc_position"], "coref": coref, "bridge": bridge}
 
     return pair_info
 
@@ -231,7 +239,7 @@ def make_data_partition(select_file_list, outfile):
     # shuffle
     shuffled_df = data.sample(frac=1)
     # write to file
-    shuffled_df.to_csv(outfile, sep='\t')
+    shuffled_df.to_csv(outfile, sep='\t', index=False)
     return
 
 
