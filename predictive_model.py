@@ -1,7 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import OrdinalEncoder
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, classification_report, ConfusionMatrixDisplay, confusion_matrix
 from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -19,13 +19,12 @@ def read_data():
     # Get a baseline:
     print("Baseline:")
     print(sum(train["bridge"]) / len(train["bridge"]))
-    #print(sum(train["bridge"]))
 
     features = []  # numerical features
     # "t_n_dist"
 
-    # Scale data
-    scaler = StandardScaler()
+    # Scale data, if necessary
+    #scaler = StandardScaler()
     #X_train = scaler.fit_transform(train[features])
     X_train = train[features]
     y_train = train["bridge"]
@@ -72,21 +71,20 @@ def random_forest(X_train, y_train, X_dev, y_dev, features):
     param_grid = {'n_estimators': [50, 100, 200, 300],
                   'max_depth': [25, 50, 75, None]}
 
-    rf = RandomForestClassifier(random_state=42)  # n_estimators=100, random_state=42, n_jobs=3
+    rf = RandomForestClassifier(random_state=42)
     # Use random search to find the best hyperparameters
     rand_search = GridSearchCV(rf, param_grid=param_grid, cv=5)
     rand_search.fit(X_train, y_train)
     rf = rand_search.best_estimator_
+
     # Print the best hyperparameters
     print('Best hyperparameters:', rand_search.best_params_)
-    #rf = RandomForestClassifier(n_estimators=500, random_state=42, n_jobs=3, max_depth=50)
-    #rf.fit(X_train, y_train)
 
     y_pred = rf.predict(X_dev)
     print(rf.__class__.__name__, accuracy_score(y_dev, y_pred))
 
     # save off predictions
-    save_predictions(y_pred, "dev.csv", "preds") # _dist
+    save_predictions(y_pred, "dev.csv", "preds")
 
     # feature importance
     feat_scores = rf.feature_importances_
@@ -105,7 +103,7 @@ def random_forest(X_train, y_train, X_dev, y_dev, features):
     # Adding labels and title
     plt.xlabel('Features')
     plt.ylabel('Importance')
-    plt.title('Feature Importance in Bridging Prediction Model') #  (with Distance)
+    plt.title('Feature Importance in Bridging Prediction Model')
 
     # Displaying the graph
     plt.show()
@@ -126,10 +124,74 @@ def sort_predictions():
     return
 
 
+def distr_by_genre():
+    data = pd.read_csv("train_dev.tab", sep="\t")
+    genre_instances = data.groupby('genre')['bridge'].sum().reset_index(name='Total')
+    genre_instances = genre_instances.sort_values(by="Total", ascending=False)
+    print(genre_instances)
+    # creating a bar plot
+    plt.bar(genre_instances["genre"], genre_instances["Total"])
+    # adding labels and title
+    plt.xlabel('Genre')
+    plt.ylabel('Sum of Bridging Instances')
+    plt.title('Distribution of Bridging Instances by Genre')
+    plt.xticks(rotation=30)
+    # displaying the plot
+    plt.show()
+
+    return
+
+
+def acc_by_genre():
+    data = pd.read_csv("dev.csv", sep="\t")
+    genres = data["genre"].unique()
+    scores = []
+    for genre in genres:
+        genre_data = data[data["genre"] == genre]
+        y_dev = genre_data["bridge"]
+        y_pred = genre_data["preds"]
+        scores.append((genre, accuracy_score(y_dev, y_pred)))
+    sorted_genre_scores = sorted(scores, key=lambda x: x[1], reverse=True)
+    sorted_scores = [x[1] for x in sorted_genre_scores]
+    sorted_genre = [x[0] for x in sorted_genre_scores]
+    plt.bar(sorted_genre, sorted_scores)
+    plt.xticks(rotation=15)
+
+    # Adding labels and title
+    plt.xlabel('Genres')
+    plt.ylabel('Accuracy')
+    plt.title('Dev Accuracy by Genre')  # (with Distance)
+
+    # Displaying the graph
+    plt.show()
+
+    return
+
+
+def confusion_matrix():
+    data = pd.read_csv("dev.csv", sep="\t")
+    #data = data[(data["bridge"]==1) | (data["coref"]==1)]
+    y_dev = data["bridge"]
+    y_pred = data["preds"]
+    print(classification_report(y_dev, y_pred))
+    cm = confusion_matrix(y_dev, y_pred)
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm)
+    disp.plot()
+    plt.show()
+    return
+
+
 def main():
-    #X_train, y_train, X_dev, y_dev, all_features = read_data()
-    #random_forest(X_train, y_train, X_dev, y_dev, all_features)
+    # read in data
+    X_train, y_train, X_dev, y_dev, all_features = read_data()
+    # train classifier and make/save predictions on dev
+    random_forest(X_train, y_train, X_dev, y_dev, all_features)
+    # divide dev predictions in FP, FN, TP, TN files for manual analysis
     sort_predictions()
+    # making graphs for analysis
+    distr_by_genre()
+    acc_by_genre()
+    confusion_matrix()
     return
 
 

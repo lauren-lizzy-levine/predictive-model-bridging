@@ -5,8 +5,6 @@ from doc_splits import gum_test, gum_dev, gum_train
 
 
 def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_pos):
-    #print(ent_id)
-    #print(token_list[0]["misc"]["Entity"])
     # get entity annotations
     parsing_entity = ""
     entities = token_list[0]["misc"]["Entity"].split("(")
@@ -230,11 +228,14 @@ def make_data_partition(select_file_list, outfile):
     select_df = df[df["doc_id"].isin(select_file_list)]
     bridging_pairs = select_df[select_df["bridge"] == 1]
     class_size = len(bridging_pairs)
+    print(class_size)
     # take equal number of other coref and non-coref instances
     coref_pairs = select_df[select_df["coref"] == 1]
     non_coref_pairs = select_df[(select_df["bridge"] == 0) & (select_df["coref"] == 0)]
     sample_coref = coref_pairs.sample(n=class_size, random_state=42)
+    print(len(sample_coref))
     sample_non_coref = non_coref_pairs.sample(n=class_size, random_state=42)
+    print(len(sample_non_coref))
     data = pd.concat([bridging_pairs, sample_coref, sample_non_coref], ignore_index=True)
     # shuffle
     shuffled_df = data.sample(frac=1)
@@ -243,10 +244,21 @@ def make_data_partition(select_file_list, outfile):
     return
 
 
+def join_data():
+    train = pd.read_csv("train.csv", sep="\t")
+    dev = pd.read_csv("dev.csv", sep="\t")
+    dev = dev.drop(columns=['preds', 'preds_dist'])
+    print(dev.head())
+    df = pd.concat([train, dev], ignore_index=True)
+    df.to_csv("train_dev.tab", sep='\t', index=False)
+    return
+
+
 def main():
-    #make_instance_files()
+    make_instance_files()
     make_data_partition(gum_train, "train.csv")
     make_data_partition(gum_dev+gum_test, "dev.csv")
+    join_data()
     return
 
 
