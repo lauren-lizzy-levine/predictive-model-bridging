@@ -12,8 +12,8 @@ np.random.seed(42)
 
 
 def read_data():
-    train = pd.read_csv("train.csv", sep="\t")
-    dev = pd.read_csv("dev.csv", sep="\t")
+    train = pd.read_csv("train_gentle_gum_balanced.csv", sep="\t")
+    dev = pd.read_csv("dev_gentle_gum_balanced.csv", sep="\t")
     # Make a dev set based on complete documents
 
     # Get a baseline:
@@ -34,8 +34,9 @@ def read_data():
 
     # Ordinally encode categorical variables
     encoder = OrdinalEncoder()
-    cat_labels = ["t_entity_type", "t_head_lemma", "t_head_deprel", "t_head_xpos", "t_head_number", "t_infostat", "genre",
-                  "n_entity_type", "n_head_lemma", "n_head_deprel", "n_head_xpos", "n_head_number"] # categorical features
+    cat_labels = ["t_n_entity_type", "t_n_head_lemma", "t_n_head_deprel", "t_n_head_xpos", "t_n_head_number"]
+    #cat_labels = ["t_entity_type", "t_head_lemma", "t_head_deprel", "t_head_xpos", "t_head_number", "t_infostat", "genre",
+    #              "n_entity_type", "n_head_lemma", "n_head_deprel", "n_head_xpos", "n_head_number"] # categorical features
     #t/n_entity_text", "t/n_head_form"
     train_copy = train.copy()
     dev_copy = dev.copy()
@@ -84,7 +85,7 @@ def random_forest(X_train, y_train, X_dev, y_dev, features):
     print(rf.__class__.__name__, accuracy_score(y_dev, y_pred))
 
     # save off predictions
-    save_predictions(y_pred, "dev.csv", "preds")
+    save_predictions(y_pred, "dev_gentle_gum_balanced.csv", "preds")
 
     # feature importance
     feat_scores = rf.feature_importances_
@@ -112,7 +113,7 @@ def random_forest(X_train, y_train, X_dev, y_dev, features):
 
 
 def sort_predictions():
-    dev = pd.read_csv("dev.csv", sep="\t")
+    dev = pd.read_csv("dev_gentle_gum_balanced.csv", sep="\t")
     true_positives = dev[(dev["bridge"] == 1) & (dev["preds"] == 1)]
     false_positives = dev[(dev["bridge"] == 0) & (dev["preds"] == 1)]
     true_negatives = dev[(dev["bridge"] == 0) & (dev["preds"] == 0)]
@@ -125,7 +126,7 @@ def sort_predictions():
 
 
 def distr_by_genre():
-    data = pd.read_csv("train_dev.tab", sep="\t")
+    data = pd.read_csv("train_dev_combined_gentle_gum_balanced.tab", sep="\t")
     genre_instances = data.groupby('genre')['bridge'].sum().reset_index(name='Total')
     genre_instances = genre_instances.sort_values(by="Total", ascending=False)
     print(genre_instances)
@@ -143,7 +144,7 @@ def distr_by_genre():
 
 
 def acc_by_genre():
-    data = pd.read_csv("dev.csv", sep="\t")
+    data = pd.read_csv("dev_gentle_gum_balanced.csv", sep="\t")
     genres = data["genre"].unique()
     scores = []
     for genre in genres:
@@ -168,11 +169,11 @@ def acc_by_genre():
     return
 
 
-def confusion_matrix():
-    data = pd.read_csv("dev.csv", sep="\t")
+def run_confusion_matrix():
+    data = pd.read_csv("dev_gentle_gum_balanced.csv", sep="\t")
     #data = data[(data["bridge"]==1) | (data["coref"]==1)]
-    y_dev = data["bridge"]
-    y_pred = data["preds"]
+    y_dev = data["bridge"].to_list()
+    y_pred = data["preds"].to_list()
     print(classification_report(y_dev, y_pred))
     cm = confusion_matrix(y_dev, y_pred)
     disp = ConfusionMatrixDisplay(confusion_matrix=cm)
@@ -191,9 +192,10 @@ def main():
     # making graphs for analysis
     distr_by_genre()
     acc_by_genre()
-    confusion_matrix()
+    run_confusion_matrix()
     return
 
 
 if __name__ == "__main__":
+    #run_confusion_matrix()
     main()

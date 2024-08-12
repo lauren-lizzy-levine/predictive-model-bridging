@@ -214,3 +214,33 @@ gum_train = ["GUM_academic_art",
 "GUM_whow_quidditch",
 "GUM_whow_quinoa",
 "GUM_whow_skittles"]
+
+gentle_dev = ["GENTLE_dictionary_trust.conllu",
+              "GENTLE_esports_fortnite.conllu",
+              "GENTLE_legal_service.conllu",
+              "GENTLE_medical_screw.conllu",
+              "GENTLE_medical_transplant.conllu",
+              "GENTLE_poetry_raven.conllu",
+              "GENTLE_poetry_road.conllu",
+              "GENTLE_proof_wosets.conllu",
+              "GENTLE_syllabus_techtonica.conllu",
+              "GENTLE_threat_malik.conllu",
+              "GENTLE_threat_white.conllu"
+              ]
+
+gentle_train = ["GENTLE_dictionary_next.conllu",
+                "GENTLE_dictionary_school.conllu",
+                "GENTLE_esports_fifa.conllu",
+                "GENTLE_legal_abortion.conllu",
+                "GENTLE_medical_anemia.conllu",
+                "GENTLE_medical_hiv.conllu",
+                "GENTLE_poetry_annabel.conllu",
+                "GENTLE_poetry_death.conllu",
+                "GENTLE_poetry_flower.conllu",
+                "GENTLE_proof_five.conllu",
+                "GENTLE_proof_square.conllu",
+                "GENTLE_syllabus_opensource.conllu",
+                "GENTLE_threat_bolin.conllu",
+                "GENTLE_threat_dillard.conllu",
+                "GENTLE_threat_kelly.conllu"
+                ]

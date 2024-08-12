@@ -1,5 +1,23 @@
 data <-read.table(file.choose(), header=TRUE,stringsAsFactors=TRUE, sep="\t", fill = TRUE, quote = "") # choose file train_dev.tab
 
+t_n_head_deprel <- table(data$t_n_head_deprel, data$bridge)
+t_n_head_deprel <- t_n_head_deprel[rowSums(t_n_head_deprel[])>30,]
+chisq <- chisq.test(t_n_head_deprel)
+residuals <- round(chisq$residuals, 3)
+#library(corrplot)
+#corrplot(residuals, is.cor = FALSE)
+
+t_n_entity_type <- table(data$t_n_entity_type, data$bridge)
+t_n_entity_type <- t_n_entity_type[rowSums(t_n_entity_type[])>30,]
+chisq <- chisq.test(t_n_entity_type)
+residuals <- round(chisq$residuals, 3)
+
+t_n_head_xpos <- table(data$t_n_head_xpos, data$bridge)
+t_n_head_xpos <- t_n_head_xpos[rowSums(t_n_head_xpos[])>30,]
+chisq <- chisq.test(t_n_head_xpos)
+residuals <- round(chisq$residuals, 3)
+
+
 n_head_xpos <- table(data$n_head_xpos, data$bridge)
 n_head_xpos <- n_head_xpos[rowSums(n_head_xpos[])>10,]
 chisq.test(n_head_xpos)
