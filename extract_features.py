@@ -552,7 +552,7 @@ def main():
     #make_instance_files(data="arrau")
 
     # With GENTLE, balanced strata
-    make_data_partition(gum_train + gum_devgit , "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
+    make_data_partition(gum_train + gum_dev, "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
     make_data_partition(gum_test + gentle, "dev_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
     join_data("train_dev_combined_gentle_gum_balanced.tab", "train_gentle_gum_balanced.csv", "dev_gentle_gum_balanced.csv")
     print("Completed: With GENTLE, balanced strata")
