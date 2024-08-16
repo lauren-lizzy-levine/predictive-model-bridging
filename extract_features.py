@@ -4,7 +4,7 @@ import pandas as pd
 import conllu
 import glob
 import ast
-from doc_splits import gum_test, gum_dev, gum_train, gentle_train, gentle_dev, trains_test, trains_train, pear_test, pear_train, vpc_test, vpc_train, wsj_test, wsj_train
+from doc_splits import gum_test, gum_dev, gum_train, gentle, wsjarrau_test, wsjarrau_dev, wsjarrau_train
 # list_obj = ast.literal_eval(list_str)
 
 def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_pos, data='gum'):
@@ -480,10 +480,10 @@ def collapse_entity_types(df):
 def make_data_partition(select_file_list, outfile, balance_strata=False, skip_split_antecedent=False, data="gum"):
     # read main data file
     if data == "arrau":
-        df = pd.read_csv("arrau_entity_pairs.csv", sep='\t')
+        df = pd.read_csv("arrau_entity_pairs_wsj.csv", sep='\t')
     else:
         df = pd.read_csv("gum_entity_pairs.csv", sep='\t')
-    if skip_split_antecedent and data=="gum":
+    if skip_split_antecedent and data == "gum":
         # change all bridge_type bridge:aggr to not be bridging
         df.loc[df['bridge_type'] == "bridge:aggr", 'bridge'] = 0
 
@@ -552,10 +552,10 @@ def main():
     #make_instance_files(data="arrau")
 
     # With GENTLE, balanced strata
-    #make_data_partition(gum_train + gentle_train, "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
-    #make_data_partition(gum_dev + gum_test + gentle_dev, "dev_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
-    #join_data("train_dev_combined_gentle_gum_balanced.tab", "train_gentle_gum_balanced.csv", "dev_gentle_gum_balanced.csv")
-    #print("Completed: With GENTLE, balanced strata")
+    make_data_partition(gum_train + gum_devgit , "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
+    make_data_partition(gum_test + gentle, "dev_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
+    join_data("train_dev_combined_gentle_gum_balanced.tab", "train_gentle_gum_balanced.csv", "dev_gentle_gum_balanced.csv")
+    print("Completed: With GENTLE, balanced strata")
 
     #entity_instances = pd.read_csv("arrau_entity_pairs.csv", sep='\t')
     #b = entity_instances[entity_instances["bridge"]==1]
@@ -565,12 +565,12 @@ def main():
 
     # ARRAU, balanced strata
 
-    make_data_partition(trains_train + pear_train + vpc_train + wsj_train, "train_arrau_balanced.csv", balance_strata=True,
+    make_data_partition(wsjarrau_train + wsjarrau_dev, "train_wsjarrau_balanced.csv", balance_strata=True,
                         skip_split_antecedent=True, data="arrau")
-    make_data_partition(trains_test + pear_test + vpc_test + wsj_test, "dev_arrau_balanced.csv", balance_strata=True,
+    make_data_partition(wsjarrau_test, "dev_wsjarrau_balanced.csv", balance_strata=True,
                         skip_split_antecedent=True, data="arrau")
-    join_data("train_dev_combined_arrau_balanced.tab", "train_arrau_balanced.csv",
-              "dev_arrau_balanced.csv")
+    join_data("train_dev_combined_wsjarrau_balanced.tab", "train_wsjarrau_balanced.csv",
+              "dev_wsjarrau_balanced.csv")
     print("Completed: ARRAU, balanced strata")
 
     # Without GENTLE, balanced strata
@@ -594,5 +594,17 @@ def main():
     return
 
 
+def remove_non_wsj():
+    entity_pairs = pd.read_csv("arrau_entity_pairs.csv", sep='\t')
+    wsj_pairs = entity_pairs[(entity_pairs["genre"] == "vpc") | (entity_pairs["genre"] == "wsjarrau")]
+    wsj_pairs.to_csv('arrau_entity_pairs_wsj.csv', sep='\t', index=False)
+
+    entity_instances = pd.read_csv("arrau_entity_instances.csv", sep='\t')
+    wsj_instances = entity_instances[(entity_instances["genre"] == "vpc") | (entity_instances["genre"] == "wsjarrau")]
+    wsj_instances.to_csv('arrau_entity_instances_wsj.csv', sep='\t', index=False)
+    return
+
+
 if __name__ == "__main__":
+    #remove_non_wsj()
     main()
