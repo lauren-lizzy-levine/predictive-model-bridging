@@ -491,6 +491,8 @@ def make_data_partition(select_file_list, outfile, balance_strata=False, skip_sp
     df = collapse_entity_types(df)
 
     # take all instances of bridging from select gum files
+    if data == "arrau":
+        select_file_list = [file_name.split(".")[0] for file_name in select_file_list]
     select_df = df[df["doc_id"].isin(select_file_list)]
     bridging_pairs = select_df[select_df["bridge"] == 1]
     class_size = len(bridging_pairs)
@@ -547,7 +549,7 @@ def main():
     """
 
     #make_instance_files(data="gum")
-    make_instance_files(data="arrau")
+    #make_instance_files(data="arrau")
 
     # With GENTLE, balanced strata
     #make_data_partition(gum_train + gentle_train, "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
@@ -555,18 +557,21 @@ def main():
     #join_data("train_dev_combined_gentle_gum_balanced.tab", "train_gentle_gum_balanced.csv", "dev_gentle_gum_balanced.csv")
     #print("Completed: With GENTLE, balanced strata")
 
-    #entity_instances = pd.read_csv("arrau_entity_instances.csv", sep='\t')
+    #entity_instances = pd.read_csv("arrau_entity_pairs.csv", sep='\t')
+    #b = entity_instances[entity_instances["bridge"]==1]
+    #print("x")
     #entity_pairs = make_data_pairs(entity_instances)
     #entity_pairs.to_csv('arrau_entity_pairs.csv', sep='\t', index=False)
 
     # ARRAU, balanced strata
-    #make_data_partition(trains_train + pear_train + vpc_train + wsj_train, "train_arrau_balanced.csv", balance_strata=True,
-    #                    skip_split_antecedent=True, data="arrau")
-    #make_data_partition(trains_test + pear_test + vpc_test + wsj_test, "dev_arrau_balanced.csv", balance_strata=True,
-    #                    skip_split_antecedent=True, data="arrau")
-    #join_data("train_dev_combined_arrau_balanced.tab", "train_arrau_balanced.csv",
-    #          "dev_arrau_balanced.csv")
-    #print("Completed: ARRAU, balanced strata")
+
+    make_data_partition(trains_train + pear_train + vpc_train + wsj_train, "train_arrau_balanced.csv", balance_strata=True,
+                        skip_split_antecedent=True, data="arrau")
+    make_data_partition(trains_test + pear_test + vpc_test + wsj_test, "dev_arrau_balanced.csv", balance_strata=True,
+                        skip_split_antecedent=True, data="arrau")
+    join_data("train_dev_combined_arrau_balanced.tab", "train_arrau_balanced.csv",
+              "dev_arrau_balanced.csv")
+    print("Completed: ARRAU, balanced strata")
 
     # Without GENTLE, balanced strata
     #make_data_partition(gum_train, "train_gum_balanced.csv", balance_strata=True)
