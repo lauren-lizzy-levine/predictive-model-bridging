@@ -4,10 +4,10 @@ import pandas as pd
 import conllu
 import glob
 import ast
-from doc_splits import gum_test, gum_dev, gum_train, gentle_train, gentle_dev
+from doc_splits import gum_test, gum_dev, gum_train, gentle_train, gentle_dev, trains_test, trains_train, pear_test, pear_train, vpc_test, vpc_train, wsj_test, wsj_train
 # list_obj = ast.literal_eval(list_str)
 
-def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_pos):
+def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_pos, data='gum'):
     # get entity annotations
     parsing_entity = ""
     entities = token_list[0]["misc"]["Entity"].split("(")
@@ -16,7 +16,11 @@ def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_p
             if entity.split("-")[0] == ent_id:
                 parsing_entity = entity
     entity_attributes = parsing_entity.split("-")[:6]
-    entity_id, entity_type, infostat, coref_type = int(entity_attributes[0]), entity_attributes[1], entity_attributes[2], \
+    if data == "arrau":
+        entity_id, entity_type, coref_type, infostat = int(entity_attributes[0]), entity_attributes[1], \
+                                                       entity_attributes[2], entity_attributes[3]
+    else:
+        entity_id, entity_type, infostat, coref_type = int(entity_attributes[0]), entity_attributes[1], entity_attributes[2], \
                                                    entity_attributes[5].split(")")[0]
     if coref_type == "sgl":
         coref = 0
@@ -25,11 +29,16 @@ def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_p
 
     bridge = 0
     bridge_from_ent = None
-    if "Bridge" in token_list[0]["misc"]:
-        bridging_annotations = token_list[0]["misc"]["Bridge"].split(",")
+    bridge_key = None
+    for key in token_list[0]["misc"]:
+        if "Bridge" in key:
+            bridge_key = key
+    if bridge_key:
+        bridging_annotations = token_list[0]["misc"][bridge_key].split(",")
         for bridge_anno in bridging_annotations:
             bridge_ent = int(bridge_anno.split("<")[1])
         if bridge_ent == entity_id:
+            #print("bridge")
             bridge = 1
             bridge_from_ent = int(bridge_anno.split("<")[0])
 
@@ -38,7 +47,7 @@ def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_p
     span = []
     for token in token_list:
         entity_text += token["form"] + " "
-        span.append(str(sent_id) + "-" + str(token["id"]))
+        span.append(str(token["sent_id"]) + "-" + str(token["id"]))
     entity_text = entity_text[:-1]
 
     # get head token
@@ -74,7 +83,7 @@ def parse_entity_instance(token_list, index, ent_id, sent_id, send_id_base_tok_p
     return entity_info #, multi_inst_count
 
 
-def extract_entity_instances(conllu_sentences):
+def extract_entity_instances(conllu_sentences, data='gum'):
     instances = []
     open_entities = {}
     #count_tot = 0
@@ -84,6 +93,7 @@ def extract_entity_instances(conllu_sentences):
         for token in sentence:
             if "-" in str(token["id"]) or "." in str(token["id"]):
                 continue
+            token["sent_id"] = sent_id
             if token["misc"] and "Entity" in token["misc"]:
                 #print(token["misc"]["Entity"])
                 entities = token["misc"]["Entity"].split("(")
@@ -98,14 +108,14 @@ def extract_entity_instances(conllu_sentences):
                                         # single token entity
                                         ent_id = closing_ent.split("-")[0] # entity
                                         entity_info = parse_entity_instance([token], len(instances), ent_id,
-                                                                            sent_id, send_id_base_tok_pos) #, count
+                                                                            sent_id, send_id_base_tok_pos, data=data) #, count
                                         #count_tot += count
                                     else:
                                         # multi token entity
                                         ent_id = closing_ent
                                         # parse most recent open entity for this id
                                         entity_info = parse_entity_instance(open_entities[ent_id][-1] + [token],
-                                                        len(instances), ent_id, sent_id, send_id_base_tok_pos) #, count
+                                                        len(instances), ent_id, sent_id, send_id_base_tok_pos, data=data) #, count
                                         #count_tot += count
                                         # remove parsed entity
                                         open_entities[ent_id] = open_entities[ent_id][:-1]
@@ -143,19 +153,26 @@ def extract_entity_instances(conllu_sentences):
 
 def split_annotation(annotation_string):
     annotation_list = []
+    seen_ent_ids = []
     if annotation_string == "_":
         return annotation_list
     annotations = annotation_string.split("|")
     for annotation in annotations:
         label, remainder = annotation.split("[")
         ent_id = remainder.split("]")[0]
+        while ent_id in seen_ent_ids:
+            ent_id += "*"
+        seen_ent_ids.append(ent_id)
         annotation_list.append({"ent_id": ent_id, "label": label})
 
     return annotation_list
 
 
-def process_tsv_annotation_line(annotations, entities):
-    token_index, token, entity_types, info_stats, coref_types, coref_links = annotations[0], annotations[2], annotations[3], annotations[4], annotations[8], annotations[9]
+def process_tsv_annotation_line(annotations, entities, data='gum'):
+    if data == "arrau":
+        token_index, token, entity_types, info_stats, coref_types, coref_links = annotations[1], annotations[2], annotations[3], annotations[4], annotations[8], annotations[9]
+    else:
+        token_index, token, entity_types, info_stats, coref_types, coref_links = annotations[0], annotations[2], annotations[3], annotations[4], annotations[8], annotations[9]
 
     ent_types_list = split_annotation(entity_types)
     for entity_type in ent_types_list:
@@ -192,6 +209,7 @@ def process_tsv_annotation_line(annotations, entities):
             ent_id_links = coref_link.split("[")[1].split("]")[0]
             link_ent_id, curr_ent_id = ent_id_links.split("_")
             if "bridge" in coref_type:
+                #print("tsv bridge")
                 if "forward_bridge_ent_id" in entities[curr_ent_id]:
                     entities[curr_ent_id]["forward_bridge_ent_id"].append(link_ent_id)
                     entities[curr_ent_id]["bridge_type"].append(coref_type)
@@ -202,16 +220,19 @@ def process_tsv_annotation_line(annotations, entities):
     return entities
 
 
-def extract_entities_from_tsv(file_name):
+def extract_entities_from_tsv(file_name, data='gum'):
     entities = {}
     with open(file_name, "r") as f:
         file_lines = f.readlines()
     for line in file_lines:
         annotations = line.split("\t")
         if len(annotations) == 11:
-            entities = process_tsv_annotation_line(annotations, entities)
+            entities = process_tsv_annotation_line(annotations, entities, data=data)
 
     df = pd.DataFrame(list(entities.values()))
+
+    if "forward_bridge_ent_id" not in df.columns:
+        df["forward_bridge_ent_id"] = None
 
     return df
 
@@ -226,10 +247,13 @@ def compare_and_combine_extracted_entity_instances(conllu_instances, tsv_instanc
     sorted_conllu_span = sorted(conllu_span_values.tolist())
     sorted_tsv_span = sorted(tsv_span_values.tolist())
     # Compare the sorted lists
+    for (c, s) in zip(sorted_conllu_span, sorted_tsv_span):
+        assert c == s
     assert sorted_conllu_span == sorted_tsv_span
 
     # Combine bridging information from the two dfs
     bridging_instances = conllu_instances[conllu_instances["bridge"] == 1]
+    skipped_bridges = 0
     for _, bridge_row in bridging_instances.iterrows():
         bridge_from_ent = bridge_row["bridge_from_ent"] # check this matches in the end
         orig_span = bridge_row["span"]
@@ -237,10 +261,18 @@ def compare_and_combine_extracted_entity_instances(conllu_instances, tsv_instanc
         tsv_anaphor_row = tsv_instances[tsv_instances["span"].apply(lambda x: x == orig_span)]
         #tsv_anaphor_row = tsv_instances[tsv_instances["span"] == orig_span]
         # get the instance id of that row
-        anaphor_tsv_id = tsv_anaphor_row["id"].item()
+        if len(tsv_anaphor_row) == 1:
+            anaphor_tsv_id = tsv_anaphor_row["id"].item()
+        else:
+            anaphor_tsv_id = list(tsv_anaphor_row["id"])[0]
         # find the row where that instance id is in the list of the forward bridge column
         tsv_antecedent_row = tsv_instances[tsv_instances["forward_bridge_ent_id"].apply(lambda x: type(x) == list and anaphor_tsv_id in x)]
         #tsv_antecedent_row = tsv_instances[anaphor_tsv_id in tsv_instances["forward_bridge_ent_id"]]
+        if tsv_antecedent_row.empty:
+            #print("missing antecedent")
+            skipped_bridges += 1
+            conllu_instances.loc[conllu_instances["span"].apply(lambda x: x == orig_span), "bridge"] = 0
+            continue
         # get the span and the bridge_type from that row
         instance_index = tsv_antecedent_row["forward_bridge_ent_id"].item().index(anaphor_tsv_id)
         antecedent_span = tsv_antecedent_row["span"].item()
@@ -248,7 +280,10 @@ def compare_and_combine_extracted_entity_instances(conllu_instances, tsv_instanc
         # in conllu df, look up row by that span - the ent id should match the original bridge_from_ent
         conllu_antecedent_row = conllu_instances[conllu_instances["span"].apply(lambda x: x == antecedent_span)]
         #conllu_antecedent_row = conllu_instances[conllu_instances["span"] == antecedent_span]
-        assert conllu_antecedent_row["entity_id"].item() == bridge_from_ent
+        if len(conllu_antecedent_row) == 1:
+            assert conllu_antecedent_row["entity_id"].item() == bridge_from_ent
+        else:
+            assert bridge_from_ent in list(conllu_antecedent_row["entity_id"])
         # add span and the bridge_type to the conllu df row for original span
         #df.loc[df['B'] == 'banana', 'A'] = 99
         conllu_instances.loc[conllu_instances["span"].apply(lambda x: x == orig_span), 'bridge_from_span'] = str(antecedent_span)
@@ -261,39 +296,61 @@ def compare_and_combine_extracted_entity_instances(conllu_instances, tsv_instanc
 
     #print("Time to combine annotations")
 
-    return conllu_instances
+    return conllu_instances, skipped_bridges
 
 
-def make_instance_files():
-    gum_file_list = glob.glob("dep/*.conllu")
+def make_instance_files(data="gum"):
+    if data == "arrau":
+        file_list = glob.glob("arrau_conllu/*.conllu")
+        #file_list = file_list[:5]
+        #file_list = ["arrau_conllu/wsjarrau_1148.conllu"]
+    else:
+        file_list = glob.glob("dep/*.conllu")
     inst_df = pd.DataFrame()
     pair_df = pd.DataFrame()
     #mult_tot = 0
-    for file in gum_file_list:
+    skipped_bridges = 0
+    #need_to_see = "wsjarrau_1148"
+    #seen = False
+    for file in file_list:
+        #if need_to_see in file:
+        #    seen = True
+        #if not seen:
+        #    continue
         file_name = file.split("/")[-1].split(".")[0]
         print(file_name)
-        genre = file_name.split("_")[1]
+        if data == "arrau":
+            genre = file_name.split("_")[0]
+        else:
+            genre = file_name.split("_")[1]
         with open(file, "r") as f:
             file_text = f.read()
             sentences = conllu.parse(file_text)
-        entity_instances = extract_entity_instances(sentences) #, mult
+        entity_instances = extract_entity_instances(sentences, data=data) #, mult
         #mult_tot += mult
         # add file_name and genre
         entity_instances["doc_id"] = file_name
         entity_instances["genre"] = genre
     #print(mult_tot)
 
-        tsv_file = "tsv/" + file_name + ".tsv"
-        tsv_entities = extract_entities_from_tsv(tsv_file)
+        if data == "arrau":
+            tsv_file = "arrau_tsv/" + file_name + ".tsv"
+        else:
+            tsv_file = "tsv/" + file_name + ".tsv"
+        tsv_entities = extract_entities_from_tsv(tsv_file, data=data)
 
-        validated_entity_instances = compare_and_combine_extracted_entity_instances(entity_instances, tsv_entities)
+        validated_entity_instances, skipped_bridges_set = compare_and_combine_extracted_entity_instances(entity_instances, tsv_entities)
+        skipped_bridges += skipped_bridges_set
 
         entity_pairs = make_data_pairs(validated_entity_instances)
         inst_df = pd.concat([inst_df, validated_entity_instances], ignore_index=True)
         pair_df = pd.concat([pair_df, entity_pairs], ignore_index=True)
         #break
-    inst_df.to_csv('gum_entity_instances.csv', sep='\t', index=False)
-    pair_df.to_csv('gum_entity_pairs.csv', sep='\t', index=False)
+    bridges = inst_df[inst_df["bridge"] == 1]
+    print("Bridging instances:", len(bridges))
+    print("Skipped bridges:", skipped_bridges)
+    inst_df.to_csv(data + '_entity_instances.csv', sep='\t', index=False)
+    pair_df.to_csv(data + '_entity_pairs.csv', sep='\t', index=False)
     return
 
 
@@ -343,11 +400,11 @@ def make_data_pairs(entity_inst_df):
     bridging_instances = entity_inst_df[entity_inst_df["bridge"] == 1]
     max_bridge_dist = 0
     for _, bridge_row in bridging_instances.iterrows():
-        #bridge_from_ent_id = bridge_row["bridge_from_ent"]
+        bridge_from_ent_id = bridge_row["bridge_from_ent"]
         bridge_from_span = bridge_row["bridge_from_span"]
         bridge_index = bridge_row["doc_index"]
         # Get row of instance the current bridge is bridged from
-        antecedent_row = entity_inst_df.loc[entity_inst_df["span"] == bridge_from_span].squeeze()
+        antecedent_row = entity_inst_df.loc[(entity_inst_df["span"] == bridge_from_span) & (entity_inst_df["entity_id"] == bridge_from_ent_id)].squeeze()
         antecedent_doc_index = antecedent_row["doc_index"].item()
 
         #print(bridge_from_ent_id, bridge_index)
@@ -374,6 +431,8 @@ def make_data_pairs(entity_inst_df):
         pair = join_rows(antecedent_row, bridge_row)
         pairs.append(pair)
         seen_pairs.add((antecedent_doc_index, bridge_index))
+    #if max_bridge_dist == 0:
+    #    max_bridge_dist = 500
     # get coref and non-coref pairs
     for _, inst_1 in entity_inst_df.iterrows():
         for _, inst_2 in entity_inst_df.iterrows():
@@ -392,12 +451,45 @@ def make_data_pairs(entity_inst_df):
     return df
 
 
-def make_data_partition(select_file_list, outfile, balance_strata=False, skip_split_antecedent=False):
+def collapse_entity_types(df):
+    # Collapsed types: person, place, organization, concrete, event, time, substance, animate, abstract
+    df.loc[df['t_entity_type'] == "space", 't_entity_type'] = "place"
+    df.loc[df['n_entity_type'] == "space", 'n_entity_type'] = "place"
+    df.loc[df['t_entity_type'] == "object", 't_entity_type'] = "concrete"
+    df.loc[df['n_entity_type'] == "object", 'n_entity_type'] = "concrete"
+    df.loc[df['t_entity_type'] == "plan", 't_entity_type'] = "event"
+    df.loc[df['n_entity_type'] == "plan", 'n_entity_type'] = "event"
+    df.loc[df['t_entity_type'] == "medicine", 't_entity_type'] = "substance"
+    df.loc[df['n_entity_type'] == "medicine", 'n_entity_type'] = "substance"
+    df.loc[df['t_entity_type'] == "animal", 't_entity_type'] = "animate"
+    df.loc[df['n_entity_type'] == "animal", 'n_entity_type'] = "animate"
+    df.loc[df['t_entity_type'] == "plant", 't_entity_type'] = "concrete"
+    df.loc[df['n_entity_type'] == "plant", 'n_entity_type'] = "concrete"
+    df.loc[df['t_entity_type'] == "undersp-onto", 't_entity_type'] = "abstract"
+    df.loc[df['n_entity_type'] == "undersp-onto", 'n_entity_type'] = "abstract"
+    df.loc[df['t_entity_type'] == "disease", 't_entity_type'] = "abstract"
+    df.loc[df['n_entity_type'] == "disease", 'n_entity_type'] = "abstract"
+    df.loc[df['t_entity_type'] == "numerical", 't_entity_type'] = "abstract"
+    df.loc[df['n_entity_type'] == "numerical", 'n_entity_type'] = "abstract"
+
+    df['t_n_entity_type'] = df['t_entity_type'] + "_" + df['n_entity_type']
+
+    return df
+
+
+def make_data_partition(select_file_list, outfile, balance_strata=False, skip_split_antecedent=False, data="gum"):
     # read main data file
-    df = pd.read_csv("gum_entity_pairs.csv", sep='\t')
-    if skip_split_antecedent:
+    if data == "arrau":
+        df = pd.read_csv("arrau_entity_pairs.csv", sep='\t')
+    else:
+        df = pd.read_csv("gum_entity_pairs.csv", sep='\t')
+    if skip_split_antecedent and data=="gum":
         # change all bridge_type bridge:aggr to not be bridging
         df.loc[df['bridge_type'] == "bridge:aggr", 'bridge'] = 0
+
+    # collapse entity types for ARRAU and GUM
+    df = collapse_entity_types(df)
+
     # take all instances of bridging from select gum files
     select_df = df[df["doc_id"].isin(select_file_list)]
     bridging_pairs = select_df[select_df["bridge"] == 1]
@@ -422,10 +514,11 @@ def make_data_partition(select_file_list, outfile, balance_strata=False, skip_sp
     return
 
 
-def join_data(joint_file):
-    train = pd.read_csv("train_gentle_gum_balanced.csv", sep="\t")
-    dev = pd.read_csv("dev_gentle_gum_balanced.csv", sep="\t")
-    dev = dev.drop(columns=['preds']) #, 'preds_dist'])
+def join_data(joint_file, train_file, dev_file):
+    train = pd.read_csv(train_file, sep="\t") # "train_gentle_gum_balanced.csv"
+    dev = pd.read_csv(dev_file, sep="\t") # "dev_gentle_gum_balanced.csv"
+    if 'preds' in dev.columns:
+        dev = dev.drop(columns=['preds']) #, 'preds_dist'])
     print(dev.head())
     df = pd.concat([train, dev], ignore_index=True)
     df.to_csv(joint_file, sep='\t', index=False)
@@ -453,13 +546,27 @@ def main():
     print("end of script")
     """
 
-    #make_instance_files()
+    #make_instance_files(data="gum")
+    make_instance_files(data="arrau")
 
     # With GENTLE, balanced strata
-    #make_data_partition(gum_train + gentle_train, "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True)
-    #make_data_partition(gum_dev + gum_test + gentle_dev, "dev_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True)
-    join_data("train_dev_combined_gentle_gum_balanced.tab")
+    #make_data_partition(gum_train + gentle_train, "train_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
+    #make_data_partition(gum_dev + gum_test + gentle_dev, "dev_gentle_gum_balanced.csv", balance_strata=True, skip_split_antecedent=True, data="gum")
+    #join_data("train_dev_combined_gentle_gum_balanced.tab", "train_gentle_gum_balanced.csv", "dev_gentle_gum_balanced.csv")
     #print("Completed: With GENTLE, balanced strata")
+
+    #entity_instances = pd.read_csv("arrau_entity_instances.csv", sep='\t')
+    #entity_pairs = make_data_pairs(entity_instances)
+    #entity_pairs.to_csv('arrau_entity_pairs.csv', sep='\t', index=False)
+
+    # ARRAU, balanced strata
+    #make_data_partition(trains_train + pear_train + vpc_train + wsj_train, "train_arrau_balanced.csv", balance_strata=True,
+    #                    skip_split_antecedent=True, data="arrau")
+    #make_data_partition(trains_test + pear_test + vpc_test + wsj_test, "dev_arrau_balanced.csv", balance_strata=True,
+    #                    skip_split_antecedent=True, data="arrau")
+    #join_data("train_dev_combined_arrau_balanced.tab", "train_arrau_balanced.csv",
+    #          "dev_arrau_balanced.csv")
+    #print("Completed: ARRAU, balanced strata")
 
     # Without GENTLE, balanced strata
     #make_data_partition(gum_train, "train_gum_balanced.csv", balance_strata=True)
